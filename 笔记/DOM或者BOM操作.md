@@ -1756,7 +1756,7 @@ bind（无数个参数）
 
 - **location.assign('url地址')**  	记录浏览记录，有后退功能
 - **location.replace('url地址')**  	不记录浏览记录，没有后退功能
-- **l****ocation.reload()**			刷新页面
+- **location.reload()**			刷新页面
 - **location.href =  ''**			跳转页面
 
 

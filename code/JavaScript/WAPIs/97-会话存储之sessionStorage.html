@@ -23,6 +23,7 @@
         set.addEventListener('click', function() {
             // 当我们点击之后 就可以把表单里面的值存储起来
             var val = ipt.value;
+            console.log(val);
             sessionStorage.setItem('uname', val);
             sessionStorage.setItem('pwd', val);
         });
