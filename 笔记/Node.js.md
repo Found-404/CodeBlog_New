@@ -139,3 +139,82 @@ fs.writeFile('f:/files/2.txt', 'abc', function(err) {
 优化写法：
 
 >![png](https://i.bmp.ovh/imgs/2022/06/22/edd1798ffc5eec30.png)
+
+## __dirname解决路径拼接错误 ##
+
+有时候出现路径拼接错误是因为提供了./或者../开头的相对路径导致
+
+>解决方法:
+>- 提供一个完整路径
+>   - 但是移植性差,不利用代码维护
+>- 使用__dirname
+>   - __dirname代表的是当前目录路径  
+
+
+```js
+fs.readFile(__dirname + '/files/2.txt', 'utf8', function(err, dataStr) {
+    if (err) {
+        return console.log('读取失败' + err.message);
+    }
+    console.log('读取成功' + dataStr);
+});
+```
+
+# path路径模块 #
+
+> **path模块**是Node.js官方提供的,用来**处理路径**的模块.它提供了一系列的方法和属性,用来满足用户对路径的处理需求.
+>
+>例如:
+>- path.join()方法,用来**将多个路径片段拼接成一个完整的路径字符串**
+>- path.basename()方法,用来从路径字符串中,将文件名解析出来
+
+如果要在JavaScript代码中使用path模块来处理路径,则需要使用如下方式导入他:
+
+```js
+
+const path = require('path');
+
+```
+
+## path.join()的语法格式 ##
+使用path.join()方法,可以把多个路径片段拼接为完整的路径字符串,语法格式如下:
+
+```js
+
+path.join([...paths])
+
+```
+
+>参数解读:
+>- ..paths< string >路径片段的序列
+>- 返回值:< string >
+
+
+代码示例:
+
+![png](https://i.bmp.ovh/imgs/2022/06/23/2883715f9505b5a9.png)
+
+## path.basename()的语法格式 ##
+
+使用path.basename()方法,可以获取路径中的最后一部分,经常通过这个方法获取路径中的文件名,语法格式如下:
+
+```js
+
+path.basename(path[,ext])
+
+```
+
+>参数解读:
+>- path`<string>`必选参数,表示一个路径的字符串
+>- ext`<string>`可选参数,表示文件扩展名
+>- 返回:`<string>`表示路径中的最后一部分
+
+示例代码：
+
+![png](https://i.bmp.ovh/imgs/2022/06/23/e6b7240594ea3cf6.png)
+
+## path.extname()代码示例 ##
+
+>使用path.extname()方法，可以获取路径中的扩展名部分
+
+![png](https://i.bmp.ovh/imgs/2022/06/23/6f381844b033d682.png)
