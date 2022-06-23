@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+                width: 200px;
+                height: 200px;
+                background-color: yellow;
+/*属性*/        transition-property: height background;
+/*动画时间*/    transition-duration: 2s;
+/*动画运动类型*/transition-timing-function: linear;
+/*延迟时间*/    transition-delay: 2s;
+        }
+        div:hover{
+            height: 600px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

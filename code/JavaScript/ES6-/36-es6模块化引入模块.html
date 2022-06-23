@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <!-- 传统方式是引入整个js文件 -->
+    <!-- <script src='./js.js'></script> -->
+    <script type="module">
+        // 1.通用的引入方法---------------------------------
+        // import *as js1 from "./36-js模块.js";
+        // console.log(js1);
+
+        // import *as js2 from "./36-js模块2.js";
+        // console.log(js2);
+
+        //应为默认暴露，所以调用需要在进入default层级
+        // js2.default.change();
+
+        // 2.解构赋值形式----------------------------------
+        import {school,call} from "./36-js模块.js";
+        import {school as school2,call as call2} from "./36-js模块2.js";
+        //利用as为重复的数据重命名
+        console.log(school);
+        console.log(school2);
+        console.log(call);
+        console.log(call2);
+
+        // 默认暴露解构赋值条件
+        import {default as def} from "./36-js模块3.js";
+        // 如果是默认暴露，则需要对default进行as别命名
+        console.log(def.school);
+        console.log(def.change);
+
+        // 3.简便形式 只针对默认暴露----------------------------
+        // import m3 from "./36-js模块3.js";
+        // console.log(m3);
+
+    </script>
+    <!-- js文件中的所有暴露的数据都传递给了html文件中的js1 -->
+</body>
+
+
+</html>

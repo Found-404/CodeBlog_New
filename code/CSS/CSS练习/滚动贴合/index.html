@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        main {
+            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            scroll-snap-type: y mandatory;
+        }
+        
+        section {
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(to right, #2BC0E4, #EAECC6);
+            scroll-snap-align: start;
+        }
+        
+        section div {
+            color: white;
+            float: left;
+            font-size: 100px;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <div>页面内容1</div>
+        </section>
+        <section>
+            <div>页面内容2</div>
+        </section>
+        <section>
+            <div>页面内容3</div>
+        </section>
+        <section>
+            <div>页面内容4</div>
+        </section>
+    </main>
+</body>
+
+</html>

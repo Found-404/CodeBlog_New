@@ -1,0 +1,58 @@
+{
+  "id": "3159799",
+  "name": "侧边栏",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "162882",
+      "name": "设置",
+      "font_class": "shezhi",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "201555",
+      "name": "表情",
+      "font_class": "biaoqing",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "577384",
+      "name": "信息",
+      "font_class": "xinxi",
+      "unicode": "e763",
+      "unicode_decimal": 59235
+    },
+    {
+      "icon_id": "1221178",
+      "name": "放大镜",
+      "font_class": "fangdajing",
+      "unicode": "e6e4",
+      "unicode_decimal": 59108
+    },
+    {
+      "icon_id": "1304891",
+      "name": "应用中心",
+      "font_class": "yingyongzhongxin",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "4347599",
+      "name": "icon_使用文档",
+      "font_class": "icon_shiyongwendang",
+      "unicode": "eb91",
+      "unicode_decimal": 60305
+    },
+    {
+      "icon_id": "18170110",
+      "name": "卡口视频摄像头,监控,桌面摄像头,网络摄像头",
+      "font_class": "bayonet-camera",
+      "unicode": "e964",
+      "unicode_decimal": 59748
+    }
+  ]
+}

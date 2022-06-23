@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // while (条件表达式) {
+        //循环体
+        // }
+        var num = 1;
+        while (num <= 100) {
+            console.log('111');
+            num++; //递增 达到条件终止循环
+        }
+
+        var i = 1;
+        while (i <= 100) {
+            console.log('这个人' + i + '岁了');
+            i++;
+        }
+        //计算1-100整数和
+        var j = 1,
+            sum = 0;
+        while (j <= 100) {
+            sum += j;
+            j++;
+        }
+        console.log(sum);
+
+        var message = prompt('一加一等于几?');
+        while (message !== '2') {
+            message = prompt('一加一等于几?');
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

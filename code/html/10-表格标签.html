@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        表格属性
+        1.宽度 width
+        2.高度 height
+        3.边框 border
+        4.边框颜色 bordercolor
+        5.背景颜色 bgcolor
+        6.水平对齐 align="left或right或center"
+        7.cellspacing="单元格与单元格之间的间距"
+        8.cellpadding="单元格与内容之间的空隙"
+
+        行tr属性
+        1.高度 height
+        2.背景颜色 bgcolor
+        3.文字水平对齐 align="left或right或center"
+        4.文字垂直对齐 valign="top或middle或bottom"
+    -->
+    <table border="1" width="500" height="500"
+     align="center" bgcolor="yellow" bordercolor="blue" cellspacing="0" cellpadding="2"
+     >       <!--table 创建表格-->
+        <tr height="100" bgcolor="green" align="center" valign="top"> <!--tr 表示行-->
+            <!-- 如果一个单元格设置宽度，影响的是这一整列的宽度 -->
+            <td>1</td>  <!--td 表示单元格-->
+            <td>2</td>
+        </tr>
+        <tr>
+            <td bgcolor="red" align="center">3</td>
+            <td align="right" valign="top">4</td>
+        </tr>
+    </table>
+</body>
+</html>

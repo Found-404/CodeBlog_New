@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 1.导入模板引擎 -->
+    <script src="./template-web.js"></script>
+    <script src="./jQuery-min.js"></script>
+</head>
+
+<body>
+    <div id="container"></div>
+</body>
+
+<script type="text/html" id="tpl-user">
+    <!-- 
+        3.定义模板 
+        3.1 模板的HTML结构 必须被定义到script中
+     -->
+
+    <h1>{{name}} ------- {{age}}</h1>
+    <!-- 
+        1.标准语法-原文输出
+        {{@value}}
+        2.标准语法-条件输出
+        3.标准语法-过滤器
+    -->
+    {{@tast}}
+    <div>
+        <!-- 判断分支 -->
+        {{if flag ===0}} flag的值是0 {{else if flag ===1}} flag的值是1 {{/if}}
+    </div>
+
+    <ul>
+        <!-- 循环体 -->
+        {{each hobby}}
+        <li>索引是:{{$index}},循环项是:{{$value}}</li>
+        {{/each}}
+    </ul>
+
+    <!-- 过滤器 -->
+    <h3>
+        {{regTime | dateFormat}}
+    </h3>
+</script>
+<!-- {{}}标准语法 -->
+<!-- 
+        {{value}}
+        {{obj.key}}
+        {{obj['key']}}
+        {{a ? b : c}}
+        {{a || b}}
+        {{a + b}}
+    -->
+<script>
+    // 定义处理时间的过滤器 以dateFormat命名
+    template.defaults.imports.dateFormat = function(date) {
+        let y = date.getFullYear();
+        let m = date.getMonth() + 1;
+        let d = date.getDate();
+        // console.log(date);
+
+        return y + '-' + m + '-' + d;
+    };
+    // art-template模板引擎是一个简约超快的模板引擎 中文官网
+    // http://aui.github.io/art-template/zh-cn/index.html
+
+
+    // 在windows全局多了一个template('模板的id','需要渲染的数据对象') 函数
+
+    // 2.定义需要渲染的数据
+    var data = {
+        name: '张三',
+        age: 20,
+        tast: '<h3>测试原文输出</h3>',
+        flag: 1,
+        hobby: ['吃饭', '睡觉', '敲代码'],
+        regTime: new Date(),
+    };
+
+    // 4.调用template函数
+    var htmlStr = template('tpl-user', data);
+    // console.log(htmlStr);
+
+    // 5.渲染html结构
+    $('#container').html(htmlStr);
+</script>
+
+</html>

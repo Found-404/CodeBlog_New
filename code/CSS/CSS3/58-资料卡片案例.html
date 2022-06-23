@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+            background:linear-gradient(#2BC0E4,#EAECC6);
+        }
+
+        .box img{
+            display: block;
+        }
+        .box{
+            width: 350px;
+            border: 5px solid white;
+            margin: 0px auto;
+            position: relative;
+            background: rgb(205, 233, 255);
+            overflow: hidden;
+
+            box-shadow: 0px 0px 5px black inset;
+        }
+        .box img{
+            width: 100%;
+            transition: all 1s;
+        }
+        .box:hover img{
+            transform: translateX(50px);
+            opacity: 0.5;
+        }
+        .box h2{
+            position:absolute;
+            /* left: 50px; */
+            top: 5px;
+            left: -35px;
+            color: white;
+            opacity: 0;
+            transition: all 0.5s;
+
+            text-shadow: 0px 0px 5px white;
+
+            font-size: 100px;
+
+        }
+        .box:hover h2{
+            opacity: 0.8;
+            /* left: 100px; */
+            transform: translateX(55px);
+        }
+        .box p{
+            position: absolute;
+            /* left: 50px; */
+            width: 50px;
+            color: white;
+            background:linear-gradient(to right,#53d7ff,#adecff);
+            transition: all 0.5s;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 900;
+        }
+        .box .p1{
+            top: 100px;
+            transform: translateY(400px);
+        }
+        .box:hover .p1{
+            /* top: 100px; */
+            transform: translateY(0px);
+        }
+        .box .p2{
+            top: 200px;
+            transform: translateX(400px);
+        }
+        .box:hover .p2{
+            /* top: 200px; */
+            transform: translateX(0px);
+        }
+        .box .p3{
+            top: 300px;
+            transform: translateX(-500px);
+        }
+        .box:hover .p3{
+            /* top: 300px; */
+            transform: translateX(0px);
+        }
+
+        .box2{
+            width: 350px;
+            margin: 10px auto;
+            border: 5px solid gray;
+            overflow: hidden;
+
+            box-shadow: 0px 0px 9px 2px black inset;
+        }
+        .box2 img{
+            width: 100%;
+            display: block;
+            transition: all 0.5s;
+        }
+        .box2:hover img{
+            opacity: 0.7;
+            transform: scale(1.1) rotate(6deg);
+        }
+        .box2 div{
+            position: relative; /*父相子绝*/
+            
+        }
+        .box2 h2{
+            position: absolute;
+            top: -330px;
+            color: black;
+            background: white;
+            border-radius: 0px 10px 10px 0px;
+
+            box-shadow: 0px 0px 5px black;
+            transition: all 0.5s ease;
+            opacity: 0;
+
+            background:linear-gradient(to right,#ffffff,#f7ffb0);
+        }
+        .box2 h2{
+            transform: translateY(-100px);
+        }
+        .box2:hover h2{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+        .box2 p{
+            position: absolute;
+            top: -125px;
+            color: black;
+            background: white;
+            transition: all 0.5s ease;
+            opacity: 0;
+            text-align: center;
+            font-weight: 800;
+            border-radius: 20px 20px 0px 0px;
+            
+            background:linear-gradient(to top,#ffffff,#ecc8ff);
+            box-shadow: 0px 0px 10px black;
+        }
+        .box2 p{
+            transform: translateY(100px);
+
+        }
+        .box2:hover p{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="资料卡片图/collage-bonus-artwork-01.jpg" alt="">
+        <h2>FØund404</h2>
+        <p class="p1">AAA</p>
+        <p class="p2">BBB</p>
+        <p class="p3">CCC</p>
+    </div>
+
+    <div class="box2">
+        <img src="资料卡片图/collage-bonus-artwork-02.jpg" alt="">
+        <div>
+            <h2>FØund404</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi saepe, in aliquid harum similique laboriosam vel fuga dolores accusamus ullam quaerat, voluptate dolor esse? Facilis rerum impedit quas mollitia vitae.</p>
+        </div>
+        <img src="" alt="">
+    </div>
+</body>
+</html>

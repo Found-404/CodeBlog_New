@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Date() 日期对象 是一个构造函数 必须使用 new来调用创建我们的日期对象
+
+        var arr = new Array(); //创建一个数组对象
+        var obj = new Object(); //创建一个对象实例
+        var date = new Date(); //创建一个日期对象
+
+
+        //1.使用 Date
+        var date = new Date();
+        console.log(date); //Mon May 09 2022 15:36:14 GMT+0800 (中国标准时间)
+        //2.参数常用写法 数字型 2019，10，01 或者 字符串型 '2019-10-1 8:8:8'
+        var date1 = new Date(2019, 11, 1, 5, 20, 30)
+        console.log(date1); //Sun Dec 01 2019 00:00:00 GMT+0800 (中国标准时间)
+        var date2 = new Date('2019-11-12 8:8:20')
+        console.log(date2); //Tue Nov 12 2019 08:08:08 GMT+0800 (中国标准时间)
+
+
+        //格式化 日期年月份
+        console.log(date.getFullYear()); //年 2022
+        console.log(date.getMonth() + 1); //月份 返回月份小一月 注意加一
+        console.log(date.getDate()); // 几日
+        console.log(date.getDay()); //  周日返回的是 0 特殊
+
+
+        // 2022年1月23日 星期日
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1; //月份要加1
+        var dates = date.getDate();
+        var arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+        var day = date.getDay(); //返回的是阿拉伯数字
+        console.log('今天是:' + year + '年' + month + '月' + dates + '日' + arr[day]);
+
+        //格式化日期 时分秒
+        console.log(date.getHours()); //时
+        console.log(date.getMinutes()); //分
+        console.log(date.getSeconds()); //秒
+
+        //封装一个函数 返回当前时间时分秒 格式08：08：08
+        function getTime() {
+            var time = new Date();
+            var h = time.getHours();
+            h = h < 10 ? '0' + h : h;
+            var m = time.getMinutes();
+            m = m < 10 ? '0' + m : m;
+            var s = time.getSeconds();
+            s = s < 10 ? '0' + s : s;
+            return h + ':' + m + ':' + s;
+        }
+        console.log(getTime());
+
+
+        //获取日期的总的毫秒(时间戳) 
+        //距离1970年1月1日过了多少毫秒数
+        //1.valueOf()  getTime()
+        console.log(date.valueOf());
+        console.log(date.getTime());
+
+        //2.简单写法 常用写法
+        var date3 = +new Date(); //+new Date() 返回总毫秒数
+        console.log(date3);
+
+        //3.h5 新增方法
+        console.log(Date.now());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

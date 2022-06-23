@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* 设置成怪异盒 */
+            box-sizing: border-box;
+        }
+        /* 页面 */
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #10131c;
+        }
+        /* 盒子 */
+        
+        .navigation {
+            /* 相对定位 */
+            position: relative;
+            width: 70px;
+            height: 70px;
+            background: #212532;
+            /* 圆角 */
+            border-radius: 10px;
+            /* 设置鼠标悬停样式 */
+            cursor: pointer;
+            /* 设置flex布局 */
+            display: flex;
+            /* 居中 */
+            justify-content: center;
+            align-items: center;
+            /* 动画过渡 */
+            transition: 0.5s ease;
+            /* 延迟0.8s */
+            transition-delay: 0.8s;
+        }
+        
+        .active {
+            width: 200px;
+            height: 200px;
+            /* 立马执行 */
+            transition-delay: 0s;
+        }
+        /* 变化前的圆点 */
+        
+        .navigation span {
+            /* 绝对定位 */
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            border-radius: 50%;
+            /* 平移 */
+            transform: translate(calc(15px*var(--x)), calc(15px*var(--y)));
+            /* 动画过渡 */
+            transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease, background 0.5s ease;
+            /* 延迟效果 */
+            transition-delay: calc(0.1s * var(--i));
+        }
+        /* 变化后的圆点 */
+        
+        .active span {
+            width: 45px;
+            height: 45px;
+            background: #333849;
+            transform: translate(calc(60px*var(--x)), calc(60px*var(--y)));
+            box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+        }
+        /* 图标 */
+        
+        .navigation span ion-icon {
+            transition: 0.5s;
+            font-size: 0em;
+        }
+        /* 点击之后的图标 */
+        
+        .active span ion-icon {
+            /* 设置点击之后字体大小为默认值的1.90倍 */
+            font-size: 1.90em;
+            color: #fff;
+        }
+        /* 鼠标悬停的滤镜 */
+        
+        .active span:hover ion-icon {
+            color: #2dfc52;
+            /* 有点像box-shadow阴影 但是空白像素却没有阴影 */
+            filter: drop-shadow(0 0 2px #2dfc52) drop-shadow(0 0 5px #2dfc52) drop-shadow(0 0 15px #2dfc52);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="navigation">
+        <span style="--i:0;--x:-1;--y:0"><ion-icon name="chatbubble-ellipses-outline"></ion-icon></span>
+        <span style="--i:1;--x:1;--y:0"><ion-icon name="cloud-circle-outline"></ion-icon></span>
+        <span style="--i:2;--x:0;--y:-1"><ion-icon name="compass-outline"></ion-icon></span>
+        <span style="--i:3;--x:0;--y:1"><ion-icon name="earth-outline"></ion-icon></span>
+        <span style="--i:4;--x:1;--y:1"><ion-icon name="game-controller-outline"></ion-icon></span>
+        <span style="--i:5;--x:-1;--y:-1"><ion-icon name="happy-outline"></ion-icon></span>
+        <span style="--i:6;--x:0;--y:0"><ion-icon name="navigate-circle-outline"></ion-icon></span>
+        <span style="--i:7;--x:-1;--y:1"><ion-icon name="power-outline"></ion-icon></span>
+        <span style="--i:8;--x:1;--y:-1"><ion-icon name="wifi-outline"></ion-icon></span>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        window.addEventListener('load', function() {
+            let navigation = document.querySelector('.navigation');
+            // 点击方法
+            // 点击之后添加类 active
+            navigation.onclick = function() {
+                navigation.classList.toggle('active');
+            }
+        })
+    </script>
+</body>
+
+</html>

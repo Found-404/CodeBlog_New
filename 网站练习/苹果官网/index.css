@@ -1,0 +1,464 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.all_Center {
+    width: 976px;
+    margin: 0 auto;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+}
+
+header .header_top {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background: #444;
+    color: #ffffff;
+}
+
+header nav {
+    width: 100%;
+    height: 44px;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+header nav>div>ul {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    line-height: 44px;
+    color: #f5f5f7;
+}
+
+header nav section {
+    display: none;
+}
+
+
+/* 中间商品部分 */
+
+
+/* 在线选购，，， */
+
+main {
+    padding-top: 80px;
+}
+
+main .main_top {
+    width: 100%;
+    height: 40px;
+    background-color: #f5f5f7;
+}
+
+main .main_top .top_p {
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+}
+
+main .main_top .top_p p {
+    display: inline-block;
+    color: #1d1d1f;
+}
+
+main .main_top .top_p a {
+    color: #0066cc;
+}
+
+
+/* 1x3排列 */
+
+main .main_center .main_center_box:nth-child(1) {
+    height: 640px;
+    background-image: url(./image/hero_iphone13pro_avail__iy77cld0zwii_large.jpg);
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+}
+
+main .main_center .main_center_box:nth-child(2) {
+    height: 640px;
+    background-image: url(./image/hero_iphonese_avail__eg8srhcnpo66_large.jpg);
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+}
+
+main .main_center .main_center_box:nth-child(3) {
+    height: 640px;
+    background-image: url(./image/hero_watch_lte__b8er858e34gi_large.jpg);
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+}
+
+main .main_center .main_center_box>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 50px;
+    align-items: center;
+}
+
+main .main_center .main_center_box>div h2 {
+    position: relative;
+    font-size: 56px;
+}
+
+main .main_center .main_center_box>div h3 {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+main .main_center .main_center_box>div>.cta-links {
+    margin-top: 20px;
+}
+
+main .main_center .main_center_box>div a {
+    font-size: 21px;
+    color: #0066cc;
+}
+
+main .main_center .main_center_box:nth-child(2)>div>h2::after {
+    content: "";
+    position: absolute;
+    right: -9px;
+    width: 71px;
+    height: 63px;
+    border: 5px solid #000000;
+    border-radius: 20px;
+}
+
+
+/* bottom部分 */
+
+main .main_bottom .all_bottom .main_bottom_box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 10px;
+    width: 100%;
+}
+
+main .main_bottom .all_bottom {
+    width: 100%;
+    margin: 0 auto;
+}
+
+main .main_bottom .all_bottom .main_bottom_box .div_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 48%;
+    height: 500px;
+    padding: 5px;
+    box-sizing: border-box;
+    /* background-color: #8898a8; */
+}
+
+main .main_bottom .all_bottom .main_bottom_box .div_box:nth-child(1) {
+    justify-content: end;
+    gap: 10px 0px;
+    padding-bottom: 50px;
+    background-image: url(./image/promo_wwdc_endframe__bv9ueo3vzmvm_large.jpg);
+    background-size: cover;
+    background-position: center center;
+    color: #ffffff;
+}
+
+main .main_bottom .all_bottom .main_bottom_box .div_box:nth-child(1) h4 {
+    font-size: 30px;
+}
+
+main .main_bottom .all_bottom .main_bottom_box .div_box:nth-child(1) h5 {
+    font-size: 16px;
+    text-align: center;
+    width: 250px;
+}
+
+main .main_bottom .all_bottom .main_bottom_box .div_box:nth-child(1) a {
+    color: #0066cc;
+}
+
+main .main_bottom .all_bottom .main_bottom_box .div_box:nth-child(2) {
+    gap: 10px 0px;
+    padding-top: 50px;
+    /* padding-bottom: 50px; */
+    background-image: url(./image/promo_iphone13_avail__frc36u35m0ii_large.jpg);
+    background-size: cover;
+    background-position: center center;
+    color: #000;
+}
+
+main .main_bottom .all_bottom .main_bottom_box .div_box:nth-child(3) {
+    gap: 10px 0px;
+    /* padding-bottom: 50px; */
+    padding-top: 50px;
+    background-image: url(./image/promo_trade_in_may_2022__bbvnbfzoqzxu_large.jpg);
+    background-size: cover;
+    background-position: center center;
+    color: #000;
+}
+
+main .main_bottom .all_bottom .main_bottom_box .div_box:nth-child(3) span {
+    color: #fa9070;
+}
+
+main .main_bottom .all_bottom .main_bottom_box .div_box:nth-child(4) {
+    gap: 10px 0px;
+    padding-top: 50px;
+    background-image: url(./image/promo_ipadair_avail__ferd4bfpcdm6_large.jpg);
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+}
+
+main .main_bottom .all_bottom .main_bottom_box .div_box:nth-child(5) {
+    gap: 10px 0px;
+    padding-top: 50px;
+    background-image: url(./image/promo_studiodisplay_avail__d1cx9j73ooq6_large.jpg);
+    background-size: cover;
+    background-position: center center;
+    color: #000;
+}
+
+main .main_bottom .all_bottom .main_bottom_box .div_box:nth-child(6) {
+    gap: 10px 0px;
+    padding-top: 50px;
+    background-image: url(./image/promo_pride__6iq9ryajnw2q_large.jpg);
+    background-size: cover;
+    background-position: center center;
+    color: #000;
+}
+
+main .main_bottom .all_bottom .main_bottom_box .div_box:nth-child(6) h5,
+main .main_bottom .all_bottom .main_bottom_box .div_box:nth-child(6) h4,
+main .main_bottom .all_bottom .main_bottom_box .div_box:nth-child(5) h4,
+main .main_bottom .all_bottom .main_bottom_box .div_box:nth-child(4) h4,
+main .main_bottom .all_bottom .main_bottom_box .div_box:nth-child(3) h4,
+main .main_bottom .all_bottom .main_bottom_box .div_box:nth-child(2) h4 {
+    font-size: 30px;
+}
+
+main .main_bottom .all_bottom .main_bottom_box .div_box:nth-child(5) h5,
+main .main_bottom .all_bottom .main_bottom_box .div_box:nth-child(4) h5,
+main .main_bottom .all_bottom .main_bottom_box .div_box:nth-child(3) h5,
+main .main_bottom .all_bottom .main_bottom_box .div_box:nth-child(2) h5 {
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+main .main_bottom .all_bottom .main_bottom_box .div_box:nth-child(6) a,
+main .main_bottom .all_bottom .main_bottom_box .div_box:nth-child(5) a,
+main .main_bottom .all_bottom .main_bottom_box .div_box:nth-child(4) a,
+main .main_bottom .all_bottom .main_bottom_box .div_box:nth-child(3) a,
+main .main_bottom .all_bottom .main_bottom_box .div_box:nth-child(2) a {
+    color: #0066cc;
+}
+
+footer {
+    background: #f5f5f7;
+}
+
+footer .footer_top {
+    font-size: 12px;
+    padding-top: 10px;
+    color: #6e6e73;
+}
+
+footer .footer_top p {
+    margin: 10px 0px;
+}
+
+.footer {
+    width: 100%;
+    /*height: 200px;*/
+    background: #f5f5f7;
+    margin-top: 15px;
+    padding-top: 20px;
+}
+
+.footer #lists {
+    width: 900px;
+    height: 350px;
+    margin: 0px auto;
+}
+
+.footer>#lists>.list {
+    width: 20%;
+    height: 100%;
+    float: left;
+    font-size: 12px;
+    line-height: 26px;
+    color: #424245;
+}
+
+.footer #lists .list ul li:first-child {
+    font-weight: bold;
+}
+
+.footer #lists .list ul li a {
+    color: #424245;
+}
+
+.footer #lists .list ul li a:hover {
+    border-bottom: 1px solid;
+}
+
+.footer p {
+    width: 900px;
+    height: 30px;
+    font-size: 14px;
+    margin: 0 auto;
+}
+
+.footer p#pa a {
+    color: #424245;
+    border-right: 1px solid #424245;
+    padding-right: 5px;
+}
+
+.footer p#pa a:last-child {
+    border: none;
+}
+
+
+/* 在976px以下*/
+
+@media all and (max-width:976px) {
+    .all_Center {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .footer #lists {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    .footer #lists .list {
+        width: 100%;
+        height: auto;
+    }
+    .footer #lists .list>ul>:not(:first-child) {
+        display: none;
+    }
+    .footer #lists>.list>ul {
+        height: 30px;
+        border-bottom: 1px solid #afafaf;
+        /* background-color: #0066cc; */
+    }
+    .footer p {
+        width: 100%;
+        height: 30px;
+        font-size: 14px;
+        margin: 0 auto;
+    }
+}
+
+
+/* 在833px以下*/
+
+@media all and (max-width:833px) {
+    .all_Center {
+        width: 95%;
+        margin: 0 auto;
+    }
+    header nav>div>ul {
+        display: none;
+    }
+    header nav>div>section {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        height: 40px;
+        width: 100%;
+        transition: all 0.5s ease;
+    }
+    header nav>div>section>.menu {
+        display: flex;
+        flex-direction: column;
+        gap: 8px 0px;
+    }
+    header nav>div>section>.menu>span {
+        display: inline-block;
+        width: 20px;
+        height: 2px;
+        background-color: #fff;
+        transition: all 0.3s ease;
+    }
+    main .main_center .main_center_box:nth-child(1) {
+        height: 640px;
+        background-image: url(./image/hero_iphone13pro_avail__iy77cld0zwii_small\ \(1\).jpg);
+        background-position: 50% 0%;
+        background-repeat: no-repeat;
+    }
+    main .main_center .main_center_box:nth-child(2) {
+        height: 640px;
+        background-image: url(./image/hero_iphonese_avail__eg8srhcnpo66_large.jpg);
+        background-position: 40% 0%;
+        background-size: 400% 100%;
+        background-repeat: no-repeat;
+    }
+    main .main_center .main_center_box:nth-child(2)>div>h2::after {
+        content: "";
+        position: absolute;
+        right: -8px;
+        width: 46px;
+        height: 38px;
+        border: 3px solid #000000;
+        border-radius: 10px;
+    }
+    main .main_center .main_center_box:nth-child(3) h2,
+    main .main_center .main_center_box:nth-child(2) h2,
+    main .main_center .main_center_box:nth-child(1) h2 {
+        font-size: 32px;
+    }
+    main .main_center .main_center_box:nth-child(3) h3,
+    main .main_center .main_center_box:nth-child(2) h3,
+    main .main_center .main_center_box:nth-child(1) h3 {
+        font-size: 20px;
+    }
+    main .main_bottom .all_bottom .main_bottom_box .div_box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 500px;
+        padding: 5px;
+        box-sizing: border-box;
+        /* background-color: #8898a8; */
+    }
+}
+
+.change {
+    position: absolute;
+    align-items: flex-start;
+    top: 40px;
+    left: 0;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #000;
+}
+
+.change>.menu {
+    /* background-color: #c4c4c479; */
+    cursor: pointer;
+}
+
+header nav>div>section>.menu_change>span:nth-child(1) {
+    transform: translateY(5px) rotate(45deg);
+}
+
+header nav>div>section>.menu_change>span:nth-child(2) {
+    transform: translateY(-5px) rotate(-45deg);
+}

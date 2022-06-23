@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+        }
+        div{
+            height: 100%;
+            width: 200px;
+            background: grey;
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            /* transform: translateX(-200px); */
+            transform: translateX(-100%);
+            /* -100%是相对于自身宽度的大小 */
+            animation: run 1s linear;
+
+            animation-fill-mode: forwards;
+            /*
+            none 默认值
+            forwards   保留最后一帧
+            backwaards 保留初始
+            */
+        }
+        @keyframes run {
+            from{
+                transform: translateX(-100%);
+            }
+            to{
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

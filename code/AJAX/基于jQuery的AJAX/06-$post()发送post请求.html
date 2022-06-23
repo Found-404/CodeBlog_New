@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jQuery-min.js"></script>
+</head>
+
+<body>
+    <script>
+        // $.post(url,[data],[callback])
+        // url          字符串型    必须    提交数据的地址
+        // data         Object      非必须  要提交的数据
+        // callback     function    非必须  数据提交成功的回调函数
+
+        $.post('https://www.baidu.com/', function (res) {
+            console.log(res);
+        })
+        $.post('https://www.baidu.com/', (res) => {
+            console.log(res);
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 给具有class属性的全部加上[class] */
+        /* 空格不能随便加 */
+        div[class]{
+            background-color: yellow;
+        }
+        p[class]{
+            background-color: red;
+        }
+
+        /* 完全匹配 仅仅box会被选中 */
+        /* div[class=box1]{
+            border: 1px solid blue;
+        } */
+
+        /* 包含就匹配 指含有box1的就赋予其属性 */
+        div[class~=box1]{
+            border: 1px solid blue;
+        }
+        input[name]{
+            background-color: yellow;
+        }
+        input[type=email]{
+            background-color: red;
+        }
+        
+    /* 模糊匹配
+        class^=b 以b开头
+        class$=b 以b结尾
+        class*=b 包含b的 */
+
+        div[class^=b]{
+            color: green;
+        }
+        div[class$="3"]{
+            color: red;
+        }
+        div[class$="3"],div[class*=o]{
+            color: red;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box1">div-1111</div>
+    <div class="box2">div-2222</div>
+    <div>div-3333</div>
+    <div class="box1">div-4444</div>
+    <div class="box1 box3">div-5555555</div>
+    <p class="p1">p-1111</p>
+    <p class="p1">p-2222</p>
+    <p>p-3333</p>
+
+    <div>
+        <h1>注册页面</h1>
+        用户名:<input type="text" name="username"><br>
+        密码:<input type="password" name="password"><br>
+        年龄:<input type="number" name="number"><br>
+        邮箱:<input type="email">
+    </div>
+</body>
+</html>

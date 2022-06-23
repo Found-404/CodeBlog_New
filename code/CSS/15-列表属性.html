@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .p{
+            list-style-type: disc;/*默认实心圆*/
+            list-style-type: circle;/*空心圆*/
+            list-style-type: square;/*实心圆*/
+            /* list-style-type: none;不显示 */
+            
+            list-style-image: url(../列表.png);
+
+        }
+        li{
+            border: 1px solid red;
+            list-style-position: inside;
+        }
+        .box{
+            list-style: none url(../列表.png) inside;
+            /* 复合属性 */
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="p">
+        <li>1111</li>
+        <li>2222</li>
+        <li>3333</li>
+    </ul>
+    <ul class="box">
+        <li>444</li>
+        <li>555</li>
+        <li>666</li>
+    </ul>
+</body>
+
+</html>

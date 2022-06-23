@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            padding: 10px;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        内容内容内容内容内容内容 内容内容内容内容内容内容 内容内容内容内容内容内容 内容内容内容内容内容内容 内容内容内容内容内容内容 内容内容内容内容内容内容 内容内容内容内容内容内容 内容内容内容内容内容内容 内容内容内容内容内容内容 内容内容内容内容内容内容 内容内容内容内容内容内容 内容内容内容内容内容内容 内容内容内容内容内容内容 内容内容内容内容内容内容
+    </div>
+    <script>
+        // scroll 系列
+        var div = document.querySelector('div');
+        console.log(div.scrollHeight); //所有内容高度 不包含边框 包含padding
+        console.log(div.clientHeight); //可视内容高度
+
+        // scroll 滚动事件
+        div.addEventListener('scroll', function() {
+            console.log(div.scrollTop);
+            // scrollTop就是滚动条向下滚动上面被隐藏部分的高度
+        });
+    </script>
+</body>
+
+</html>

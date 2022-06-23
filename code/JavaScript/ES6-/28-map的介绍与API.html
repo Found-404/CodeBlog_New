@@ -1,0 +1,58 @@
+<!--
+ * @Author: error: git config user.name && git config user.email & please set dead value or install git
+ * @Date: 2022-06-02 10:26:32
+ * @LastEditors: error: git config user.name && git config user.email & please set dead value or install git
+ * @LastEditTime: 2022-06-02 10:46:53
+ * @FilePath: \code\code\JavaScript\ES6-\28-map的介绍与API.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 声明Map
+        // 就是升级版对象 可以自定义key值和属性值
+        let m = new Map();
+        // .set方法添加元素 ('key值','属性值')
+        m.set('name', '123');
+        m.set('change', function() {
+            console.log('456');
+        });
+        console.log(m);
+        var abc = {
+            name: '789'
+        };
+        m.set(abc, [7, 8, 9]);
+        console.log(m);
+
+        // .size方法获取长度
+        console.log(m.size);
+
+        // 删除方法
+        m.delete('name');
+        console.log(m);
+
+        // 获取方法
+        console.log(m.get('change'));
+        console.log(m.get(abc)); //[7,8,9]
+
+        // 清空
+        // m.clear();
+        // console.log(m);
+
+        // 遍历
+        for (const v of m) {
+            console.log(v);
+        }
+    </script>
+</body>
+
+</html>

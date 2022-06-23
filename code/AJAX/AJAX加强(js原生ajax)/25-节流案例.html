@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lib/jquery.js"></script>
+    <style>
+         :root,
+        html {
+            margin: 0px;
+            padding: 0px;
+            overflow: hidden;
+        }
+        
+        img {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="../loadingImgGif/20140524124233131.gif" alt="" width="20px" id="img">
+</body>
+<script>
+    $(function() {
+        // 获取到图片
+        var angel = $('#img');
+        // 绑定鼠标事件
+        // 定义节流阀
+        var flag = null;
+        $(document).on('mousemove', function(e) {
+            // 开启定时器
+            if (flag) {
+                return;
+            }
+            flag = setTimeout(function() {
+                $(angel).css('top', e.pageY - 15 + 'px').css('left', e.pageX - 15 + 'px');
+                // 打开节流阀
+                flag = null;
+            }, 16);
+        });
+    })
+</script>
+
+</html>

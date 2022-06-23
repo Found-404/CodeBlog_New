@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        
+        .change {
+            background-color: black;
+            color: #fff;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="first">文本内容</div>
+    <script>
+        //1.获取元素
+        var div = document.querySelector('div');
+        //2.注册事件 处理程序
+        div.onclick = function() {
+            // this.style.backgroundColor = 'black';
+            // this.style.color = '#fff';
+            // this.style.fontSize = '25px';
+            // 当前元素的类名class改为了'change'
+
+            this.className = 'change';
+            // 会直接更改 覆盖原先的class类名
+
+            //如果想要保留原先的类名 可以如下做法
+            this.className = 'first change';
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+ul{
+    list-style: none;
+}
+.con{
+    width: 966px;
+    margin: 0 auto;
+}
+.header{
+    
+    height: 110px;
+    /* background-color: yellow; */
+    
+}
+.logo{
+    width: 265px;
+    height: 110px;
+    background: url(logo.png);
+    float: left;
+}
+.headerright{
+    float: right;
+}
+.headerright ul{
+    height: 44px;
+    margin-top: 10px;
+    line-height: 44px;
+}
+.headerright li{
+    float: left;
+}
+.headerright li a{
+    border-right: 1px solid #b2c7ea;
+    padding: 0px 13px;
+    font-size: 13px;
+    color: #b2c7ea;
+}
+.headerright .last{
+    padding-right: 0px;
+    border:0px;
+}
+.headerright li .avtive{
+    color: #eb6ca1;
+}
+.search{
+    float: right;
+    width: 234px;
+    height: 28px;
+    border:1px solid #d1d1d1;
+}
+.search input{
+    border:0px;
+    outline: none;
+}
+.search .left{
+    width: 196px;
+    float: left;
+    height: 28px;
+    padding-left: 14px;
+}
+.search .right{
+    float: right;
+    width: 24px;
+    height: 28px;
+    background: url(搜索.png) no-repeat left center;
+}
+.nav{
+    height: 53px;
+    line-height:53px;
+    border-top: 1px solid #657588;
+    background: #0c345c;
+    color: white;
+}
+.nav li{
+    float: left;
+    font-size: 16px;
+    margin-right: 76px;;
+}
+.banner {
+    height: 380px;
+    background: url(大图-1.png) center;
+}
+.list{
+    height: 213px;
+    /* background: yellow; */
+    margin-top: 51px;
+    margin-bottom:35px; 
+}
+.item{
+    height: 211px;
+    width: 305px;
+    border: 1px solid #cccccc;
+    float: left;
+    margin-right: 19px;
+}
+.item p{
+    height: 67px;
+    line-height: 65px;
+    padding-left: 28px;
+    /* text-align: center; */
+    font-size: 16px;
+    color: #000;
+}
+.item img{
+    display: block;
+}
+.itemlast{
+    margin-right: 0;
+}
+.fooder{
+    height: 206px;
+    border-top: 1px solid #cccccc;
+}
+
+.fooder ul{
+    height: 84px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ecebeb;
+    line-height: 28px;
+}
+.fooder ul li{
+    width: 210px;
+    padding-left: 30px;
+    font-size: 12px;
+    color: #336699;
+    float: left;
+}
+.fooder p{
+    height: 61px;
+    line-height: 61px;
+    padding-left: 30px;
+    font-size: 12px;
+}
+.fooder p spen{
+    color: #0096da;
+}

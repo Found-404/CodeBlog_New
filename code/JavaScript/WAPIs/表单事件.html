@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="box">
+        <div>
+            <input type="text" onfocus="focusFn()" placeholder="获取焦点">
+        </div>
+        <div>
+            <input type="text" onblur="blurFn()" placeholder="失去焦点">
+        </div>
+        <div>
+            <select>
+					<option value="01">p1</option>
+					<option value="02" selected>p2</option>
+					<option value="03">p3</option>
+					<option value="04">p4</option>
+			</select>
+        </div>
+        <div>
+            <input type="text" oninput="inputFn(this)" placeholder="输入时触发">
+            <h2 class="h2"></h2>
+        </div>
+        <div>
+            <input type="text" onselect="selectFn(this)" placeholder="选择时触发">
+        </div>
+
+        <form onsubmit="submitFn()" onreset="resetFn()">
+            <input type="submit" value="提交" />
+            <input type="reset" value="重置" />
+        </form>
+
+    </div>
+
+    <script type="text/javascript">
+        // 获取焦点
+        function focusFn() {
+            console.log("获取焦点");
+        }
+
+        // 失去焦点
+        function blurFn() {
+            console.log("失去焦点了");
+        }
+
+        // onchange
+        var sel = document.querySelector("select");
+        sel.onchange = function() {
+            console.log(this.value);
+        }
+
+        // 输入时触发
+        let h2 = document.querySelector('h2');
+
+        function inputFn(self) {
+            console.log(self.value);
+            h2.innerHTML = self.value;
+        }
+
+        // 选择时触发
+        function selectFn(self) {
+            console.log(self.value);
+        }
+
+        // 提交时触发
+        function submitFn() {
+            console.log('提交了');
+        }
+
+        // 重置时触发
+        function resetFn() {
+            console.log('重置了');
+        }
+    </script>
+
+</body>
+
+</html>

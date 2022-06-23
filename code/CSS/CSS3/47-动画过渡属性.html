@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            transition:all 1s linear 1s;
+            /*
+              all    所有的属性
+              2s     动画时间
+              linear 匀速
+              2s     延迟
+              
+              除了display:none / block 属性无法支持
+            */
+        }
+        .box1:hover{
+            height: 600px;
+            background-color: yellow;
+
+        }
+
+        .box2{
+            width: 200px;
+            height: 50px;
+            background-color: yellow;
+            border: 1px solid gray;
+            margin-top: 20px;
+        }
+        .box2 ul{
+            /* display: none; */
+            margin-top: 50px;
+            transition: all 1s;
+            height: 0px;      /*设置高度为0*/
+
+            overflow: hidden; /*将溢出部分隐藏*/
+        }
+        .box2:hover ul{
+            /* display: block; */
+            height: 200px;    /*移入之后高度变换*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+
+    <div class="box2">
+        我的菜单
+        <ul>
+            <li>1111</li>
+            <li>2222</li>
+            <li>3333</li>
+            <li>4444</li>
+            <li>5555</li>
+        </ul>
+    </div>
+</body>
+</html>

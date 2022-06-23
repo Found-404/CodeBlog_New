@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        textarea{
+            width: 300px;
+            height: 300px;
+            resize: none;
+            /* resize重新设置大小 
+               vertical垂直方向
+               horizontal水平方向
+               both所有方向
+               none都不
+            */
+        }
+    </style>
+</head>
+<body>
+    <h1>多行文本输入框-文本域</h1>
+    <div>
+        <!--(字符的) cols列数  rows行数 多用css控制行列 
+        
+        placeholder预置文本 提示文字
+            
+        默认value：写在双标签内部 注意空格问题          
+        -->
+        <input type="text" value="aaaa">
+        <br>
+        <textarea name="" id="" cols="10" rows="10" placeholder="请输入你的意见">提前设置好的value</textarea>
+    </div>
+</body>
+</html>

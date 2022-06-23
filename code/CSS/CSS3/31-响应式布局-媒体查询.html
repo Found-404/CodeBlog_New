@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+        }
+        body{
+            background: yellow;
+        }
+        /* screen是针对电脑移动端设备也可以写成all */
+        /* 在1000px以上是黄色 */
+        @media screen and (min-width:1000px){
+            body{
+            background: yellow;
+            }
+        }
+        /* 在1000px-500px是红色 */
+        @media screen and (max-width:1000px) and (min-width:500px){
+            body{
+            background: red;
+            }
+        }
+        /* 在500px以下为绿色 */
+        @media screen and (max-width:500px){
+            body{
+            background: green;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!--
+ * @Author: error: git config user.name && git config user.email & please set dead value or install git
+ * @Date: 2022-05-31 14:13:26
+ * @LastEditors: error: git config user.name && git config user.email & please set dead value or install git
+ * @LastEditTime: 2022-06-01 19:04:29
+ * @FilePath: \code\code\JavaScript\ES6-\22-Promise介绍与基本使用.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //实例化 Promise 对象
+        //Promise 是异步编程的一种解决方案，其实是一个构造函数，自己身上有all、reject、resolve这几个方法
+        //原型上有then、catch等方法。
+
+        // p的状态有 初始化 成功 失败
+        const p = new Promise(function(resolve, reject) {
+            // 封装异步操作
+            setTimeout(function() {
+                //
+                // let date = '数据库中用户数数据';
+                // resolve
+                // resolve(date);
+
+                let err = '数据调用失败';
+                reject(err);
+            }, 1000);
+        });
+
+        // 调用 promise 对象的then方法中传入的两个形参都是函数类型
+        // 第一个值为成功执行 第二个为失败执行 唯一性
+        // 如果p为成功则执行第一个函数形参,失败误则执行第二个函数形参
+        // 配合node.js使用
+        p.then(function(value) {
+            //成功执行
+            console.log(value);
+        }, function(reason) {
+            //失败执行
+            console.error(reason);
+        });
+
+
+        // 实例二
+        // let q = new Promise((resolve, reject) => {
+        //     //做一些异步操作
+        //     setTimeout(function() {
+        //         var num = Math.ceil(Math.random() * 10); //生成1-10的随机数
+        //         if (num <= 5) {
+        //             resolve(num);
+        //         } else {
+        //             reject('数字太大了');
+        //         }
+        //     }, 2000);
+        // });
+        // q.then((data) => {
+        //     console.log('resolved', data);
+        // }, (err) => {
+        //     console.log('rejected', err);
+        // });
+    </script>
+</body>
+
+</html>

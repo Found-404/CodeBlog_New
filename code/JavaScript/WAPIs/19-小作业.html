@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        div input {
+            width: 100px;
+            height: 30px;
+            border: 1px solid blue;
+            outline: none;
+            color: gray;
+            margin-left: 20px;
+        }
+        
+        .box {
+            width: 74px;
+            height: 88px;
+            position: relative;
+            border: 1px solid #ccc;
+            margin: 100px auto;
+            font-size: 12px;
+            text-align: center;
+            color: #f40;
+        }
+        
+        .box img {
+            width: 60px;
+            margin-top: 5px;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: -1px;
+            left: -16px;
+            width: 14px;
+            height: 14px;
+            border: 1px solid #ccc;
+            line-height: 14px;
+            cursor: pointer;
+        }
+        
+        ul li {
+            display: block;
+            width: 100px;
+            border: 1px solid black;
+        }
+        
+        ul .l2 {
+            display: none;
+            position: absolute;
+            background: white;
+        }
+        
+        .guanDeng {
+            background: black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 1.世纪佳缘用户名 显示隐藏内容 -->
+    <div>
+        <input type="text" value="用户名" class="shuRu">
+    </div>
+
+    <!-- 2.京东关闭广告 -->
+    <div class="box">
+        <img src="../../CSS/touxiang.png" alt="">
+        <i class="close-btn">X</i>
+    </div>
+
+    <!-- 3.新浪下拉菜单 -->
+    <ul>
+        <li class="l1">01</li>
+        <li class="l2">02</li>
+
+    </ul>
+
+    <!-- 4.关灯效果 -->
+    <button class="deng">关灯</button>
+
+
+    <script>
+        // 1.
+        var text = document.querySelector('input');
+        // 获得焦点
+        text.onfocus = function() {
+            if (this.value === '用户名') {
+                this.value = '';
+            }
+            this.style.border = '1px solid pink';
+            this.style.color = 'black';
+        }
+
+        // 失去焦点
+        text.onblur = function() {
+            if (this.value === '') {
+                this.value = '用户名';
+                this.style.color = 'gray';
+            }
+            this.style.border = '1px solid blue';
+        }
+
+        // 2.京东关闭广告
+        var btn = document.querySelector('.close-btn');
+        var box = document.querySelector('.box');
+        btn.onclick = function() {
+            box.style.display = 'none';
+        }
+
+        // 3.新浪下拉菜单
+        var l1 = document.querySelector('.l1');
+        var l2 = document.querySelector('.l2');
+        var flag = 0;
+        // onmouseover鼠标悬停
+        l1.onmouseover = function() {
+            l2.style.display = 'block';
+        }
+        l2.onmouseover = function() {
+            l2.style.display = 'block';
+        }
+
+        // onmouseover鼠标移出
+        l1.onmouseout = function() {
+            l2.style.display = 'none';
+        }
+        l2.onmouseout = function() {
+            l2.style.display = 'none';
+        }
+
+        // 4.关灯效果
+        var deng = document.querySelector('.deng');
+        var yeMian = document.querySelector('body');
+        var fn = 0;
+        deng.onclick = function() {
+            if (fn == 0) {
+                yeMian.className = 'guanDeng';
+                this.innerHTML = '开灯';
+                fn = 1;
+            } else {
+                yeMian.className = '';
+                this.innerHTML = '关灯';
+                fn = 0;
+            }
+        }
+    </script>
+</body>
+
+</html>

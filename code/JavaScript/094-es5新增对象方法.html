@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. Object.keys(obj)用于获取对象自身所有属性
+        var obj = {
+            id: 1,
+            pname: '小米',
+            price: 1999,
+            num: 2000
+        };
+        // 属性名被放在数组中
+        var arr = Object.keys(obj);
+        console.log(arr);
+
+        // 利用forEach遍历arr数组
+        arr.forEach(function(value) {
+            console.log(value);
+        });
+
+        // 2.Object.defineProperty()定义新属性或修改原属性
+        // 旧的修改和新增属性方法
+        // obj.sum = 3000;
+        // obj.price = 2999;
+        //----------------------------------
+        // Object.defineProperty(obj, prop, descriptor)
+        // obj:       必须,目标对象
+        // prop:      必须,需定义或修改的属性的名字
+        // descriptor:必须,目标属性所拥有的特性
+        Object.defineProperty(obj, 'sum', {
+            value: 2222, // 没有属性就添加
+            enumerable: true,
+        });
+        console.log(obj);
+
+        Object.defineProperty(obj, 'price', {
+            value: 9.9 // 有属性就修改
+        });
+        console.log(obj);
+
+        Object.defineProperty(obj, 'id', {
+            //  writable不允许修改这个属性
+            writable: false,
+            // true可修改
+            // false默认不可修改
+        });
+        obj.id = 2; // 无效 无法修改
+        console.log(obj);
+
+        Object.defineProperty(obj, 'address', {
+            value: '中国',
+            writable: false,
+            // enumerable是否允许遍历该属性
+            enumerable: false,
+            //默认false不允许
+
+            // configurable是否允许被删除或修改特性
+            configurable: false,
+        });
+        console.log(obj);
+        console.log(Object.keys(obj)); //遍历obj属性名
+        delete obj.address; //删除address 无效
+        console.log(obj);
+        delete obj.pname; //删除pname 有效
+        console.log(obj);
+    </script>
+</body>
+
+</html>

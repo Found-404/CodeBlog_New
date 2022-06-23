@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 600px;
+            height: 600px;
+            border: 5px solid gray;
+            display: grid;
+            grid-template-rows: 200px 180px 180px;
+            grid-template-columns: 200px 180px 180px;
+            /* 写法1 */
+            /* grid-row-gap: 20px;
+            行间距
+            grid-column-gap: 20px;
+            列间距                  */
+            /* 写法2 */
+            /* grid-gap: 20px 20px; */
+            /* 写法3 */
+            row-gap: 20px;
+            column-gap: 20px;
+        }
+        .box div{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+</body>
+</html>

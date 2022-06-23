@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百度一下，你就知道</title>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <style>
+        * {
+            /* 清除默认属性 */
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        
+        body {
+            height: 100vh;
+            /* display: flex; */
+            position: relative;
+        }
+        
+        a {
+            /* a标签字体颜色 */
+            color: #222;
+        }
+        
+        header {
+            /* 头部栏 */
+            height: 60px;
+            font-size: 13px;
+            /* 字体大小 */
+            padding-left: 24px;
+            /* 左内边距 */
+            display: flex;
+            /* 转换为弹性盒子 */
+            justify-content: space-between;
+            /* 布局方式 */
+        }
+        
+        header li,
+        ul {
+            display: inline-block;
+            /* 转换为行内块元素 */
+        }
+        
+        header li {
+            margin: 19px 24px 0px 0px;
+            /* 设置每个li的外边距 */
+        }
+        /* 设置登录按钮样式 */
+        
+        .dengLu {
+            text-align: center;
+            /* 文字居中 */
+            line-height: 24px;
+            /* 行高 */
+            color: #fff;
+            width: 48px;
+            height: 24px;
+            display: inline-block;
+            background-color: #4e6ef2;
+            border-radius: 5px;
+            /* 圆角 */
+        }
+        /* 图片设置 */
+        
+        .big_logo {
+            display: block;
+            /* 转换为块级元素 */
+            width: 280px;
+            /* 设置大小 */
+            margin: -30px auto;
+            /* 设置边距 */
+        }
+        /* 搜索框设置 */
+        
+        .textBox {
+            width: 650px;
+            height: 44px;
+            border: 2px solid #c4c7ce;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 40px auto;
+        }
+        /* 搜索框内按钮设置 */
+        
+        .textBox span {
+            display: inline-block;
+            width: 100px;
+            height: 100%;
+            background-color: #4e6ef2;
+            color: #fff;
+            font-size: 17px;
+            text-align: center;
+            line-height: 44px;
+            float: right;
+        }
+        /* 输入框样式 */
+        
+        input {
+            width: 500px;
+            height: 100%;
+            margin-left: 10px;
+            border: none;
+            font-size: 18px;
+        }
+        
+        section {
+            position: absolute;
+            width: 800px;
+            height: 413px;
+            background-color: #fff;
+            /* display: none; */
+            box-shadow: 2px 2px 10px -4px black;
+            transform: scale(0);
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            border-radius: 10px;
+            /* display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-sizing: border-box; */
+            transition: all 0.4s cubic-bezier(.24, .22, .015, 1.56);
+            display: grid;
+            opacity: 0.8;
+        }
+        
+        section span {
+            display: block;
+            width: 100%;
+            height: 20px;
+            text-align: end;
+            line-height: 20px;
+            float: right;
+            font-weight: bold;
+        }
+        
+        .textBox {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        header ul:first-child li:hover a {
+            color: #4e6ef2;
+        }
+        
+        header>ul>nav {
+            position: relative;
+            width: 250px;
+            /* height: 300px; */
+            background-color: #fff;
+            top: 3px;
+            left: 40%;
+            z-index: 10000;
+            box-shadow: 0px 0px 10px -4px black;
+            border-radius: 20px;
+            /* visibility: hidden; */
+            transform: scale(0);
+            transition: all 0.3s ease;
+            transform-origin: 90% top;
+        }
+        
+        header ul {
+            transition: all 0.5s ease;
+        }
+        
+        header ul:hover #box {
+            transform: scale(1);
+        }
+        
+        header ul #box ul {
+            width: 100%;
+            height: 250px;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            justify-items: center;
+            align-items: center;
+        }
+        
+        header ul #box ul>li {
+            margin: 0;
+            width: 70px;
+            height: 70px;
+            border-radius: 10px;
+            font-size: 50px;
+            color: #888888;
+            text-align: center;
+            line-height: 80px;
+            transition: all 0.5s ease;
+        }
+        
+        header ul #box ul>li:hover {
+            background-color: #c4c7ce;
+            color: #fff;
+            box-shadow: 0px 0px 5px -2px black inset;
+        }
+        
+        header .right #box2 {
+            position: absolute;
+            top: 18px;
+            left: -25px;
+            width: 80px;
+            /* background-color: #222; */
+            box-shadow: 0px 0px 5px -2px black;
+            padding: 10px 0px;
+            border-radius: 10px;
+            visibility: hidden;
+        }
+        
+        header .right #box2>li {
+            margin: 0;
+            width: 100%;
+            height: 25px;
+            text-align: center;
+            line-height: 25px;
+        }
+        
+        header .right:hover #box2 {
+            visibility: visible;
+        }
+        
+        header .right #box2 li:hover a {
+            color: #4e6ef2;
+        }
+        
+        .news {
+            width: 650px;
+            margin: auto;
+        }
+        
+        main>nav {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        main>nav>a {
+            display: flex;
+        }
+        
+        main>ul {
+            /* height: 80px; */
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: repeat(2 300px);
+            grid-auto-flow: column;
+            justify-content: space-between;
+            row-gap: 10px;
+        }
+        
+        main>ul>li {
+            width: 230px;
+            height: 26.6px;
+            line-height: 26px;
+        }
+        
+        main>ul>li span {
+            color: #fe2d46;
+            font-size: 20px;
+            margin-right: 5px;
+        }
+        
+        .bg {
+            width: 100vw;
+            height: 100vh;
+            background-color: #888888;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.5;
+            z-index: 100;
+            display: none;
+        }
+        
+        section>span {
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+        }
+        
+        section>span>p {
+            display: inline-block;
+            width: 94px;
+            height: 30px;
+            /* border: 1px solid; */
+            margin: 30px 0px 0px 30px;
+            background-image: url(../案例/百度images/newloginlogo.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        section>main {
+            width: 100%;
+            height: 330px;
+            display: grid;
+            /* grid-template-rows: 1fr 1fr 1fr; */
+            grid-template-columns: 1fr 1fr;
+            border-bottom: 2px solid #f6f2f2;
+        }
+        
+        section>main>nav:nth-child(1) {
+            /* height: 330px; */
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: flex-start;
+            border-right: 2px solid #f6f2f2;
+            padding-top: 80px;
+        }
+        
+        section>main>nav:nth-child(1)>div {
+            font-size: 18px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        section>main>nav:nth-child(1)>div>a {
+            display: inline-block;
+            width: 140px;
+            /* height: 34px; */
+            line-height: 34px;
+            background: #f5f5f6;
+            border-radius: 8px;
+            color: #4e6ef2;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* flex-direction: column; */
+            position: relative;
+        }
+        
+        section>main>nav:nth-child(1)>div>a>div {
+            width: 338px;
+            height: 258px;
+            background: #fff;
+            position: absolute;
+            box-sizing: border-box;
+            top: -261px;
+            left: -95px;
+            border-radius: 12px;
+            box-shadow: 0 0 5px 1px rgb(0 0 0 / 15%);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            visibility: hidden;
+        }
+        
+        section>main>nav:nth-child(1)>div>a:hover>div {
+            visibility: visible;
+        }
+        
+        section>main>nav:nth-child(1)>div>a>div>img {
+            border: 2px solid #c7c7c7;
+            padding: 10px;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+        
+        section>main>nav:nth-child(1)>div>a>div>p {
+            color: #222;
+        }
+        
+        section>main>nav:nth-child(2) {
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: flex-start;
+        }
+        
+        section>main>nav:nth-child(2)>p {
+            display: flex;
+            width: 100%;
+            justify-content: stretch;
+            margin-left: 30px;
+        }
+        
+        section>main>nav:nth-child(2)>p>span {
+            height: 100%;
+            width: 75px;
+            display: inline-block;
+            text-align: center;
+            line-height: 32.25px;
+            font-size: 18px;
+            margin-right: 40px;
+        }
+        
+        .border_bottom {
+            border-bottom: 3px solid #4e6ef2;
+        }
+        
+        section>main>nav:nth-child(2)>div {
+            width: 336px;
+            height: 48px;
+            border: 2px solid #c4c7ce;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        
+        section>main>nav:nth-child(2)>div>input {
+            margin: 0;
+            width: 100%;
+            outline: none;
+            padding-left: 10px;
+        }
+        
+        section>main>nav:nth-child(2)>footer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+        }
+        
+        section>main>nav:nth-child(2)>footer>a {
+            width: 80px;
+            margin: 0 0 0 auto;
+            font-size: 14px;
+            color: #4e6ef2;
+            margin-bottom: 10px;
+        }
+        
+        section>main>nav:nth-child(2)>footer>div>button {
+            width: 336px;
+            height: 48px;
+            line-height: 48px;
+            background: #4e6ef2;
+            border-radius: 10px;
+            box-shadow: 0 6px 16px 0 rgb(78 111 242 / 30%);
+            font-size: 17px;
+            font-weight: 800;
+            border: 0;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        section>main>nav:nth-child(2)>footer>nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        section>main>nav:nth-child(2)>footer>nav>a {
+            color: #4e6ef2;
+        }
+        
+        section>footer {
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+        }
+        
+        section>footer>nav {
+            display: flex;
+            justify-content: center;
+            margin-left: 40px;
+            align-items: center;
+        }
+        
+        section>footer>nav>img {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        
+        section>footer>a {
+            margin-right: 20px;
+            width: 80px;
+            height: 65px;
+            color: #4e6ef2;
+            line-height: 65px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li><a href="javaScript:;">新闻</a></li>
+            <li><a href="javaScript:;">hao123</a></li>
+            <li><a href="javaScript:;">地图</a></li>
+            <li><a href="javaScript:;">贴吧</a></li>
+            <li><a href="javaScript:;">视频</a></li>
+            <li><a href="javaScript:;">图片</a></li>
+            <li><a href="javaScript:;">网盘</a></li>
+            <li><a href="javaScript:;" class="more_Menus">更多</a></li>
+            <nav id="box">
+                <ul>
+                    <li>
+                        <ion-icon name="alarm"></ion-icon>
+                    </li>
+                    <li>
+                        <ion-icon name="logo-youtube"></ion-icon>
+                    </li>
+                    <li>
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </li>
+                    <li>
+                        <ion-icon name="logo-steam"></ion-icon>
+                    </li>
+                    <li>
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </li>
+                    <li>
+                        <ion-icon name="logo-twitch"></ion-icon>
+                    </li>
+                    <li>
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </li>
+                    <li>
+                        <ion-icon name="logo-google"></ion-icon>
+                    </li>
+                    <li>
+                        <ion-icon name="add-circle"></ion-icon>
+                    </li>
+                </ul>
+            </nav>
+        </ul>
+        <ul class="right">
+            <li style="position: relative;">
+                <a href="javaScript:;" id="fit">
+                    <p>设置</p>
+                    <ul id="box2">
+                        <li><a href="#">搜索设置</a></li>
+                        <li><a href="#">高级搜索</a></li>
+                        <li><a href="#">关闭预测</a></li>
+                        <li><a href="#">隐私设置</a></li>
+                        <li><a href="#">关闭热搜</a></li>
+                    </ul>
+                </a>
+            </li>
+            <li><a href="javaScript:;" class="dengLu">登录</a></li>
+        </ul>
+    </header>
+    <img src="./百度images/baidu.png" alt="" class="big_logo">
+    <div class="textBox">
+        <input type="text" style="outline: none;" placeholder="百度一下">
+        <ion-icon name="camera-outline" style="font-size: 25px; color: #888888;"></ion-icon>
+        <span class="baiDu" style="cursor: pointer;">百度一下</span>
+    </div>
+    <section>
+        <span>
+            <p></p>
+            <!-- <p class="guanBi" style="margin-right: 5px;width: 15px;border-right: 5px solid black;">X</p> -->
+            <ion-icon name="close-outline" class="guanBi" style="font-size: 30px;cursor: pointer;color: #adadad;"></ion-icon>
+        </span>
+        <main>
+            <nav>
+                <img src="./百度images/login-ewm.png" alt="" style="width: 138px; height: 138px;border: 2px solid #c4c7ce;padding: 10px;border-radius: 10px;">
+                <img src="./百度images/login-sm.png" alt="" style="width: 134px; height: 160px;margin-left: 20px;">
+                <div>
+                    <p>请使用百度APP扫码登陆</p>
+                    <a href="#">
+                        <img src="./百度images/baidu-download-icon.png" alt="" style="width: 20px; height: 21px;">
+                        <p style="font-size: 14px;">下载百度app</p>
+                        <div>
+                            <img src="./百度images/login-ewm.png" alt="" style="width: 148px; height: 148px;">
+                            <p>扫描二维码下载百度APP</p>
+                        </div>
+                    </a>
+                </div>
+
+            </nav>
+            <nav>
+                <p>
+                    <span class="border_bottom border" style="cursor: pointer;">账号登陆</span>
+                    <span class="border" style="cursor: pointer;">短信登陆</span>
+                </p>
+                <p style="color: #858585;font-weight: 400;margin: 11px 0px 10px 30px;font-size: 12px;" class="yanZheng">验证即登录，未注册将自动创建百度帐号</p>
+                <div>
+                    <input type="text" name="" id="top" placeholder="手机号/用户名/邮箱">
+                </div>
+                <div>
+                    <input type="password" name="" id="bottom" placeholder="密码" style="width: 200px;">
+                    <p style="display: inline-block; font-size: 16px;border-left: 1px solid #c7c7c7;padding-left: 20px;" class="faSong"><a href="#" style="color: #4e6ef2;">发送验证码</a href="#"></p>
+                </div>
+                <footer>
+                    <a href="#" class="password">忘记密码？</a>
+                        <div>
+                            <button>登录</button>
+                        </div>
+                        <nav style="font-size: 14px;">
+                            <p style="letter-spacing: 1px;">阅读并接受</p>
+                            <a href="#">百度用户协议</a>
+                            <p>和</p>
+                            <a href="#">隐私政策</a>
+                        </nav>
+                        </footer>
+            </nav>
+        </main>
+        <footer>
+            <nav>
+                <img src="./百度images/qq.png" alt="" style="width: 28px;height: 28px;">
+                <img src="./百度images/wb.png" alt="" style="width: 28px;height: 28px;">
+                <img src="./百度images/wx.png" alt="" style="width: 28px;height: 28px;">
+            </nav>
+            <a href="javaScript:;">立即注册</a>
+        </footer>
+    </section>
+    <nav class="bg"></nav>
+    <main class="news">
+        <nav>
+            <a href="#">
+                <p>百度热搜</p>
+                <ion-icon name="chevron-forward-outline" style="font-size: 20px;margin-left: 5px;"></ion-icon>
+            </a>
+
+            <a href="#">
+                <ion-icon name="reload-outline" style="font-size: 20px;margin-right: 10px;"></ion-icon>
+                <p>换一换</p>
+            </a>
+        </nav>
+        <ul>
+            <li><span>1</span><a href="#">没膝淤泥阻止不了搜寻的脚步</a></li>
+            <li><span>2</span><a href="#">没膝淤泥阻止不了搜寻的脚步</a></li>
+            <li><span>3</span><a href="#">没膝淤泥阻止不了搜寻的脚步</a></li>
+            <li><span>4</span><a href="#">没膝淤泥阻止不了搜寻的脚步</a></li>
+            <li><span>5</span><a href="#">没膝淤泥阻止不了搜寻的脚步</a></li>
+            <li><span>6</span><a href="#">没膝淤泥阻止不了搜寻的脚步</a></li>
+        </ul>
+    </main>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        var dengLu = document.querySelector('.dengLu');
+        var box = document.querySelector('section');
+        var guan = document.querySelector('.guanBi');
+        var baidu = document.querySelector('.baiDu');
+        var bg = document.querySelector('.bg');
+        var border = document.querySelectorAll('.border');
+        // 获取元素
+        // yanzheng
+        var yanZheng = document.querySelector('.yanZheng');
+        // 发送验证码
+        var faSong = document.querySelector('.faSong');
+        // 上input
+        var top = document.querySelector('#top');
+        // 下input
+        var bottom = document.querySelector('#bottom');
+        dengLu.onclick = function() {
+            bg.style.display = 'block';
+            box.style.transform = 'scale(1)';
+            box.style.opacity = '1';
+        }
+        baidu.onclick = function() {
+            bg.style.display = 'block';
+            box.style.transform = 'scale(1)';
+            box.style.opacity = '1';
+        }
+        guan.onclick = function() {
+            bg.style.display = 'none';
+            box.style.transform = 'scale(0)';
+            box.style.opacity = '0';
+        }
+        bg.onclick = function() {
+            bg.style.display = 'none';
+            box.style.transform = 'scale(0)';
+            box.style.opacity = '0';
+        };
+        // 蓝色底部border
+        // 排他思想
+        for (let i = 0; i < border.length; i++) {
+            border[i].onclick = function() {
+                // 清除所有class
+                for (let i = 0; i < border.length; i++) {
+                    border[i].className = 'border';
+                }
+                border[i].className = 'border border_bottom';
+            }
+        }
+    </script>
+</body>
+
+</html>

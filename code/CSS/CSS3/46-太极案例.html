@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        :root,body{
+            height: 100%;
+            background: linear-gradient(to top,#252525,#777777);
+        }
+        div{
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(white 50%,black 50%);
+            margin: 10px auto;
+            display: flex;
+            align-items: center;
+            border-radius: 50%;
+        }
+        div::before{
+            content: "";
+            display: block;  /*转换为块级元素*/
+            width: 250px;
+            height: 250px;
+            background:radial-gradient(white 25%,black 26%);
+            border-radius: 50%;
+        }
+        div::after{
+            content: "";
+            display: block; /*转换为块级元素*/
+            width: 250px;
+            height: 250px;
+            background:radial-gradient(black 25%,white 26%);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+
+</body>
+</html>

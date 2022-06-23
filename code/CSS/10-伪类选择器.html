@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+/*  
+    a:link{属性;属性值;}超链接的初始状态，
+    a:visited{属性:属性值}超链接被访问后的状态:
+    a:hover{属性:属性值}鼠标悬停，即鼠标划过超链接时的状态:
+    a:active{属性:属性值;}超链接被激活时的状态，即鼠标按下时超链接的状态 
+
+    link-visited-hover-active
+    !!! 顺序不能乱 !!!
+*/
+
+        /* 初始状态 */
+        a:link{
+            color: yellow;
+        }
+        /* 访问之后 */
+        a:visited{
+            color: red;
+        }
+        /* 鼠标移上去 */
+        a:hover{
+            color: royalblue;
+        }
+        /* 点击激活 */
+        a:active{
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <a href="http://www.baidu.com">百度</a>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!--
+ * @Author: error: git config user.name && git config user.email & please set dead value or install git
+ * @Date: 2022-02-21 16:51:26
+ * @LastEditors: error: git config user.name && git config user.email & please set dead value or install git
+ * @LastEditTime: 2022-06-02 11:57:14
+ * @FilePath: \code\code\JavaScript\079-super调用父类普通函数以及继承中属性方法查找原则.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // super 关键字调用父类普通函数
+        class Father {
+            say() {
+                return '我是爸爸';
+            }
+        }
+        class Son extends Father {
+            say() {
+                // console.log('我是son');
+                console.log(super.say() + '的儿子');
+                // super.say() 就是调用父类中的普通函数say()
+            }
+        }
+        var son = new Son();
+        son.say();
+        console.log(son);
+        // 继承中的属性和方法原则:就近原则
+        // 1.继承中，如果实例化子类输出-个方法， 先看子类有没有这个方法，如果有就先执行子类的
+        // 2.继承中，如果子类里面没有，就去查找父类有没有这个方法，如果有，就执行父类的这个方法(就近原则)
+    </script>
+</body>
+
+</html>

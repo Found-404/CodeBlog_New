@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="iconfont.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: grid;
+            height: 100%;
+            background: linear-gradient(to right, #ffc3ca, #bfe9ff);
+        }
+        
+        .box {
+            width: 95px;
+            height: 600px;
+            background: linear-gradient(to bottom, #000000, #424242);
+            align-self: center;
+            justify-self: center;
+            margin: 100px auto;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.6s ease;
+        }
+        
+        .box:hover {
+            width: 300px;
+        }
+        
+        .box .box-head {
+            width: 100%;
+        }
+        
+        .box .box-head .box-yuan {
+            width: 100%;
+            height: 48px;
+            /* background: coral; */
+        }
+        
+        .box .box-head .box-yuan div {
+            width: 10px;
+            height: 10px;
+            background: crimson;
+            float: left;
+            margin-top: 18px;
+            border-radius: 50%;
+        }
+        
+        .box .box-head .box-yuan div:nth-child(1) {
+            background: crimson;
+            margin-left: 23px;
+        }
+        
+        .box .box-head .box-yuan div:nth-child(2) {
+            background: yellow;
+            margin-left: 12px;
+        }
+        
+        .box .box-head .box-yuan div:nth-child(3) {
+            background: green;
+            margin-left: 12px;
+        }
+        
+        .box .box-head .touXiang {
+            height: 75px;
+            margin: 0px 15px;
+            border-bottom: 1px solid rgb(85, 85, 85);
+        }
+        
+        .box .box-head .touXiang span {
+            width: 142px;
+            display: block;
+            margin-left: 90px;
+            color: white;
+        }
+        
+        .box .box-head .touXiang .s1 {
+            font-size: 20px;
+        }
+        
+        .box .box-head .touXiang .s2 {
+            font-size: 25px;
+            font-weight: 700;
+        }
+        
+        .box .box-head .touXiang>img {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid gray;
+            margin-left: 6px;
+            float: left;
+        }
+        
+        .box .muLu {
+            width: 100%;
+            /* height: 400px; */
+            margin-top: 10px;
+        }
+        
+        .box .muLu .menu6 {
+            margin-bottom: 10px;
+            margin-left: 30px;
+            color: white;
+            font-weight: 500;
+            font-size: 15px;
+        }
+        
+        .box .muLu ul li {
+            transition: all 0.3s ease;
+        }
+        
+        .box .muLu ul li:hover {
+            /* height: 55px; */
+            border-left: 5px solid #f04141;
+        }
+        
+        .box .muLu ul li div {
+            height: 100%;
+            width: 260px;
+            margin-left: 16px;
+            border-radius: 10px;
+            line-height: 50px;
+            color: white;
+            align-items: center;
+            transition: all 0.5s ease;
+        }
+        
+        .box .muLu ul li div:hover {
+            background-color: rgb(46, 46, 46);
+        }
+        
+        .box .muLu ul li div:hover i {
+            filter: drop-shadow(0 0 5px #f04141)drop-shadow(0 0 10px #f04141)drop-shadow(0 0 15px #f04141);
+        }
+        
+        .box .muLu ul li div>i {
+            font-size: 25px;
+            margin-left: 20px;
+            margin-right: 100px;
+            transition: all 0.3s ease;
+        }
+        
+        .box:hover .muLu ul li div>i {
+            margin-right: 20px;
+        }
+        
+        .box .sever {
+            padding-top: 12px;
+            margin: 10px 15px;
+            border-top: 1px solid gray;
+        }
+        
+        .box .sever span {
+            margin: 10px 14px;
+            color: white;
+            font-weight: 500;
+            font-size: 15px;
+        }
+        
+        .box .sever ul {
+            width: 65px;
+            margin-top: 10px;
+            background-color: rgb(34, 34, 34);
+            border-radius: 10px;
+            transition: all 0.6s ease;
+            overflow: hidden;
+        }
+        
+        .box:hover .sever ul {
+            width: 265px;
+        }
+        
+        .box .sever ul li {
+            width: 265px;
+            border-radius: 10px;
+            transition: all 0.5s ease;
+        }
+        
+        .box .sever ul li:hover {
+            background-color: rgb(73, 73, 73);
+        }
+        
+        .box .sever ul li:hover i {
+            filter: drop-shadow(0 0 5px #f04141)drop-shadow(0 0 10px #f04141)drop-shadow(0 0 15px #f04141);
+        }
+        
+        .box .sever ul li div {
+            line-height: 50px;
+            color: white;
+            align-items: center;
+        }
+        
+        .box .sever ul li div>i {
+            font-size: 25px;
+            margin-left: 21px;
+            margin-right: 100px;
+            transition: all 0.4s ease;
+        }
+        
+        .box:hover .sever ul li div i {
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box-head">
+            <div class="box-yuan">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="touXiang">
+                <img src="https://avatars.githubusercontent.com/u/98320020?v=4" alt="" width="100%">
+                <span class="s1">Good Day</span>
+                <span class="s2">Found 404.</span>
+            </div>
+
+        </div>
+        <div class="muLu">
+            <div class="menu6">Menu</div>
+            <ul>
+                <li>
+                    <div><i class="iconfont icon-icon_shiyongwendang"></i>Dashboard</div>
+                </li>
+                <li>
+                    <div><i class="iconfont icon-xinxi"></i>Products</div>
+                </li>
+                <li>
+                    <div><i class="iconfont icon-bayonet-camera"></i>Campaigns</div>
+                </li>
+                <li>
+                    <div><i class="iconfont icon-biaoqing"></i>Sales</div>
+                </li>
+
+            </ul>
+        </div>
+        <div class="sever">
+            <span>Sever</span>
+            <ul>
+                <li>
+                    <div><i class="iconfont icon-yingyongzhongxin"></i>Software</div>
+                </li>
+                <li>
+                    <div><i class="iconfont icon-shezhi"></i>Chat</div>
+                </li>
+                <li>
+                    <div><i class="iconfont icon-fangdajing"></i>Intercom</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

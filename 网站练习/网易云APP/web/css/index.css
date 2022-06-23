@@ -1,0 +1,308 @@
+.top_Nav,
+.sheet_Top,
+.sheet_box,
+.sheetmain_Top {
+    display: flex;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+nav section:nth-child(1) div {
+    color: #fff;
+}
+
+nav section:nth-child(1) div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+nav section:nth-child(1) p {
+    color: red;
+}
+
+
+/* 轮播图部分 */
+
+main {
+    /* overflow: auto; */
+    margin-top: 45px;
+}
+
+main .scroll {
+    overflow: hidden;
+    width: 100vw;
+}
+
+main .scroll-View {
+    display: flex;
+    align-items: center;
+    gap: 0px 10px;
+    padding: 5px;
+    width: 500vw;
+    animation: swiperrun 10s linear infinite;
+}
+
+main .scroll-View a {
+    display: inline-block;
+    width: 97vw;
+    height: 200px;
+}
+
+
+/* 轮播动画属性 */
+
+@keyframes swiperrun {
+    0% {
+        transform: translateX(0px);
+    }
+    20% {
+        transform: translateX(0px);
+    }
+    30% {
+        transform: translateX(-99vw);
+    }
+    40% {
+        transform: translateX(-99vw);
+    }
+    50% {
+        transform: translateX(-199vw);
+    }
+    60% {
+        transform: translateX(-199vw);
+    }
+    70% {
+        transform: translateX(-299vw);
+    }
+    80% {
+        transform: translateX(-299vw);
+    }
+    90% {
+        transform: translateX(-398vw);
+    }
+    100% {
+        transform: translateX(-398vw);
+    }
+}
+
+
+/* top_Nav */
+
+main .top_Nav {
+    justify-content: space-around;
+    padding: 15px 8px 30px;
+}
+
+main .top_Nav section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    width: 48px;
+}
+
+main .top_Nav section .topNav_icon a {
+    width: 25px;
+    height: 25px;
+    color: #fff;
+}
+
+main .top_Nav section .topNav_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    background-color: red;
+}
+
+
+/* 精选歌单 */
+
+main .song_Sheet {
+    padding: 0px 10px;
+    margin-bottom: 30px;
+}
+
+main .song_Sheet .sheet_Top {
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+main .song_Sheet .sheet_Top p {
+    font-size: 1.6rem;
+}
+
+main .song_Sheet .sheet_Top a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 20px;
+    border: 1px solid #afafaf;
+    border-radius: 30px;
+    background-color: #fff;
+}
+
+main .song_Sheet .sheet_Bottom {
+    height: 140px;
+    overflow: hidden;
+}
+
+main .song_Sheet .sheet_box {
+    overflow: auto;
+    /* width: 370px; */
+    height: 150px;
+    gap: 0px 20px;
+}
+
+main .song_Sheet .sheet_Bottom .sheet_box section {
+    display: flex;
+    flex-direction: column;
+    gap: 9px 0px;
+}
+
+main .song_Sheet .sheet_Bottom .sheet_box section a:nth-child(2) p {
+    height: 30px;
+    width: 100px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+
+/* 他把故事唱成了歌 */
+
+main .song_SheetMain {
+    margin-bottom: 30px;
+}
+
+main .song_SheetMain .sheetmain_Top {
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+
+main .song_SheetMain .sheetmain_Top p {
+    font-size: 1.6rem;
+}
+
+main .song_SheetMain .sheetmain_Top a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px 5px;
+    width: 90px;
+    height: 20px;
+    border: 1px solid #afafaf;
+    border-radius: 30px;
+    background-color: #fff;
+}
+
+main .song_SheetMain .sheetmain_bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0px;
+    padding: 10px;
+}
+
+main .song_SheetMain .sheetmain_bottom section {
+    display: flex;
+    align-items: center;
+    gap: 0px 10px;
+}
+
+main .song_SheetMain .sheetmain_bottom section .sheetmain_Center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 45px;
+}
+
+main .song_SheetMain .sheetmain_bottom section .sheetmain_Center .top {
+    display: flex;
+    align-items: center;
+    gap: 0px 10px;
+}
+
+main .song_SheetMain .sheetmain_bottom section .sheetmain_Center .top p:nth-child(1) {
+    font-size: 1.5rem;
+}
+
+main .song_SheetMain .sheetmain_bottom section .sheetmain_Center .top p:nth-child(2) {
+    font-size: 1rem;
+    color: #484848;
+}
+
+main .song_SheetMain .sheetmain_bottom section .sheetmain_Center .bottom {
+    display: flex;
+    align-items: center;
+    gap: 0px 5px;
+}
+
+main .song_SheetMain .sheetmain_bottom section .sheetmain_Center .bottom p:nth-child(1) {
+    color: red;
+    width: 30px;
+    border: 1px solid red;
+    border-radius: 5px;
+    text-align: center;
+}
+
+main .song_SheetMain .sheetmain_bottom section .sheetmain_Center .bottom p:nth-child(2) {
+    color: #484848;
+}
+
+main .song_SheetMain .sheetmain_bottom section .sheetmain_Play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+    font-size: 3rem;
+    color: red;
+}
+
+
+/* 加载界面 */
+
+main .load {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px 10px;
+    width: 100vw;
+    height: 100px;
+    margin-bottom: 70px;
+}
+
+main .load .load_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    font-size: 2.5rem;
+    color: #afafaf;
+    animation: load linear 1.5s infinite;
+}
+
+main .load p {
+    color: #afafaf;
+}
+
+@keyframes load {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

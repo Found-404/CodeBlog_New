@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        /* 
+        390px = 100vw
+        1px = 0.25vw
+        */
+        
+         :root,
+        body {
+            height: 100vh;
+            font-size: 1rem;
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        header {
+            width: 100vw;
+        }
+        
+        header p {
+            text-align: center;
+            font-size: 2rem;
+            color: #000;
+            letter-spacing: .8rem;
+        }
+        
+        main {
+            overflow: auto;
+            padding: 0px 20px;
+        }
+        
+        main>nav {
+            position: sticky;
+            /*设置固定顶部栏*/
+            top: 0;
+            /*固定在距离顶部0rem位置*/
+            background: white;
+            /* opacity: 0.9; */
+            /*设置透明度*/
+        }
+        
+        main>nav>ul {
+            display: flex;
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: space-around;
+            height: 30px;
+            padding-top: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .xuanZhong {
+            border-bottom: 3px solid #feae3f;
+        }
+        
+        main section {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 4vh;
+        }
+        
+        main section .section_box {
+            width: 41vw;
+        }
+        
+        main section .section_box .text p:first-child {
+            font-size: .9rem;
+        }
+        
+        main section .section_box .text p:last-child {
+            font-size: .5rem;
+            color: #afafaf;
+        }
+        
+        footer {
+            width: 100vw;
+            position: fixed;
+            bottom: 0px;
+            background-color: #fff;
+        }
+        
+        footer nav ul {
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 10px;
+        }
+        
+        footer nav ul li {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8rem;
+            color: #3d3d3d;
+        }
+    </style>
+    <script>
+        //fontsize计算
+        document.documentElement.style.fontSize = document.documentElement.
+        clientWidth / 390 * 16 + 'px'
+            // 320 设备的宽度  20 默认的font-size值      
+            // fontsize =当前设备的css布局宽度/物理分辨率*基准font-size
+    </script>
+</head>
+
+<body>
+    <header>
+        <p>发现</p>
+    </header>
+    <main>
+        <nav>
+            <ul>
+                <li>推荐</li>
+                <li>旅行攻略</li>
+                <li class="xuanZhong">美食攻略</li>
+                <li>民宿集合</li>
+                <li>租房故</li>
+            </ul>
+        </nav>
+        <div class="Rotation">
+            <img src="./img/heder.png" alt="" width="100%" height="100%">
+        </div>
+        <section>
+            <div class="section_box">
+                <div class="img">
+                    <img src="./img/图1.png" alt="">
+                </div>
+                <div class="text">
+                    <p>网红城市的吃喝玩乐全攻略，3天游...</p>
+                    <p>网红城市的吃喝玩乐全攻略，3天游遍全重庆!</p>
+                </div>
+            </div>
+            <div class="section_box">
+                <div class="img">
+                    <img src="./img/图2.png" alt="">
+                </div>
+                <div class="text">
+                    <p>网红城市的吃喝玩乐全攻略，3天游...</p>
+                    <p>网红城市的吃喝玩乐全攻略，3天游遍全重庆!</p>
+                </div>
+            </div>
+            <div class="section_box">
+                <div class="img">
+                    <img src="./img/图2.png" alt="">
+                </div>
+                <div class="text">
+                    <p>网红城市的吃喝玩乐全攻略，3天游...</p>
+                    <p>网红城市的吃喝玩乐全攻略，3天游遍全重庆!</p>
+                </div>
+            </div>
+            <div class="section_box">
+                <div class="img">
+                    <img src="./img/图2.png" alt="">
+                </div>
+                <div class="text">
+                    <p>网红城市的吃喝玩乐全攻略，3天游...</p>
+                    <p>网红城市的吃喝玩乐全攻略，3天游遍全重庆!</p>
+                </div>
+            </div>
+            <div class="section_box">
+                <div class="img">
+                    <img src="./img/图2.png" alt="">
+                </div>
+                <div class="text">
+                    <p>网红城市的吃喝玩乐全攻略，3天游...</p>
+                    <p>网红城市的吃喝玩乐全攻略，3天游遍全重庆!</p>
+                </div>
+            </div>
+            <div class="section_box">
+                <div class="img">
+                    <img src="./img/图2.png" alt="">
+                </div>
+                <div class="text">
+                    <p>网红城市的吃喝玩乐全攻略，3天游...</p>
+                    <p>网红城市的吃喝玩乐全攻略，3天游遍全重庆!</p>
+                </div>
+            </div>
+            <div class="section_box">
+                <div class="img">
+                    <img src="./img/图2.png" alt="">
+                </div>
+                <div class="text">
+                    <p>网红城市的吃喝玩乐全攻略，3天游...</p>
+                    <p>网红城市的吃喝玩乐全攻略，3天游遍全重庆!</p>
+                </div>
+            </div>
+            <div class="section_box">
+                <div class="img">
+                    <img src="./img/图2.png" alt="">
+                </div>
+                <div class="text">
+                    <p>网红城市的吃喝玩乐全攻略，3天游...</p>
+                    <p>网红城市的吃喝玩乐全攻略，3天游遍全重庆!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li>
+                    <img src="./img/首页.png" alt="">
+                    <p>首页</p>
+                </li>
+                <li>
+                    <img src="./img/发现.png" alt="">
+                    <p>发现</p>
+                </li>
+                <li>
+                    <img src="./img/订单.png" alt="">
+                    <p>订单</p>
+                </li>
+                <li>
+                    <img src="./img/消息.png" alt="">
+                    <p>消息</p>
+                </li>
+                <li>
+                    <img src="./img/我的.png" alt="">
+                    <p>我的</p>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>

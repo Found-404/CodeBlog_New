@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{ /*根元素*/
+            font-size: 16px;
+        }
+        .box1,.box2{
+            border: 1px solid red;
+            font-size: 12px;
+        }
+        .box1 p{
+            font-size: 32px;
+        }
+        .box2 p{      /*父元素设置为12px  1em就是父元素1倍 2em就是2倍*/
+            font-size: 2em;
+        }
+
+
+        .box2 p{      /*根元素为20px  2rem就是根元素html20px的二倍即40px*/
+            font-size: 2rem;
+        }
+
+        .box2 p span{
+            font-size: 4rem; /* 四倍  16px*4   */
+        }
+    </style>
+</head>
+<body>
+    <!-- px , em , rem -->
+<!-- 
+        px: 常规
+        em: 相对单位，  相对于父元素的字体大小。div width:10em
+        rem: 相对单位   相对于根元素(html)字体大小 div width:10rem
+-->
+    <div class="box1">
+        <p>赵钱孙李</p>
+    </div>
+    <div class="box2">
+        <p>赵钱孙<span>李</span></p>
+    </div>
+</body>
+</html>

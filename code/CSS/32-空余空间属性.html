@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* white- space: normal/nowrap/pre/pre -wrap /pre-line /inherit该属性用来设置如何处理元素内的空白;
+        normal:默认值，空白会被浏览器忽略,
+        nowrap:文本不会换行，文本会在同一行上继续，直到遇到<br/>标签为止; */
+        div{
+            width: 200px;
+            height: 200px;
+            background:yellow;
+            /* white-space: nowrap; */
+            /* white-space: pre-line; */
+            /*
+                nowrap :  不换行
+                pre:      显示空格,回车,换行
+                pre-wape: 显示空格,回车,换行
+                pre-line: 显示回车,不显示空格,换行          
+            */
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            /*1,容器宽度: width: 200px;
+              2.强制文本在- -行内显示:white-space: nowrap;
+              3.溢出内容为隐藏: overflow: hidden;
+              4.溢出文本显示省略号: text- overflow: ellipsis;*/
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore perferendis quisquam eveniet sunt ipsa quas earum necessitatibus adipisci debitis fuga minima sit sed quaerat eos sint nobis, eaque veritatis error.
+    </div>
+    <!-- <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, minus! Iusto commodi assumenda nesciunt cumque laborum pariatur consectetur similique obcaecati exercitationem, architecto nemo omnis optio vero. Explicabo magnam ab harum!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae assumenda architecto perferendis culpa. Tempore cum dicta quibusdam eveniet nulla. Non impedit esse commodi possimus praesentium minima at mollitia tempore temporibus?
+    </div>
+    <pre>
+        预格式化文本 保留空格,tab,回车 常用于代码展示网站
+        div{
+            width: 200px;
+            height: 200px;
+            background:yellow;
+            /* white-space: nowrap; */
+            white-space: pre;
+        }
+    </pre> -->
+</body>
+</html>

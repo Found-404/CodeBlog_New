@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 默认贪婪模式
+        var p = /a{2,5}/; //{}量词 是一个范围时,总会尽可能多的匹配
+        console.log(p.exec('aaaaaab'));
+
+        var p2 = /a{2,5}?/; //{}在量词之后添加? 转化为懒惰模式 尽可能少的匹配
+        console.log(p2.exec('aaaaaab'));
+
+        var p3 = /ab?/;
+        var p4 = /ab??/;
+        console.log(p3.exec('ababcdab'));
+        console.log(p4.exec('abcd'));
+    </script>
+</body>
+
+</html>

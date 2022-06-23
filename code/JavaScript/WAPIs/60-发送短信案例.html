@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    手机号: <input type="number"><button class="b1">发送</button>
+    <button class="b2">后退</button>
+    <script>
+        var btn = document.querySelector('.b1');
+        var time = 10; //定义剩下的秒数
+        btn.addEventListener('click', function() {
+            btn.disabled = true;
+            var timer = setInterval(function() {
+                if (time == 0) {
+                    clearInterval(timer);
+                    btn.disabled = false;
+                    btn.innerHTML = '发送';
+                    time = 10; //重新定义时间
+                } else {
+                    btn.innerHTML = '还剩下' + time + '秒';
+                    time--;
+                }
+            }, 1000)
+        })
+
+        var btn2 = document.querySelector('.b2');
+        btn2.addEventListener('click', function() {
+            history.back();
+            // history.go(-1); 实现跳转
+        })
+    </script>
+</body>
+
+</html>

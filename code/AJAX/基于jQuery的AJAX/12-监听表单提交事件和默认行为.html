@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jQuery-min.js"></script>
+</head>
+
+<body>
+    <form action="/login" method="get" id="f1" target="_blank">
+        <input type="text" name="username">
+        <input type="password" name="password" id="">
+        <input type="submit" value="提交">
+    </form>
+
+    <script>
+        // 监听表单提交事件
+        $(function() {
+            // 第一种方式
+            // $("#f1").submit(function(e) {
+            //     alert('第一种');
+            //     // 第一种阻止表单默认提交行为
+            //     e.preventDefault();
+            // });
+            // 第二种方式
+            $('#f1').on('submit', function(e) {
+                alert('第二种');
+                // 第二种阻止表单默认提交行为(跟第一种一样)
+                e.preventDefault();
+
+                // 利用serialize()获取表单中的所有数据
+                // 前提是被获取表单必须有name属性
+                let shujv = $(this).serialize();
+                console.log(shujv);
+            });
+
+        })
+    </script>
+</body>
+
+</html>

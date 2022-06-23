@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1.创建一个电脑对象,该对象要有颜色、重量、品牌、型号,可以看电影、听音乐、打游戏和敲代码。
+        // 2.创建一个按钮对象,该对象中需要包含宽,高，背景颜色和点击行为。
+        // 3.创建一个车的对象,该对象要有重量、颜色、牌子,可以载人拉货和耕田。
+
+        function com(yanse, zhong, pin, xingHao) {
+            this.yanse = yanse;
+            this.zhong = zhong;
+            this.pin = pin;
+            this.xingHao = xingHao;
+            this.kan = function(dian) {
+                console.log('看' + dian);
+            };
+            this.music = function(yin) {
+                console.log('听' + yin);
+            };
+            this.daiMa = function(dai) {
+                console.log('敲' + dai);
+            }
+        }
+        var dianNao = new com('黑色', 25, '联想', 'L1');
+        console.log(dianNao.yanse);
+        dianNao.kan('复联');
+
+        var anNiu = {
+            kuan: 100,
+            gao: 100,
+            color: '黑色',
+            dianji: function() {
+                console.log('点击');
+            }
+        }
+        console.log(anNiu.color);
+        anNiu.dianji();
+
+        var car = new Object();
+        car.zhong = 100;
+        car.color = '黑色';
+        car.pin = '宝马';
+        car.zairen = function() {
+            console.log('载人');
+        }
+        car.lahuo = function() {
+            console.log('拉货');
+        }
+        car.geng = function() {
+            console.log('耕田');
+        }
+        console.log(car.color);
+        car.zairen();
+
+        //写一个函数 实现反转任意数组。
+        //写一个函数 实现对数字数组的排序。
+        function fan() {
+            var kong = [];
+            for (var i = arguments.length - 1; i >= 0; i--) {
+                kong[kong.length] = arguments[i];
+            }
+            return kong;
+        }
+        console.log(fan(1, 2, 3, 4, 5, 6));
+
+        function maoPao() {
+            for (var i = 0; i < arguments.length - 1; i++) {
+                for (var j = 0; j < arguments.length - i - 1; j++) {
+                    if (arguments[j] > arguments[j + 1]) {
+                        var kong = arguments[j];
+                        arguments[j] = arguments[j + 1];
+                        arguments[j + 1] = kong;
+                    }
+                }
+            }
+            return arguments;
+        }
+        console.log(maoPao(9, 3, 6, 8, 4, 2, 1, 5, 7));
+
+        //简易计算机
+        function tiShi() {
+            j1 = prompt('输入第一个数');
+            j2 = prompt('输入第二个数');
+        }
+        do {
+            var caoZuo = prompt('欢迎使用简易计算器:\n1.加法运算;\n2.减法运算;\n3.乘法运算;\n4.除法运算;\n5.退出;\n请输入您的选项:');
+            if (caoZuo == '1') {
+                tiShi();
+                var sum = parseFloat(j1) + parseFloat(j2);
+                alert('结果为:' + sum);
+            }
+            if (caoZuo == '2') {
+                tiShi()
+                var sum = parseFloat(j1) - parseFloat(j2);
+                alert('结果为:' + sum);
+            }
+            if (caoZuo == '3') {
+                tiShi()
+                var sum = parseFloat(j1) * parseFloat(j2);
+                alert('结果为:' + sum);
+            }
+            if (caoZuo == '4') {
+                tiShi()
+                var sum = parseFloat(j1) / parseFloat(j2);
+                alert('结果为:' + sum);
+            }
+            if (caoZuo == '5') {
+                alert('您已退出');
+                break;
+            }
+        } while (caoZuo != '5');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

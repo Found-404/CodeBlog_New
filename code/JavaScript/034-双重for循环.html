@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>双重for循环</title>
+    <script>
+        for (var i = 1; i <= 3; i++) {
+            console.log('外层循环第' + i + '次');
+            for (var j = 1; j <= 3; j++) {
+                console.log('里层循环第' + j + '次');
+            }
+        }
+
+        //打印五行五列星
+        var str = '';
+        for (var i = 1; i <= 5; i++) { //外层循环打印5行
+            for (var j = 1; j <= 5; j++) { //里层循环负责一行打印五个星星
+                str += '★';
+            }
+            str += '\n'; //一行打印完换行
+        }
+        console.log(str);
+
+        console.log('--------------');
+
+        //打印倒三角
+        var sta = '';
+        for (var i = 1; i <= 10; i++) { //外层循环打印5行
+            for (var j = i; j <= 10; j++) { //里层循环负责一行打印10个星星
+                sta += '★';
+            }
+            sta += '\n'; //一行打印完换行
+        }
+        console.log(sta);
+
+        console.log('--------------');
+
+        var stb = '';
+        for (var i = 1; i <= 10; i++) { //外层循环打印5行
+            for (var j = 1; j <= i; j++) { //里层循环负责一行打印10个星星
+                stb += '★';
+            }
+            stb += '\n'; //一行打印完换行
+        }
+        console.log(stb);
+        console.log('--------------');
+
+        //乘法表打印
+        var sum = '';
+        for (var i = 1; i <= 9; i++) { //外层循环打印5行
+            for (var j = 1; j <= i; j++) { //里层循环负责一行打印10个星星
+                //1 x 2 = 2
+                //j + 'x' + i + '=' + j * i
+                sum += j + 'x' + i + '=' + j * i + '\t'
+            }
+            sum += '\n'; //一行打印完换行
+        }
+        console.log(sum);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

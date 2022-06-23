@@ -1,0 +1,236 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header .header_Box {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    /* height: 30vh; */
+}
+
+header .header_bg {
+    position: absolute;
+    z-index: -1;
+    left: -10px;
+    width: 105%;
+    filter: brightness(60%);
+}
+
+header .header_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px;
+    margin-top: 5px;
+    height: 40px;
+}
+
+header .header_top .top_return {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    font-size: 3rem;
+    color: #fff;
+}
+
+header .header_top .top_return a {
+    color: #fff;
+}
+
+header .header_top .top_main {
+    overflow: hidden;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    border: 4px solid #949494;
+}
+
+header .header_top .top_main a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+header .recommend {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    height: 150px;
+    color: #fff;
+}
+
+header .recommend .recommend_box .re_top {
+    display: flex;
+    align-items: flex-end;
+}
+
+header .recommend .recommend_box .re_top p:nth-child(1) {
+    font-size: 3.5rem;
+}
+
+header .recommend .recommend_box .re_top p:nth-child(2) {
+    font-size: 2rem;
+    margin-left: -7px;
+}
+
+header .recommend .recommend_box .re_bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 130px;
+    height: 30px;
+    margin-top: 5px;
+    border-radius: 40px;
+    background-color: #fff;
+    color: #000;
+}
+
+header .recommend .recommend_box .re_bottom p:nth-child(1) {
+    font-size: 1.5rem;
+}
+
+header .recommend .recommend_box .re_bottom p:nth-child(2) {
+    background-color: #000;
+    width: 50px;
+    height: 70%;
+    text-align: center;
+    line-height: 21px;
+    ;
+    color: #fff;
+    border-radius: 30px;
+}
+
+header .recommend .more {
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+    margin-bottom: 25px;
+}
+
+header .recommend .more .more_box {
+    overflow: hidden;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+header .recommend .more .more_box:nth-child(1) {
+    margin-right: -10px;
+}
+
+header .recommend .more .more_box:nth-child(3) {
+    margin-left: -10px;
+}
+
+header .recommend .more .more_icon {
+    width: 20px;
+    height: 20px;
+    font-size: 2rem;
+}
+
+
+/* 播放全部部分 */
+
+main {
+    margin-top: -20px;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 20px 20px 0px 0px;
+}
+
+main .main_top {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .main_top div {
+    gap: 0px 5px;
+    display: flex;
+    align-items: center;
+}
+
+main .main_top .main_top_left {
+    font-size: 2.5rem;
+}
+
+main .main_top .main_top_right p,
+main .main_top .main_top_left p {
+    font-size: 1.5rem;
+}
+
+main .main_top .main_top_right {
+    font-size: 2rem;
+}
+
+main .main_bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0px;
+    margin-top: 10px;
+}
+
+main .main_bottom .bottom_box {
+    display: flex;
+    align-items: center;
+}
+
+main .main_bottom .bottom_box .box_img {
+    width: 58px;
+    height: 58px;
+}
+
+main .main_bottom .bottom_box .box_text {
+    margin-left: 5px;
+}
+
+main .main_bottom .bottom_box .box_text p:nth-child(3),
+main .main_bottom .bottom_box .box_text p:nth-child(2) {
+    display: inline-block;
+}
+
+main .main_bottom .bottom_box .box_text p:nth-child(1) {
+    font-size: 1.5rem;
+}
+
+main .main_bottom .bottom_box .box_text p:nth-child(2) {
+    width: 35px;
+    height: 17px;
+    margin-top: 10px;
+    text-align: center;
+    border: 1px solid red;
+    border-radius: 5px;
+    color: red;
+}
+
+main .main_bottom .bottom_box .box_text p:nth-child(3) {
+    color: #afafaf;
+}
+
+main .main_bottom .bottom_box .box_icon {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 0px 10px;
+    flex-grow: 1;
+    font-size: 2.5rem;
+    color: #686868;
+}
+
+main .main_bottom .bottom_box .box_icon div {
+    width: 25px;
+    height: 25px;
+}

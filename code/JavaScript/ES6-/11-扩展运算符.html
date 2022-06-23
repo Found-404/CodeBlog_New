@@ -1,0 +1,33 @@
+<!--
+ * @Author: error: git config user.name && git config user.email & please set dead value or install git
+ * @Date: 2022-03-07 11:27:16
+ * @LastEditors: error: git config user.name && git config user.email & please set dead value or install git
+ * @LastEditTime: 2022-06-02 10:08:42
+ * @FilePath: \code\code\JavaScript\ES6-\11-扩展运算符.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // [...] 扩展运算符能将[数组]转换为逗号分割的[参数序列]
+        // 声明一个数组 ... 
+        const colors = ['黑', '白', '灰']; // => '黑','白','灰'
+        console.log(colors);
+        //声明一个函数
+        function color() {
+            console.log(arguments);
+        }
+        color(...colors); //color('黑','白','灰');
+    </script>
+</body>
+
+</html>

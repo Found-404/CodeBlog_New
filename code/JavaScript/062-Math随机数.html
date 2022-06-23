@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1.Math对象随机数方法random() 返回一个随机的小数 0 =< X <1
+
+        //2.不跟参数
+        console.log(Math.random()); //0.15730....(随机)
+
+        //3.得到两个数字之间的随机整数 并且包含这两个整数
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min; //含最大值，含最小值 
+        }
+        console.log(getRandom(1, 10));
+
+        //4.随机点名
+        var arr = ['七七', '刘六', '王五', '张三', '李四'];
+        console.log(arr[getRandom(0, arr.length - 1)]);
+
+        //猜数字
+        var shuzi = getRandom(1, 10)
+        while (true) {
+            var shuRu = prompt('输入数字');
+            if (shuRu > shuzi) {
+                alert('数字大了');
+            } else if (shuRu < shuzi) {
+                alert('数字小了');
+            } else {
+                alert('你猜对了');
+                break; //退出整个循环
+            }
+        }
+        //要求用户猜1~50之间的一个数字但是只有10次猜的机会
+        var shuZi = getRandom(1, 50)
+        for (var i = 1; i <= 10; i++) {
+            var shuru = prompt('输入数字\n第' + i + '次机会');
+            if (shuru > shuZi) {
+                alert('数字大了');
+            } else if (shuru < shuZi) {
+                alert('数字小了');
+            } else {
+                alert('你猜对了');
+                break; //退出整个循环
+            }
+            if (i == 10) {
+                alert('你失败了');
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //constructor主要用于记录该对象引用于哪个构造函数,它可以让原型对象重新指向原来的构造函数。
+        function Star(uname, age) {
+            this.uname = uname;
+            this.age = age;
+        }
+        // Star.prototype.sing = function() {
+        //     console.log(this.uname + '我会飞');
+        // };
+        // Star.prototype.movie = function() {
+        //     console.log('演电影');
+        // }
+        Star.prototype = {
+            constructor: Star,
+            sing: function() {
+                console.log('唱歌');
+            },
+            movie: function() {
+                console.log('演电影');
+            },
+        }
+        var ldh = new Star('刘德华', 18);
+        var zxy = new Star('张学友', 19);
+        console.log(Star.prototype);
+        console.log(ldh.__proto__);
+        console.log(Star.prototype.constructor);
+        console.log(ldh.__proto__.constructor);
+        // 很多情况下,我们需要手动的利用constructor这个属性指向原来的构造函数
+    </script>
+</body>
+
+</html>

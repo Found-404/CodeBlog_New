@@ -1,0 +1,187 @@
+nav section:nth-child(2) div {
+    color: #fff;
+}
+
+nav section:nth-child(2) div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+nav section:nth-child(2) p {
+    color: red;
+}
+
+
+/* ------------------分类部分--------------- */
+
+.fenLei {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    top: 45px;
+    padding-bottom: 5px;
+    background-color: #fff;
+}
+
+.fenLei ul {
+    display: flex;
+    padding: 0px 10px;
+}
+
+.fenLei ul li {
+    flex-grow: 1;
+    height: 30px;
+    line-height: 30px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.xuanZhong {
+    font-size: 1.8rem;
+    color: red;
+    border-bottom: 2px solid red;
+}
+
+
+/* 内容部分 */
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 5px 0px;
+    margin: 70px 0px 0px;
+    background-color: #eeeeee;
+}
+
+main .main_Box {
+    padding: 10px;
+    background-color: #fff;
+}
+
+main .main_Box .box_top .video {
+    position: relative;
+    width: 100%;
+    color: #ffffff;
+}
+
+main .main_Box .box_top .video .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: calc(50% - 20px);
+    left: calc(50% - 20px);
+    width: 40px;
+    height: 40px;
+    font-size: 5rem;
+}
+
+main .main_Box .box_top .video .po_a {
+    position: absolute;
+    filter: drop-shadow(0px 0px 3px black);
+}
+
+main .main_Box .box_top .play_math {
+    display: flex;
+    bottom: 10px;
+    left: 10px;
+    font-size: 1.5rem;
+}
+
+main .main_Box .box_top .play_time {
+    display: flex;
+    bottom: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+}
+
+main .main_Box .box_bottom .bottom_right .bottom_icon,
+main .main_Box .box_bottom,
+main .main_Box .box_bottom .bottom_right,
+main .main_Box .box_bottom .bottom_left {
+    display: flex;
+    align-items: center;
+    gap: 0px 10px;
+}
+
+main .main_Box .box_bottom {
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #afafaf;
+}
+
+main .main_Box .box_bottom .bottom_left .user {
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+main .main_Box .box_bottom .bottom_left p {
+    font-size: 1.5rem;
+    color: #afafaf;
+}
+
+main .main_Box .box_bottom .bottom_right {
+    gap: 0px 20px;
+    font-size: 2.5rem;
+    margin-right: 30px;
+}
+
+main .main_Box .box_bottom .bottom_right .bottom_icon {
+    position: relative;
+    justify-content: center;
+    width: 33px;
+    height: 33px;
+}
+
+main .main_Box .box_bottom .bottom_right .bottom_icon::before {
+    content: "99+";
+    position: absolute;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    top: -5px;
+    right: -25px;
+}
+
+
+/* 加载界面 */
+
+.load {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px 10px;
+    width: 100vw;
+    height: 100px;
+    padding-bottom: 70px;
+}
+
+.load .load_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    font-size: 2.5rem;
+    color: #afafaf;
+    animation: load linear 1.5s infinite;
+}
+
+.load p {
+    color: #afafaf;
+}
+
+@keyframes load {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

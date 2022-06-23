@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .search {
+            width: 175px;
+            height: 150px;
+        }
+        
+        .search .con {
+            font-size: 20px;
+            width: 100%;
+            margin-bottom: 5px;
+            border: 1px solid gray;
+            box-shadow: 0px 3px 4px rgb(207, 207, 207);
+            position: relative;
+            /* display: none; */
+        }
+        
+        .search .con::before {
+            content: '';
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 28px;
+            left: 18px;
+            border: 8px solid #000;
+            border-style: solid dashed dashed;
+            border-color: rgb(93, 93, 93) transparent transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="search">
+        <div class="con">123</div>
+        <input type="text" placeholder="请输入您的快递单号" class="jd">
+    </div>
+    <script>
+        var con = document.querySelector('.con');
+        var jd_input = document.querySelector('.jd');
+        jd_input.addEventListener('keyup', function(e) {
+            // console.log('输入内容');
+            if (this.value == '') {
+                con.style.display = 'none';
+            } else {
+                con.style.display = 'block';
+                con.innerText = this.value;
+            }
+        })
+
+        // 失去焦点隐藏 con盒子
+        jd_input.addEventListener('blur', function() {
+            con.style.display = 'none';
+        });
+        jd_input.addEventListener('focus', function() {
+            if (this.value !== '') {
+                con.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+
+</html>

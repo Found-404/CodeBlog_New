@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" method="post" id="forml">
+        <label for="email">邮箱:</label><input type="email" name="" id="email"><br>
+        <label for="tel">手机:</label><input type="text" id="tel"><br>
+        <label for="user">账号:</label><input type="text" id="user"><br>
+        <label for="pws">密码:</label><input type="text" id="pws"><br>
+        <button id="btnLogin">登录</button>
+    </form>
+</body>
+<script>
+    var forml = document.querySelector('#forml');
+    var email = document.querySelector('#email');
+    var tel = document.querySelector('#tel');
+    var user = document.querySelector('#user');
+    var pws = document.querySelector('#pws');
+    var btnLogin = document.querySelector('#btnLogin');
+
+    forml.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var emailReg = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z]+)+$/;
+        if (emailReg.test(email.value) == false) {
+            alert('格式不对');
+            return;
+        };
+        var phoneReg = /^(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\d{8}$/;
+        if (phoneReg.test(tel.value) == false) {
+            alert('手机号不对');
+            return;
+        };
+        var accReg = /^[a-zA-Z0-9_]{6,15}$/;
+        var dig = /^(?!\d).*$/; //以数字开头返回true
+        if (accReg.test(user.value) == false) {
+            alert('请输入正确账号,数字,字母,下划线,长度在6-15之间');
+            return;
+        };
+        // console.log(123);
+        var pwdReg = /^[a-zA-Z0-9_]{6,15}$/;
+        if (!pwdReg.test(pwd.value)) {
+            alert('请输入正确密码格式');
+            return;
+        }
+
+    });
+</script>
+
+</html>

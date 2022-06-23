@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var xhr = new XMLHttpRequest();
+        // 在url末尾添加向服务器发送信息的字符串  ?id=1
+        xhr.open('GET', 'http://www.liulongbin.top:3006/api/getbooks?id=1')
+        xhr.send();
+        xhr.onreadystatechange = function() {
+            // 固定判断条件
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                // 获取服务器相应的数据成功
+                console.log(xhr.responseText);
+            }
+        }
+
+        // 带一个参数
+        // http://www.liulongbin.top:3006/api/getbooks?id=1
+        // 带二个参数
+        // http://www.liulongbin.top:3006/api/getbooks?id=1&bookname=西游记
+
+
+        // 2. GET请求携带参数的本质
+        // 无论使用$.ajax0, 还是使用$.get),又或者直接使用xhr对象发起GET请求，当需要携带参数的时候，本质上,都是直
+        // 接将参数以查询字符串的形式，追加到URL地址的后面，发送到服务器的。
+    </script>
+</body>
+
+</html>

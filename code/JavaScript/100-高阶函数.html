@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jQuery/jQuery-min.js"></script>
+    <style>
+        div {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        // 高阶函数是对其他函数进行操作的函数,他接收函数作为参数或将函数作为返回值输出
+        function fn(a, b, callback) {
+            console.log(a + b);
+            callback && callback();
+            // **&&** 的意思是如果前面为true则执行后面
+        };
+        fn(1, 2, function() {
+            console.log('我是最后调用的');
+        });
+        $('div').animate({
+            left: 500
+        }, 5000, function() {
+            $('div').css('backgroundColor', 'blue')
+        });
+    </script>
+</body>
+
+</html>

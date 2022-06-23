@@ -1,0 +1,218 @@
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( #969696, #6c6c6c);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    height: 50px;
+    color: #fff;
+}
+
+header .return {
+    display: flex;
+    align-items: flex-start;
+    width: 50px;
+    height: 50px;
+    /* margin-right: 60px; */
+    font-size: 3rem;
+}
+
+header .return a {
+    color: #fff;
+}
+
+header .center {
+    display: flex;
+    flex-grow: 1;
+    gap: 5px;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .center p:nth-child(1) {
+    font-size: 1.6rem;
+}
+
+header .center p:nth-child(2) {
+    font-size: 1.5rem;
+    color: #dbdbdb;
+}
+
+header .right {
+    display: flex;
+    gap: 10px;
+    padding-right: 5px;
+}
+
+header .right a {
+    overflow: hidden;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+header .right .right_icon {
+    font-size: 3rem;
+}
+
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+}
+
+main .music_play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+main .music_play .play_img {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border: 25px solid;
+    border-radius: 50%;
+    animation: rotate linear 15s infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+main .play_bottom {
+    display: flex;
+    justify-content: space-evenly;
+    height: 60px;
+    font-size: 3rem;
+    color: #fff;
+}
+
+main .play_bottom .bottom_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+}
+
+main .play_bottom .bottom_icon:nth-child(4) {
+    position: relative;
+}
+
+main .play_bottom .bottom_icon:nth-child(4)::before {
+    content: "999+";
+    position: absolute;
+    font-size: 1.5rem;
+    top: 0;
+    right: -20px;
+    font-weight: 800;
+}
+
+main .play_top {
+    position: absolute;
+    z-index: 100;
+    left: 50%;
+    width: 160px;
+    transform-origin: top left;
+    transform: rotate(35deg);
+}
+
+main .play_top::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: -5px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+
+/* 底部控制部件 */
+
+footer {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+footer .footer_progress {
+    display: flex;
+    gap: 0px 10px;
+    align-items: center;
+    padding: 0px 10px;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+footer .footer_progress .progress {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    height: 15px;
+}
+
+footer .footer_progress .progress .box {
+    height: 5px;
+    width: 0px;
+    background-color: #fff;
+    animation: progress linear 120s infinite;
+}
+
+@keyframes progress {
+    from {
+        width: 0px;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+footer .footer_progress .progress::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: progress-box linear 120s infinite;
+}
+
+@keyframes progress-box {
+    from {
+        left: 0;
+    }
+    to {
+        left: 96%;
+    }
+}
+
+footer .footer_control {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    font-size: 5rem;
+    color: #fff;
+}

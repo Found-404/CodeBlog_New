@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //函数可以相互调用
+        function fn1() {
+            console.log(11);
+            fn2();
+        }
+
+        function fn2() {
+            console.log(22);
+        }
+        fn1();
+
+        function fn3() {
+            console.log(111);
+            fn4();
+            console.log('fn3');
+        }
+
+        function fn4() {
+            console.log(222);
+            console.log('fn4');
+        }
+        fn3();
+
+        //输出当前年份二月份天数
+        function backDay() {
+            var year = prompt('输入年份');
+            if (panDuan(year)) { //是true所以触发闰年
+                alert('闰年 29天');
+            } else {
+                alert('平年 28天');
+            }
+        }
+        backDay();
+
+        function panDuan(year) {
+            var flag = false;
+            if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+                flag = true;
+            }
+            return flag;
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

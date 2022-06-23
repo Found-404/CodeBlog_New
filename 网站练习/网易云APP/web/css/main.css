@@ -1,0 +1,285 @@
+nav section:nth-child(3) div {
+    color: #fff;
+}
+
+nav section:nth-child(3) div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+nav section:nth-child(3) p {
+    color: red;
+}
+
+body {
+    background-color: #272727;
+}
+
+.header {
+    padding: 30px 10px 10px;
+    color: #fff;
+}
+
+.header .header_bottom ul,
+.header .header_top .user,
+.header .header_top {
+    display: flex;
+    align-items: center;
+}
+
+.header .header_top .user {
+    gap: 0px 10px;
+}
+
+.header .header_top .user .user_text p {
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+}
+
+.header .header_top .user .user_text span {
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 30px;
+    background-color: #3a3a3a;
+}
+
+.header .header_top {
+    justify-content: space-between;
+}
+
+.header .header_top .user .user_img {
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.header .header_bottom {
+    margin-top: 40px;
+}
+
+.header .header_bottom ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.header .header_bottom ul li .li_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    font-size: 3rem;
+}
+
+main {
+    padding: 20px 0px 20px 10px;
+    background-color: #fff;
+    border-radius: 20px 20px 0px 0px;
+}
+
+main .main_header {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+    font-size: 1.5rem;
+}
+
+main .my_music {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+    margin-top: 15px;
+}
+
+main .my_music .myMusic_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 32%;
+    height: 180px;
+    border-radius: 10px;
+    background-color: rgb(95, 95, 95);
+    color: #fff;
+}
+
+main .my_music .myMusic_box>p {
+    font-size: 1.5rem;
+}
+
+main .my_music .myMusic_box .myMusic_icon {
+    font-size: 3.5rem;
+}
+
+main .my_music .myMusic_box .myMusic_bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .my_music .myMusic_box:nth-child(1) {
+    background-image: url(../assetes/images/u1762.png);
+    background-repeat: no-repeat;
+}
+
+main .my_music .myMusic_box:nth-child(1) .myMusic_top .myMusic_icon {
+    color: red;
+}
+
+main .my_music .myMusic_box:nth-child(2) {
+    background-color: rgba(27, 27, 27, 0.458823529411765);
+}
+
+main .my_music .myMusic_box:nth-child(3) {
+    background-color: rgba(174, 174, 174, 0.458823529411765);
+    color: #5b5b5b;
+}
+
+main .my_music .myMusic_box:nth-child(1) .myMusic_bottom {
+    width: 90px;
+    height: 20px;
+    background-color: #3a3a3a7c;
+    border-radius: 10px;
+}
+
+main .my_music .myMusic_box .myMusic_top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* 最近播放 */
+
+main .lately_play {
+    margin-top: 25px;
+}
+
+main .lately_play .lately_text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+main .lately_play .lately_Box {
+    height: 80px;
+    overflow: auto;
+}
+
+main .lately_play .lately_Box .lately_ {
+    width: 300vw;
+    display: flex;
+    gap: 0px 10px;
+}
+
+main .lately_play .lately_Box .lately_box {
+    display: flex;
+    width: 150px;
+}
+
+main .lately_play .lately_Box .lately_box .box_left {
+    width: 60px;
+    height: 60px;
+}
+
+main .lately_play section {
+    overflow: hidden;
+    height: 70px;
+}
+
+
+/* 推荐歌单 */
+
+main .recommend>p {
+    font-size: 1.5rem;
+}
+
+main .recommend ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 10px;
+    margin-top: 10px;
+}
+
+main .recommend ul li {
+    display: flex;
+    gap: 0px 10px;
+    width: 48%;
+}
+
+main .recommend ul li .li_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #dcb481;
+}
+
+main .recommend ul li .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+main .recommend ul li .text p:nth-child(1) {
+    font-size: 1.5rem;
+}
+
+main .recommend ul li .text p:nth-child(2) {
+    font-size: 1rem;
+    color: #afafaf;
+}
+
+
+/* 加载界面 */
+
+.load {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px 10px;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 70px;
+}
+
+.load .load_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    font-size: 2.5rem;
+    color: #afafaf;
+    animation: load linear 1.5s infinite;
+}
+
+.load p {
+    color: #afafaf;
+}
+
+@keyframes load {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

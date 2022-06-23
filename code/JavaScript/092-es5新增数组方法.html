@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. forEach 迭代(遍历)数组
+        var arr = [1, 2, 3];
+        // value 每一个数组元素
+        // index 元素索引号
+        // array 数组本身
+        var sum = 0;
+        arr.forEach(function(value, index, array) {
+            console.log('每一个数组元素' + value);
+            console.log('每一个数组元素的索引号' + index);
+            console.log('每一个数组本身' + array);
+            sum += value;
+        })
+        console.log(sum); //数组相加 6
+
+        // 2. filter() 方法创建一个新数组,新数组中的元素是通过检查特定数组中符合条件的所有元素,主要用于筛选数组
+        // 注:它返回一个新数组
+        // currentValue 每一个数组元素
+        // index        数组当前项的索引
+        // arr          数组对象本身
+        var aee = [12, 66, 99, 4];
+        var newAee = aee.filter(function(value, index) {
+            return value >= 20; //返回>20的元素
+            //return value % 2 === 0; //返回偶数
+        });
+        console.log(newAee); //newAee=[66,99]
+
+        // 3. some() 方法用于检测数组中的元素是否满足指定条件,简单来说就是查找数组中是否有满足条件的元素
+        // 注:返回布尔值,查不到false,查到true,
+        //    如果第一个满足就会终止循环不再查找
+        // currentValue 每一个数组元素
+        // index        数组当前项的索引
+        // arr          数组对象本身
+        var ass = [10, 30, 4];
+        var flag = ass.some(function(value, index) {
+            // return value >= 20;
+            return value < 3; // false
+        });
+        console.log(flag);
+        var ass1 = ['red', 'pink', 'blue'];
+        var flag1 = ass1.some(function(value) {
+            return value == 'red';
+        })
+        console.log(flag1); // true
+    </script>
+</body>
+
+</html>

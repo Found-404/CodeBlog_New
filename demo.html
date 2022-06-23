@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        body {
+            display: flex;
+            height: 100vh;
+            background: linear-gradient(to right, #ffc3ca, #bfe9ff);
+        }
+        
+        main {
+            margin: auto;
+            width: 400px;
+            height: 300px;
+            border: 5px solid #ffffff;
+        }
+        
+        main header ul {
+            display: flex;
+            box-shadow: 0px 2px 4px -3px gray;
+        }
+        
+        main header ul li {
+            flex-grow: 1;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 25px;
+            cursor: pointer;
+            color: #fff;
+            background-color: #ffc3ca;
+        }
+        
+        section {
+            height: calc(300px - 50px);
+        }
+        
+        section ul {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            color: #fff;
+        }
+        
+        header ul li:nth-child(1) {
+            background-color: #bfe9ff;
+        }
+        
+        section ul li:not(:nth-child(1)) {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <header>
+            <ul class="ulHerder">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+        </header>
+        <section>
+            <ul class="ulMain">
+                <li>第一</li>
+                <li>第二</li>
+                <li>第三</li>
+                <li>第四</li>
+                <li>第五</li>
+            </ul>
+        </section>
+    </main>
+    <script>
+        // 获取元素
+        let ulHerder = document.querySelector('.ulHerder');
+        let ulMain = document.querySelector('.ulMain');
+        // 为每一个li添加自定义属性
+        for (let i = 0; i < ulMain.children.length; i++) {
+            ulMain.children[i].setAttribute('data-index', i);
+        }
+
+        // 为ulHerder下的每个li设置事件绑定
+        for (let i = 0; i < ulHerder.children.length; i++) {
+            // 将每个li的自定义属性值传输给index
+            let index = ulMain.children[i].dataset.index;
+            // 为ulHerder下的每个li设置事件绑定
+            ulHerder.children[i].addEventListener('click', function() {
+                // 排他思想,将每一个li设置dis none
+                for (let j = 0; j < ulMain.children.length; j++) {
+                    ulMain.children[j].style.display = 'none';
+                }
+                // 排他思想,将每一个头部li设置初始背景颜色
+                for (let j = 0; j < ulHerder.children.length; j++) {
+                    ulHerder.children[j].style.backgroundColor = '#ffc3ca';
+                }
+                // 点击相应的li并让他显示
+                ulMain.children[index].style.display = 'block';
+                ulHerder.children[index].style.backgroundColor = '#bfe9ff';
+            });
+        }
+    </script>
+</body>
+
+</html>

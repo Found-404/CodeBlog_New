@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //字符串操作方法
+        // 1. concat("字符串1','字符串2....)
+        var str = 'andy';
+        console.log(str.concat('red', '123')); //andyred123
+
+        // 2. substr('截取的起始位置'，'截取几个字符');
+        var str1 = '改革春风吹满地';
+        console.log(str1.substr(2, 2)); //春风
+        //第一个2是索引号的2 第二个2是取几个字符
+
+        // 3.替换字符 replace('被替换的字符','替换为的字符')；
+        var str2 = 'andyandy'; //只会替换第一个字符
+        console.log(str2.replace('a', '1')); //1ndyandy
+
+        //有一个 字符串'abcoefoxyozzopp'要求吧里面所有的o替换为*
+        var str3 = 'abcoefoxyozzopp';
+        while (str3.indexOf('o') !== -1) {
+            str3 = str3.replace('o', '*');
+        }
+        console.log(str3);
+
+        //3.字符转换为数组split('分隔符')   join 把数组转换为字符串
+        var str4 = 'red,pink,blue';
+        console.log(str4.split(',')); //此时已转换为对象
+        var str5 = 'red&pink&blue';
+        console.log(str5.split('&')); //此时已转换为对象
+
+        // 作业：给定一个字符串 ,如: abafgghijkls5ss3444343” , 问题如下:
+        // 1、字符串的长度
+        // 2、取出指定位置的字符 ,如: 0,3,5,9等
+        // 3、查找指定字符是否在以上字符串中存在,如:i,c , b等
+        // 4、替换指定的字符,如: g昔换为22,ss替换为b等操作方法
+        // 5、截取指定开始位置到结束位置的字符串,如:取得1 -5的字符串,
+        // 6、找出以上字符串中出现次数最多的字符和出现的次数
+
+        var arr = "abaasdffggghhjjkkgfddssss3444343";
+        console.log(arr.length); //32
+        console.log(arr.charAt(0) + arr.charAt(3) + arr.charAt(5) + arr.charAt(9));
+        // console.log(arr.indexOf('i'));
+        if (arr.indexOf('i') == -1) {
+            console.log('不存在i');
+        } else {
+            console.log('存在i');
+        }
+
+        while (arr.indexOf('g') !== -1) {
+            arr = arr.replace('g', '22');
+        }
+        console.log(arr);
+        while (arr.indexOf('ss') !== -1) {
+            arr = arr.replace('ss', 'b');
+        }
+        console.log(arr);
+
+        console.log(arr.substr(1, 5));
+
+        var o = {};
+        for (var i = 0; i < arr.length; i++) {
+            var chars = arr.charAt(i); //chars是字符串的每个字符
+            if (o[chars]) { // o[chars] 得到属性值
+                o[chars]++;
+            } else {
+                o[chars] = 1;
+            }
+        }
+        console.log(o);
+        //遍历对象
+        var max = 0;
+        var ch = '';
+        for (var k in o) {
+            //k 得到属性
+            //o[k]得到属性值
+            if (o[k] > max) {
+                max = o[k];
+                ch = k;
+            }
+        }
+        console.log(max);
+        console.log('最多的字符是' + ch);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

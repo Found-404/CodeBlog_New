@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 500px;
+            background: yellow;
+
+            /* 控制显示的列数 */
+            column-count: 5;
+            /* 调整列间距 */
+            column-gap: 100px;
+            /* 列边框 */
+            column-rule: 2px solid red;
+
+            /* 控制列高度统一属性 */
+            column-fill: auto;
+                             /* auto把父盒子占满 */
+            /* 调整列宽 */
+            /* column-width: 200px; */
+        
+        }
+        div>h1{
+            column-span: all; /*横跨所有的列*/
+            /* all所有 none没有 */
+            text-align: center;
+            /*标题居中对齐*/
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>大标题</h1>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas delectus voluptates iste tenetur sunt, rerum suscipit praesentium mollitia ab dolorum non numquam vel, fugiat reiciendis illo ullam necessitatibus quisquam odio?
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas delectus voluptates iste tenetur sunt, rerum suscipit praesentium mollitia ab dolorum non numquam vel, fugiat reiciendis illo ullam necessitatibus quisquam odio?
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas delectus voluptates iste tenetur sunt, rerum suscipit praesentium mollitia ab dolorum non numquam vel, fugiat reiciendis illo ullam necessitatibus quisquam odio?
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas delectus voluptates iste tenetur sunt, rerum suscipit praesentium mollitia ab dolorum non numquam vel, fugiat reiciendis illo ullam necessitatibus quisquam odio?
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas delectus voluptates iste tenetur sunt, rerum suscipit praesentium mollitia ab dolorum non numquam vel, fugiat reiciendis illo ullam necessitatibus quisquam odio?
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas delectus voluptates iste tenetur sunt, rerum suscipit praesentium mollitia ab dolorum non numquam vel, fugiat reiciendis illo ullam necessitatibus quisquam odio?
+    </div>
+</body>
+</html>

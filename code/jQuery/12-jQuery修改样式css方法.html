@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jQuery-min.js"></script>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        // 操作样式之css方法
+        $(function() {
+            // 参数只写属性名 则是返回属性值
+            console.log($('div').css('width'));
+
+            // 1.修改样式逗号隔开,引号引入,当值为数字可以不加引号
+            // $('div').css('width', '300px');
+
+            // 2.以对象的形式修改可以不加引号
+            $('div').css({
+                // 数字可以不用加引号
+                width: 400,
+                height: 400,
+                // 组合属性采取驼峰命名法
+                // 值不为数字就需要加引号
+                backgroundColor: 'red'
+            });
+        })
+    </script>
+</body>
+
+</html>

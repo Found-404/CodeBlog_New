@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1使用xhr发起POST请求
+        // 步骤:
+        // ①创建xhr对象
+        // ②调用xhr.open()函数
+        // ③设置Content-Type属性(固定写法)
+        // ④调用xhr.send()函数，同时指定要发送的数据
+        // ⑤监听xhr.onreadystatechange事件
+
+
+        // 1.创建xhr对象
+        var xhr = new XMLHttpRequest();
+        // 2.调用.open()方法
+        xhr.open('POST', 'http://www.liulongbin.top:3006/api/addbook');
+        // 3.设置Content-Type属性(固定写法)
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        // 4.调用xhr.send()函数
+        xhr.send('bookname=三体&author=刘慈欣&publisher=河南图书');
+        // 5.监听事件
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                console.log(xhr.responseText);
+            }
+        }
+    </script>
+</body>
+
+</html>

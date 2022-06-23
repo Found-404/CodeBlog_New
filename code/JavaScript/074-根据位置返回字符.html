@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //根据位置返回字符
+        //1.charAt(index) 根据位置返回字符
+        var str = 'andy';
+        console.log(str.charAt(3)); //y
+
+        //遍历所有字符
+        for (var i = 0; i < str.length; i++) {
+            console.log(str.charAt(i));
+        }
+
+        //2.charCodeAt(index) 返回相同索引号字符的ASCII值 目的：判断用户按下哪个键
+
+        console.log(str.charCodeAt(0)); //97
+
+        //3.str[index] h5新增
+        console.log(str[0]); //a
+
+        // 案例
+        // var o = { //有一个对象来判断是否有该属性对象['属性名']
+        //     age: 18,
+        // }
+        // if (o['age']) {
+        //     console.log('里面有该属性');
+        //     o['age']++;
+        // } else {
+        //     console.log('没有该属性');
+        // }
+
+
+        var arr = 'abcoefoxyozzopp';
+        var o = {};
+        console.log(o);
+        for (var i = 0; i < arr.length; i++) {
+            var chars = arr.charAt(i); //chars是字符串的每个字符
+            if (o[chars]) { // o[chars] 得到属性值
+                o[chars]++; //++增加的是值而不是索引号
+            } else {
+                o[chars] = 1;
+            }
+            // console.log(chars);
+        }
+        console.log(o);
+        //遍历对象
+        var max = 0;
+        var ch = '';
+        for (var k in o) {
+            //k 得到属性值
+            //o[k]得到属性值
+            if (o[k] > max) {
+                max = o[k];
+                ch = k;
+            }
+        }
+        console.log(max);
+        console.log('最多的字符是' + ch);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

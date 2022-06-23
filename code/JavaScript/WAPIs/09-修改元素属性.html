@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="p1">p1</button>
+    <button id="p2">p2</button>
+    <img src="../../../img/图片/cs (1).webp" alt="" title="p1">
+
+    <script>
+        //修改 元素属性 src
+        //1.获取元素
+        var p1 = document.getElementById('p1');
+        var p2 = document.getElementById('p2');
+        var img = document.querySelector('img');
+        //2.注册事件
+        p2.onclick = function() {
+            img.src = '../../../img/图片/cs (2).webp'
+            img.title = 'p2';
+        };
+        p1.onclick = function() {
+            img.src = '../../../img/图片/cs (1).webp'
+            img.title = 'p1';
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 选择排序： -->
+    <!-- 原理；将第一位 一次和后面的元素进行比较，得到最大值或最小值，与第一位交换 -->
+</body>
+<script>
+    var arr = [8, 9, 4, 5, 6, 4, 2, 3, 1];
+    for (let i = 0; i < arr.length - 1; i++) {
+        var min = arr[i]; //8
+        var minIndex = i; //0
+        for (let j = i + 1; j < arr.length; j++) {
+            if (min > arr[j]) { //84  45  46  44  42  23  21
+                min = arr[j]; //4  2  1
+                minIndex = j; //2  6  8  
+            };
+        };
+        arr[minIndex] = arr[i]; // [8, 9, 4, 5, 6, 4, 2, 3, 8]
+        arr[i] = min; //[1, 9, 4, 5, 6, 4, 2, 3, 8]
+    }
+    console.log(arr);
+
+    // let abb = (a, b) => {
+    //     return a + b;
+    // };
+    // console.log(abb(3, 2));
+</script>
+
+</html>

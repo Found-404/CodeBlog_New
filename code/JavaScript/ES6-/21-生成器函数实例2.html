@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //模拟获取  用户数据  订单数据  商品数据
+        function grtUsers() {
+            setTimeout(() => {
+                let data = '用户数据';
+                //调用next方法 并且将数据传入
+                iterator.next(data);
+            }, 1000);
+        };
+
+        function grtOrders() {
+            setTimeout(() => {
+                let data = '订单数据';
+                iterator.next(data);
+            }, 1000);
+        };
+
+        function grtGoods() {
+            setTimeout(() => {
+                let data = '商品数据';
+                iterator.next(data);
+            }, 1000);
+        };
+
+        function* gen() {
+            let users = yield grtUsers();
+            console.log(users);
+            let orders = yield grtOrders();
+            console.log(orders);
+            let goods = yield grtGoods();
+            console.log(goods);
+        };
+
+        // 调用生成器函数
+        let iterator = gen();
+        iterator.next();
+
+        //博客实例------------------------
+        // function draw(count) {
+        //     //抽奖模拟 如转盘转动
+        //     setTimeout(() => {
+        //         console.log(count);
+        //         span.innerHTML = '抽奖剩余次数' + count;
+        //     }, 1000);
+        // }
+
+        // function* generatorDraw(count) {
+        //     // 生成generator函数
+        //     while (count > 0) {
+        //         count--;
+        //         yield draw(count);
+        //     }
+        // }
+
+        // let beginDraw = generatorDraw(3); // 这个3一般是从服务端获取   开始调用；
+
+        // const btn = document.createElement("button");
+        // btn.innerText = "点击抽奖";
+        // btn.addEventListener("click", function() {
+        //     beginDraw.next();
+        // });
+
+        // const span = document.createElement('span');
+
+        // document.body.appendChild(btn);
+        // document.body.appendChild(span);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../CSS/图标文件/font_3127283_0vhnbhmmoiuq/iconfont.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        html,
+        body {
+            height: 100%;
+        }
+        /* 将body变成一个弹性盒 */
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            /*主轴方向向下 即Y轴*/
+        }
+        /* 头部部分 */
+        
+        header {
+            height: 44px;
+            /*相比设计稿像素要除以二 设计稿为物理分辨率*/
+            background: #0cc440;
+            display: flex;
+            justify-content: center;
+            /*x轴 主轴方向对齐*/
+            align-items: center;
+            /*y轴 侧轴方向对齐*/
+        }
+        
+        header div {
+            width: 60px;
+            height: 25px;
+            line-height: 25px;
+            /*行高*/
+            text-align: center;
+            font-size: 12px;
+        }
+        
+        header div:nth-child(1) {
+            border-radius: 12px 0 0 12px;
+            background: #63d985;
+            color: white;
+        }
+        
+        header div:nth-child(2) {
+            border-radius: 0 12px 12px 0;
+            background: #3dd066;
+            color: #a9e4b4;
+        }
+        /* 中间部分 */
+        
+        section {
+            flex: 1;
+            /* overflow: auto; */
+            /*溢出部分设置滚动条*/
+        }
+        
+        section ul {
+            /* position: sticky; */
+            /*设置固定顶部栏*/
+            top: 0;
+            /*固定在距离顶部0px位置*/
+            display: flex;
+            background: white;
+            opacity: 0.9;
+            /*设置透明度*/
+        }
+        
+        section ul li {
+            /* 不设置宽度 使用flex等比例占位 */
+            flex: 1;
+            text-align: center;
+            height: 35px;
+            line-height: 35px;
+            border-bottom: 1px solid #d9d9d9;
+            color: #8c8c8c;
+            font-size: 14px;
+        }
+        
+        section ul li:hover {
+            /* 鼠标移入变色 */
+            border-bottom: 2px solid #08c63e;
+            color: #08c63e;
+        }
+        
+        section .list {
+            display: flex;
+            flex-wrap: wrap;
+            /*折行*/
+            justify-content: space-between;
+            /*设置对齐为两边不留空隙*/
+        }
+        
+        section .list>div {
+            width: 49%;
+            margin-top: 4px;
+            border: 1px solid gray;
+            box-sizing: border-box;
+            /*设置成怪异盒*/
+        }
+        
+        section .list>div img {
+            width: 100%;
+        }
+        
+        section .list>div p {
+            line-height: 30px;
+            height: 30px;
+            font-size: 12px;
+            text-indent: 10px;
+            /*首行缩进*/
+        }
+        /* 底部部分 */
+        
+        footer {
+            height: 44px;
+            background: white;
+        }
+        
+        footer ul {
+            display: flex;
+            height: 100%;
+            /*设置占满footer部分的高度*/
+        }
+        
+        footer li {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            /*设置主轴向下即y轴*/
+            justify-content: center;
+            /*设置主轴居中对齐*/
+            color: #626262;
+        }
+        
+        footer li i {
+            height: 21px;
+            line-height: 21px;
+            text-align: center;
+            font-size: 16px;
+        }
+        
+        footer li span {
+            height: 17px;
+            font-size: 12px;
+            text-align: center;
+        }
+        
+        footer li:hover {
+            color: #08c63e;
+        }
+        
+        footer li:nth-child(3) {
+            position: relative;
+            /*设置相对定位*/
+        }
+        /*父相子绝*/
+        
+        footer li:nth-child(3) i {
+            background: white;
+            height: 50px;
+            width: 50px;
+            border: 1px solid gray;
+            border-radius: 50%;
+            /*设置圆角*/
+            position: absolute;
+            /*设置绝对定位*/
+            left: 50%;
+            /*设置在父元素的50%位置*/
+            margin-left: -25px;
+            /*再设置向左移动一般像素 就可以显示在中央*/
+            top: -8px;
+            /*相对于父元素向上8px*/
+            font-size: 30px;
+            text-align: center;
+            line-height: 50px;
+        }
+        
+        .goBack {
+            display: none;
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            bottom: 10%;
+            right: 15px;
+            border-radius: 50%;
+            font-size: 38px;
+            line-height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 返回顶部模块 -->
+    <div class="goBack">😍</div>
+    <header>
+        <div>热点</div>
+        <div>关注</div>
+    </header>
+    <section>
+        <ul>
+            <li>足球现场</li>
+            <li>足球生活</li>
+            <li>足球美驴</li>
+        </ul>
+        <div class="list">
+            <div class="div">
+                <img src="../../CSS/touxiang.png" alt="">
+                <p>FØund404</p>
+            </div>
+            <div>
+                <img src="../../CSS/touxiang.png" alt="">
+                <p>FØund404</p>
+            </div>
+            <div>
+                <img src="../../CSS/touxiang.png" alt="">
+                <p>FØund404</p>
+            </div>
+            <div>
+                <img src="../../CSS/touxiang.png" alt="">
+                <p>FØund404</p>
+            </div>
+            <div>
+                <img src="../../CSS/touxiang.png" alt="">
+                <p>FØund404</p>
+            </div>
+            <div>
+                <img src="../../CSS/touxiang.png" alt="">
+                <p>FØund404</p>
+            </div>
+            <div>
+                <img src="../../CSS/touxiang.png" alt="">
+                <p>FØund404</p>
+            </div>
+            <div>
+                <img src="../../CSS/touxiang.png" alt="">
+                <p>FØund404</p>
+            </div>
+            <div>
+                <img src="../../CSS/touxiang.png" alt="">
+                <p>FØund404</p>
+            </div>
+            <div>
+                <img src="../../CSS/touxiang.png" alt="">
+                <p>FØund404</p>
+            </div>
+            <div>
+                <img src="../../CSS/touxiang.png" alt="">
+                <p>FØund404</p>
+            </div>
+            <div>
+                <img src="../../CSS/touxiang.png" alt="">
+                <p>FØund404</p>
+            </div>
+            <div>
+                <img src="../../CSS/touxiang.png" alt="">
+                <p>FØund404</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <ul>
+            <li>
+                <i class="iconfont icon-add"></i>
+                <span>首页</span>
+            </li>
+            <li>
+                <i class="iconfont icon-search"></i>
+                <span>发现</span>
+            </li>
+            <li>
+                <i class="iconfont icon-scan"></i>
+                <span></span>
+            </li>
+            <li>
+                <i class="iconfont icon-xinxi"></i>
+                <span>信息</span>
+            </li>
+            <li>
+                <i class="iconfont icon-31wode"></i>
+                <span>我的</span>
+            </li>
+        </ul>
+    </footer>
+    <script>
+        // 返回顶部事件
+        var goBack = document.querySelector('.goBack');
+        var list = document.querySelector('.list');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset >= list.offsetTop) {
+                goBack.style.display = 'block';
+            } else {
+                goBack.style.display = 'none';
+            }
+        })
+        goBack.addEventListener('click', function() {
+            animate(window, 0);
+        })
+
+        // 返回顶部的动画函数
+        function animate(obj, target, callback) {
+            // console.log(callback); callback = function(){} 调用的时候callback()
+
+            clearInterval(obj.timer);
+            obj.timer = setInterval(function() {
+
+                // 步长值写道定时器里面
+                // 把步长值改为整数 不要出现小数
+                // var step = Math.ceil((target - obj.offsetLeft) / 10);
+                var step = (target - window.pageYOffset) / 10;
+                step = step > 0 ? Math.ceil(step) : Math.floor(step);
+                if (window.pageYOffset == target) {
+                    //停止动画 停止定时器
+                    clearInterval(obj.timer);
+                    //回调函数写道定时器结束里面
+                    // if (callback) {
+                    //     //调用函数
+                    //     callback();
+                    // }
+                    callback && callback();
+                    // 短路运算
+                }
+                // 把每次加一这个步长值改为慢慢变小的值
+                // 步长公式：(目标值 - 现在的位置)/10
+                // obj.style.left = window.pageYOffset + step + 'px';
+                window.scroll(0, window.pageYOffset + step);
+            }, 20)
+        }
+    </script>
+</body>
+
+</html>

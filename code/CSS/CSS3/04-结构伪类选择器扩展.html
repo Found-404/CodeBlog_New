@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+        X:first- child   匹配子集的第一个元索。 IE7就可以支持
+        X:last-child     匹配父元素中最后一个X元素
+        X:nth-child(n)   用于匹配索引值为n的子元素。索引值从1开始
+        X:only- -child   这个伪类-般用的比较少,比如上述代码匹配的是div下的有且仅有一个的p,也就是说，如果div内有多个p.将不匹配。
+        X:root           匹配文档的根元索。在HTML (标准通用标记语言下的一个应用)中,根元素永远是HTML
+        X:empty          匹配没有任何子元素(包括包含文本)的元素X */
+        
+        
+        /* ul li:first-child{
+            background: yellow;
+        }
+        ul li:last-child{
+            background-color: red;
+        } */
+        /* 第几个 */
+
+        /* ul li:nth-child(2) */
+        /* ul li:nth-child(2){
+            background-color: blue;
+        } */
+
+        /* 第几个 偶数(even)2n 奇数(odd)2n+1 或者 2n-1*/        
+        li:nth-child(2n+1){ /*也可以用英文单词*/
+            background-color: yellow;
+        }
+        /* ------------------------------------------------------- */
+        div{
+            border: 1px solid black;
+        }
+        /* only-child只选择含有一个<p>标签的 */
+        div p:only-child{
+            background-color: red;
+        }
+        /* --------------------------------------------------------- */
+        /* empty选择没有子标签的 注:一点东西都没有的 空格也算 */
+        div:empty{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+        /* ----------------------------------------------------------- */
+        /* :root代替html */
+        :root,body{
+            height: 100%;
+            background-color: turquoise;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>1111</li>
+        <li>2222</li>
+        <li>3333</li>
+        <li>4444</li>
+        <li>5555</li>
+    </ul>
+    <div>
+        <p>11111</p>
+        <p>22222</p>
+    </div>
+
+    <div>
+        <p>111111</p>
+    </div>
+
+    <div></div>
+</body>
+</html>

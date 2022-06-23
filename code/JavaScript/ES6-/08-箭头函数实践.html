@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ad {
+            width: 200px;
+            height: 200px;
+            background-color: #58a;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ad"></div>
+    <script>
+        // 需求1 点击div 2s后颜色变成粉色
+        //获取元素
+        let ad = document.getElementById('ad');
+        ad.addEventListener('click', function() {
+            //箭头函数方法
+            setTimeout(() => {
+                this.style.backgroundColor = 'pink';
+                console.log(123);
+            }, 2000);
+
+            // 传统的函数方法
+            // this指向不好使 解决方式是在外部声明一个变量放this 然后再在函数内使用
+            // setTimeout(function() {
+            //     console.log(this); //这里面的this指向的是window
+            //     this.style.backgroundColor = 'pink';
+            // }, 2000);
+        });
+
+        // 需求2 从数组中返回偶数元素
+        const arr = [1, 6, 9, 10, 100, 25];
+        // const arr2 = arr.filter(function(item) {
+        //     if (item % 2 === 0) {
+        //         return true;
+        //     } else {
+        //         return false;
+        //     }
+        // });
+
+        const arr2 = arr.filter(item => item % 2 === 0);
+        console.log(arr2);
+
+        // 箭头函数适合 与this无关的回调 定时器 数组方法回调
+        // 箭头函数不适合与this有关的回调,事件回调,对象的方法
+    </script>
+</body>
+
+</html>

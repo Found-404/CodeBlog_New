@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 颜色选择 -->
+    <form action="">
+        <!-- 前后端交互 -->
+        <div>
+            颜色选择:
+            <input type="color" name="color">
+        </div>
+        <div>
+            邮箱输入:
+            <input type="email" name="email">
+        </div>
+        <div>
+            url(完整地址)地址:
+            <input type="url">
+        </div>
+
+        <div>
+            电话号码:多试用手机端网站
+            <input type="tel">
+        </div>
+
+        <div>
+            滑块效果:
+            <input type="range" name="range" min="100" max="200" value="100" step="10">
+            <!-- min,max设置区间
+            step设置步长
+            value设置初始值
+        -->
+        </div>
+        <div>
+            数字类型:
+            <input type="number" min="0" max="10" value="1">
+            <!-- min,max设置区间
+            step设置步长
+            value设置初始值
+        -->
+        </div>
+        <div>
+            搜索:
+            <input type="search">
+        </div>
+        <div>
+            日期选择框:
+            <input type="date"> 月份选择:
+            <input type="month"> 周数选择:
+            <input type="week"> 精确到时间:
+            <input type="datetime-local" name="time">
+            <!-- 设置name方便后端 -->
+        </div>
+        <input type="submit">
+    </form>
+</body>
+
+</html>

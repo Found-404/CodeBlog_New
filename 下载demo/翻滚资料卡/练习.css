@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background: #f2f2f2;
+}
+
+.jieMian {
+    display: grid;
+    justify-items: center;
+    margin: 200px 90px;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+@media (max-width: 700px) {
+    .jieMian {
+        margin: 200px auto;
+    }
+}
+
+.jieMian .box {
+    width: 300px;
+    height: 200px;
+    /* margin: 200px 100px auto; */
+    display: flex;
+    transform-style: preserve-3d;
+    position: relative;
+    transition: all 0.5s ease;
+    /* transform-origin: top center; */
+}
+
+.box:hover {
+    transform: rotateX(90deg);
+}
+
+.box:hover .shang {
+    opacity: 0;
+}
+
+.jieMian .box .shang {
+    height: 200px;
+    width: 300px;
+    background: white;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    position: absolute;
+    z-index: 1;
+    transform: translate3d(0px, 0px, 100px);
+    transition: all 0.3s linear;
+    box-shadow: 0px 0px 9px rgb(171, 27, 255, 0.2);
+}
+
+.jieMian .box .shang .touXiang {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px rgb(171, 27, 255);
+}
+
+.jieMian .box .shang .touXiang img {
+    width: 100%;
+}
+
+.jieMian .box .shang span {
+    font-size: 25px;
+    font-weight: 1000;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.jieMian .box .xia {
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    height: 200px;
+    display: grid;
+    justify-items: center;
+    grid-template-rows: 68px 132px;
+    position: absolute;
+    transform: translate3d(0px, 100px, 0px)rotateX(-90deg);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.jieMian .box:hover .xia {
+    opacity: 1;
+}
+
+.jieMian .box .xia span {
+    font-size: 25px;
+    font-weight: 1000;
+    line-height: 68px;
+    color: white;
+}
+
+.jieMian .box .xia p {
+    line-height: 18px;
+    color: white;
+}

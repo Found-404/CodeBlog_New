@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        div {
+            width: 200px;
+            display: flex;
+            height: 100px;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        div span {
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            color: white;
+            line-height: 50px;
+            text-align: center;
+            font-size: 23px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span class="hour">1</span>
+        <span class="minute">2</span>
+        <span class="second">3</span>
+    </div>
+    <button class="begin">开始</button>
+    <button class="stop">结束</button>
+    <script>
+        var hour = document.querySelector('.hour'); // 小时的黑色盒子
+        var minute = document.querySelector('.minute'); // 分钟的黑色盒子
+        var begin = document.querySelector('.begin');
+        var stop = document.querySelector('.stop');
+        var second = document.querySelector('.second'); // 秒数的黑色盒子
+        var inputeTime = +new Date('2022-1-31 22:37:00'); //用户数输入的时间毫秒数
+
+        var timer = null; //全局变量 函数内就可以使用了
+
+        begin.addEventListener('click', function() {
+            countDown(); //先调用一次函数 防止第一次刷新页面有空白
+            // 1.开启定时器 setInterval()
+            timer = setInterval(countDown, 1000) //每隔一秒调用一次函数
+            function countDown() { //这是计时函数
+                var nowTime = +new Date(); //返回当前时间毫秒数
+                var times = (inputeTime - nowTime) / 1000; //times就是剩余时间毫秒数  除以1000得到秒数
+                var h = parseInt(times / 60 / 60 % 24); //小时
+                h = h < 10 ? '0' + h : h;
+                hour.innerHTML = h; // 把剩余的小时给小时黑色盒子
+                var m = parseInt(times / 60 % 60); //分
+                m = m < 10 ? '0' + m : m;
+                minute.innerHTML = m;
+                var s = parseInt(times % 60); //秒数
+                s = s < 10 ? '0' + s : s;
+                second.innerHTML = s;
+            }
+        })
+
+        // 3.停止定时器 clearInterval()
+        stop.addEventListener('click', function() {
+            clearInterval(timer);
+        })
+    </script>
+</body>
+
+</html>

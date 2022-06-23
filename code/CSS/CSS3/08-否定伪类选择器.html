@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 非第一个 加:not() */
+        /* li:not(:first-child){
+            background-color: yellow;
+        } */
+        /* 非奇数 加:not() */
+        li:not(:nth-child(odd)){
+            background-color: yellow;
+        }
+        /* 非空子对象 加:not() */
+        div:not(:empty){
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+    </ul>
+    <div></div>
+    <div>11111</div>
+</body>
+</html>

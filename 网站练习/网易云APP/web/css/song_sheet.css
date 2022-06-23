@@ -1,0 +1,130 @@
+/* ----------------头部部分------------ */
+
+header {
+    position: fixed;
+    top: 0px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0px 100px;
+    width: 100%;
+    height: 40px;
+    padding: 5px 0px;
+    background-color: #fff;
+}
+
+header .music_play {
+    overflow: hidden;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 4px solid #666666;
+}
+
+header .sheet_return a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+header .sheet_return {
+    font-size: 3rem;
+    width: 30px;
+    height: 30px;
+}
+
+header p {
+    font-size: 1.8rem;
+}
+
+
+/* ------------------分类部分--------------- */
+
+nav {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    top: 50px;
+    padding-bottom: 5px;
+    background-color: #fff;
+}
+
+nav ul {
+    display: flex;
+    padding: 0px 10px;
+}
+
+nav ul li {
+    flex-grow: 1;
+    height: 30px;
+    line-height: 30px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.xuanZhong {
+    font-size: 1.8rem;
+    color: red;
+    border-bottom: 2px solid red;
+}
+
+main {
+    margin-top: 82px;
+}
+
+main .main_top {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    height: 220px;
+    border-radius: 0px 0px 10px 10px;
+    background-color: #e4e4e4;
+}
+
+main .main_top .top_center {
+    overflow: hidden;
+    width: 180px;
+    position: absolute;
+    z-index: 100;
+    left: calc(50% - 90px);
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+main .main_top .top_center p {
+    padding: 5px;
+}
+
+main .main_top .top_center .play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 60px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    font-size: 2rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.687);
+    color: red;
+}
+
+main .main_top .top_left,
+main .main_top .top_right {
+    opacity: 0.6;
+}
+
+main .main_bottom ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 10px;
+}
+
+main .main_bottom ul li {
+    width: 30%;
+}

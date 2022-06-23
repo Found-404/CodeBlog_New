@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*溢出属性
+          文字太多需要隐藏
+          overflow:visible/hidden(隐藏)/scroll/auto(自动)/inherit
+          visile： 默认值，溢出内容会显示在元素外
+          hidden： 溢出内容隐藏
+          scroll： 滚动，溢出内容以滚动方式显示
+          auto：   如果溢出会增加滚动条，没有溢出正常显示
+          inherit：规定应该遵从父元素继承overflow属性的值
+          overflow-x：x轴溢出；
+          overflow-y：y轴溢出；(两个必须搭配使用)
+        */
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            /* overflow: hidden;溢出隐藏 */
+            /* overflow: scroll;滚动条 不溢出也会有滚动条 */
+            /* overflow: auto;  滚动条 溢不溢出自动显示 */
+            /* overflow: inherit;  继承父元素效果 */
+        
+        }
+
+    </style>
+</head>
+<body>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, voluptates quidem? Amet, voluptates eius. Maxime, in? Facere, sed quasi veritatis obcaecati nisi quas sit dolorum sint voluptatum alias veniam eaque.</div>
+</body>
+</html>

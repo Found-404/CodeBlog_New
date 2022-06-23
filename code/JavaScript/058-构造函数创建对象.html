@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //我们为什么需要使用构造函数
+        //就是因我们前面两种创建对象的方式一次只能创建一个对象
+        var zs = {
+            uname: '张三',
+            age: '55',
+            sing: function() {
+                console.log('hi');
+            }
+        }
+        var zs = {
+                uname: '李四',
+                age: '51',
+                sing: function() {
+                    console.log('hi');
+                }
+            }
+            //一次创建一个对象 里面很多属性和方法大量相同 我们只能复制
+            //因此我们可以利用函数 重复这些相同代码 称之为构造函数
+            //又因为这个函数不一样 里面封装的不是普通代码，而是对象
+            //构造函数 就是把对象中相同属性和方法抽象出来封装到函数里面
+
+        //利用构造函数创建对象
+        //构建法外狂徒对象，相同属性：名字 年龄 性别 相同方法：唱歌
+        //构造函数语法
+        // function 构造函数名() {
+        //     this.属性=值;
+        //     this.方法=function(){
+
+        //     }
+        // }
+        // const 构造函数名();
+        function Star(uname, age, sex, sing) { //形参
+            this.uname = uname;
+            this.age = age;
+            this.sex = sex;
+            this.sing = function(sang) {
+                    console.log(sang);
+                }
+                //构造函数不需要return
+        }
+        var ldh = new Star('张三', 18, '男'); //实参 调用函数返回的是一个对象object
+        // console.log(typeof ldh);
+        console.log(ldh.uname);
+        console.log(ldh['sex']);
+        ldh.sing('hi');
+        var zxy = new Star('李四', 19, '男');
+        console.log(zxy.uname);
+        console.log(zxy['age']);
+        zxy.sing('hello');
+
+
+        //1.构造函数名字首字母大写 非必须
+        //2.构造函数不需要return
+        //3.我们调用构造函数 必须使用 new
+        //4.我们只要new Star() 调用函数就创建一个对象 ldh{}
+        //5.我们的属性和方法前面必须添加this.
+
+
+        //练习
+        function Wz(name, type, blood) {
+            this.name = name;
+            this.type = type;
+            this.blood = blood;
+            this.attack = function(skill) {
+                console.log(skill);
+            }
+        }
+        var lianPo = new Wz('廉颇', '力量型', '500血量');
+        lianPo.attack('近战');
+        var houYi = new Wz('后羿', '射手型', '100血量');
+        houYi.attack('远程');
+
+        // new执行
+        // 1.在内存中创建一个新的空对象。
+        // 2.让this指向这个新的对象。
+        // 3.执行构造函数里面的代码,给这个新对象添加属性和方法。
+        // 4.返回这个新对象(所以构造函数里面不需要return) .
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

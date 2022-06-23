@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D</title>
+    <style>
+        .box{
+            width: 500px;
+            height: 500px;
+            border: 5px solid black;
+
+            transform-style: preserve-3d;
+            /*flat:2d舞台*/
+            /*preserve-3d:构建一个3d舞台*/
+            position: relative;
+            margin: 0 auto;
+
+            /* transform:rotateY(0deg); */
+            /* 添加景深 */
+            perspective: 900px;
+        }
+        .center{
+            position: absolute;
+            /* 添加绝对定位 */
+            width: 200px;
+            height: 200px;
+            background: red;
+            left: 50%;
+            top: 50%;
+            margin-left:-100px;
+            margin-top:-100px;
+
+
+            transform:translateZ(100px);
+            /* transform:translate3d(0,0,0); */
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="center"></div>
+    </div>
+</body>
+</html>

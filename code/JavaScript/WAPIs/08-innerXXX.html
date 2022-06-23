@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <p>
+        我是文字
+        <span>123</span>
+    </p>
+    <script>
+        //innerText和innerHTML的区别
+        // 1. innerText 不识别html标签 非标准
+        var div = document.querySelector('div');
+        // div.innerText = '今天是:2022';
+        // 2. innerHTML 识别标签  W3C标准
+        div.innerHTML = '<b>今天是:</b>2022';
+        // 两个属性可读写 可以获取元素里面的内容 
+        var p = document.querySelector('p');
+        console.log(p.innerText);
+        console.log(p.innerHTML); //会保留换行 空格
+        // 3.outerHtml  获取节点本身和其里面的内容
+        console.log(p.outerHTML);
+        p.outerHTML = `<h1><p>outherHtml</p></h1>`;
+        console.log(p);
+
+        // 4.textContent  仅仅获取文本
+        console.log(p.textContent);
+    </script>
+</body>
+
+</html>

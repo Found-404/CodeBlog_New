@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jQuery-min.js"></script>
+</head>
+
+<body>
+    <button id="ajaxGet">ajax发送get请求</button>
+    <button id="ajaxPost">ajax发送Post请求</button>
+    <!-- 相比于$.get0 和$.post0函数, jQuery中提供的$.ajax()函数,是一个功能比较综合的函数， 它允许我们对
+    Ajax请求进行更详细的配置。 -->
+    <script>
+        $.ajax({
+            type: '', //请求的方式 如 get 或 post
+            url: '', //请求的url地址
+            data: {}, //这次请求携带的数据
+            success: function(res) {
+
+            }, //请求完成过后回调函数
+        });
+    </script>
+    <script>
+        $(function() {
+            //GET请求
+            $('#ajaxGet').on('click', function() {
+                $.ajax({
+                    type: 'GET',
+                    url: 'http://www.liulongbin.top:3006/api/getbooks',
+                    data: {
+                        id: 1
+                    },
+                    success: function(res) {
+                        console.log(res);
+                    }
+                })
+            });
+            //POST请求
+            $('#ajaxPost').on('click', function() {
+                $.ajax({
+                    type: 'PSOT',
+                    url: 'http://www.liulongbin.top:3006/api/addbooks',
+                    data: {
+                        bookname: '水浒传',
+                        author: '施耐庵',
+                        publisher: '天津出版社'
+                    },
+                    success: function(res) {
+                        console.log(res);
+                    }
+                })
+            });
+        })
+    </script>
+
+</body>
+
+</html>

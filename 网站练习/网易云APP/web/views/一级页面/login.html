@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="../../css/Default_style.css">
+    <!-- css样式 -->
+    <link rel="stylesheet" href="../../css/login.css">
+</head>
+
+<body>
+    <header>
+        <div class="top">
+            <div>
+                <ion-icon name="musical-note-outline" style="font-size: 2rem;"></ion-icon>
+            </div>
+            <h2>
+                木子云音乐
+            </h2>
+        </div>
+        <main>
+            <div class="text">
+                <p>138*****0000</p>
+                <p>中国移动提供认证服务</p>
+            </div>
+            <div class="button">
+                <button class="">
+                    一键登录
+                    <!-- <a href="../首页/index.html">一键登录</a> -->
+                </button>
+                <button>
+                    立即体验
+                    <!-- <a href="../首页/indexTY.html">立即体验</a> -->
+                </button>
+            </div>
+            <div class="footer">
+                <div class="left">
+                    <input type="checkbox" id="yes">
+                    <label for="yes">同意</label>
+                </div>
+                <a href="#">《服务条款》《隐私政策》《儿童隐私政策》《中国移动认证服务协议》</a>
+            </div>
+        </main>
+    </header>
+
+    <footer>
+        <div class="left">
+            <a href="../首页/index.html" class="weChat">
+                <ion-icon name="logo-wechat" style="font-size: 3rem; color: rgb(0, 172, 132);"></ion-icon>
+            </a>
+            <a href="../首页/index.html" class="tw">
+                <ion-icon name="logo-twitter" style="font-size: 3rem; color: rgb(44, 181, 255);"></ion-icon>
+            </a>
+            <a href="../首页/index.html" class="fb">
+                <ion-icon name="logo-facebook" style="font-size: 3rem; color: rgb(54, 137, 255);"></ion-icon>
+            </a>
+        </div>
+        <div class="right">
+            <a href="../首页/index.html">
+                <ion-icon name="logo-apple" style="font-size: 3rem;"></ion-icon>
+                <p>通过Apple登录</p>
+            </a>
+        </div>
+    </footer>
+
+    <!-- 勾选协议可跳转js -->
+    <script>
+        window.addEventListener('load', function() {
+            // 获取元素
+            let btn = document.querySelector('.button');
+            let ipt = document.querySelector('#yes');
+            // console.log(ipt);
+            // console.log(btn);
+            // console.log(btn.children[0]);
+            // 在加载页面之初先判断一次
+            panDuan();
+            ipt.addEventListener('click', function() {
+                if (this.checked) {
+                    tiaoZhaun();
+                    btn.children[0].className = 'text000';
+                    btn.children[0].innerHTML = '一键登录';
+                } else {
+                    btn.onclick = null; // 事件删除
+                    btn.children[0].className = 'textNot';
+                    btn.children[0].innerHTML = '请先勾选协议';
+                }
+            });
+            //跳转事件
+            function tiaoZhaun() {
+                // 这里要用传统注册事件
+                // 用addEventListener会发生冲突,跳转链接不会被顶替掉
+                btn.children[0].onclick = function() {
+                    location.href = '../首页/index.html';
+                }
+                btn.children[1].onclick = function() {
+                    location.href = '../首页/indexTY.html';
+                }
+            };
+            // 判断
+            function panDuan() {
+                if (this.checked) {
+                    tiaoZhaun();
+                    btn.children[0].className = 'text000';
+                    btn.children[0].innerHTML = '一键登录';
+                } else {
+                    // tiaoZhaunNot();
+                    btn.children[0].className = 'textNot';
+                    btn.children[0].innerHTML = '请先勾选协议';
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

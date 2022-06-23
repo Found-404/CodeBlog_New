@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jQuery-min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .wrapper {
+            width: 250px;
+            height: 250px;
+            background-color: aqua;
+            margin: 0px auto;
+        }
+        
+        .wrapper ul {
+            float: left;
+            display: block;
+            height: 100%;
+            width: 50px;
+            background-color: aquamarine;
+        }
+        
+        .wrapper ul li {
+            height: 33.3%;
+        }
+        
+        .wrapper ul li :hover {
+            background-color: gray;
+            color: white;
+        }
+        
+        .wrapper ul li a {
+            width: 100%;
+            height: 100%;
+            display: block;
+            text-decoration: none;
+            font-size: 30px;
+            line-height: 83px;
+            text-align: center;
+        }
+        
+        #content {
+            float: right;
+            margin-top: 30px;
+        }
+        
+        #content div:not(:first-child) {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <ul id="left">
+            <li><a href="#">A</a></li>
+            <li><a href="#">B</a></li>
+            <li><a href="#">C</a></li>
+        </ul>
+        <div id="content">
+            <div>
+                <a href="#"><img src="../../img/图片/cs (1).webp" width="200" height="200"></a>
+            </div>
+            <div>
+                <a href="#"><img src="../../img/图片/cs (2).webp" width="200" height="200"></a>
+            </div>
+            <div>
+                <a href="#"><img src="../../img/图片/cs (3).webp" width="200" height="200"></a>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function() {
+            // 1.鼠标经过li
+            $('#left li').mouseover(function() {
+                // 2.得到当前li的索引号
+                var index = $(this).index();
+                // 3.让右侧盒子相应索引号盒子显示
+                // $('#content div').eq(index).show();
+                // 4.让其余的图片(就是其他的兄弟)隐藏
+                // $('#content div').eq(index).siblings().hide();
+                // 链式编程
+                $('#content div').eq(index).show().siblings().hide();
+
+            })
+        })
+    </script>
+</body>
+
+</html>

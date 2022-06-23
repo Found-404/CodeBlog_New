@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // return返回值
+        // function 名字(形参) {
+        //     return 需要返回的结果;
+        // }
+        // 函数名();
+
+        // 没有返回值 返回的是undefind
+        function cook() {
+            return 666;
+        }
+        cook(); //相当于 cook()=666;
+        console.log(cook()); //666
+
+        function Cook(aru) {
+            return aru;
+        }
+        console.log(Cook('777')); //777
+
+        // 求任意两个数的和
+        function sum(num1, num2) {
+            return num1 + num2;
+        }
+        console.log(sum(3, 5)); //8
+
+        //利用函数求任意两个数的最大值
+        function max(num1, num2) {
+            if (num1 > num2) {
+                return num1;
+            } else {
+                return num2;
+            }
+            // 三元运算
+            // return num1 > num2 ? num1 : num2;
+        }
+        console.log(max(10, 5)); //10
+
+
+        //求数组[5,2,99,101,67,77]中的最大数值。
+        function zuiDa(arr) {
+            var max = arr[0];
+            for (var i = 1; i <= arr.length; i++) {
+                if (max < arr[i]) {
+                    max = arr[i];
+                }
+            }
+            return max; //return只能返回一个值
+        }
+        var re = zuiDa([5, 2, 99, 101, 67, 77]);
+        console.log(re); //101
+
+        // 求任意两个数加减乘除结果
+        function suanFa(num1, num2) {
+            //return可以返回数组 但是不会返回单个值
+            return [num1 + num2, num1 - num2, num1 * num2, num1 / num2];
+        }
+        var jg = suanFa(9, 4);
+        console.log(jg); //[13, 5, 36, 2.25]
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3127283 */
+  src: url('iconfont.woff2?t=1641701737869') format('woff2'),
+       url('iconfont.woff?t=1641701737869') format('woff'),
+       url('iconfont.ttf?t=1641701737869') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  /* font-size: 40px; */
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-31wode:before {
+  content: "\e600";
+}
+
+.icon-xinxi:before {
+  content: "\e763";
+}
+
+.icon-licaiqia:before {
+  content: "\e692";
+}
+
+.icon-zhifubaozhifu:before {
+  content: "\e605";
+}
+
+.icon-system-QRcode:before {
+  content: "\e667";
+}
+
+.icon-personal:before {
+  content: "\e679";
+}
+
+.icon-add:before {
+  content: "\e689";
+}
+
+.icon-scan:before {
+  content: "\e68b";
+}
+
+.icon-travel:before {
+  content: "\e68d";
+}
+
+.icon-card:before {
+  content: "\e68e";
+}
+
+.icon-pay_collect:before {
+  content: "\e691";
+}
+
+.icon-search:before {
+  content: "\e6d4";
+}
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <span>我是span</span>
+    <div>我是div</div>
+    <span>我是span</span>
+    <span>我是span</span>
+    <span>我是span</span>
+    <script>
+        // 兼容问题
+        var div = document.querySelector('div');
+        // nextSibling 下一个兄弟节点
+        console.log(div.nextSibling); //文本节点
+        // previousSibling获取元素的上一个兄弟节点:(既包含元素节点、文本节点、注释节点)
+        console.log(div.previousSibling); //文本节点
+        // 2.nextElementSibling 获取元素的下一个兄弟元素节点
+        console.log(div.nextElementSibling);
+        console.log(div.previousElementSibling);
+
+
+        function getNextElementSibling(element) {
+            var el = element;
+            while (el = el.nextSibling) {
+                if (el.nodeType === 1) {
+                    return el;
+                }
+            }
+            return null;
+        }
+    </script>
+</body>
+
+</html>

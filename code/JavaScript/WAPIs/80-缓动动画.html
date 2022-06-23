@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: absolute;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+        
+        span {
+            position: absolute;
+            display: block;
+            width: 150px;
+            height: 150px;
+            background-color: powderblue;
+            top: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn123">点击123</button>
+    <button class="btn321">点击321</button>
+    <div></div>
+    <span>123</span>
+    <script>
+        var div = document.querySelector('div');
+        var span = document.querySelector('span');
+        // var btn = document.querySelector('button');
+
+        var btn123 = document.querySelector('.btn123');
+        var btn321 = document.querySelector('.btn321');
+        // 动画函数封装
+        function animate(obj, target) {
+            clearInterval(obj.timer);
+            obj.timer = setInterval(function() {
+                // 步长值写道定时器里面
+                // 把步长值改为整数 不要出现小数
+                // var step = Math.ceil((target - obj.offsetLeft) / 10);
+                var step = (target - obj.offsetLeft) / 10;
+                step = step > 0 ? Math.ceil(step) : Math.floor(step);
+                if (obj.offsetLeft == target) {
+                    //停止动画 停止定时器
+                    clearInterval(obj.timer);
+                }
+                // 把每次加一这个步长值改为慢慢变小的值
+                // 步长公式：(目标值 - 现在的位置)/10
+                obj.style.left = obj.offsetLeft + step + 'px';
+            }, 30)
+        }
+        // 7.调用函数
+        // animate(div, 300);
+        btn123.addEventListener('click', function() {
+            animate(span, 500);
+        })
+        btn321.addEventListener('click', function() {
+            animate(span, 800);
+        })
+    </script>
+</body>
+
+</html>

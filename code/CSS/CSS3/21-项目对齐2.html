@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 500px;
+            height: 500px;
+            border: 2px solid black;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .box div{
+            height: 100px;
+            width: 100px;
+            border: 1px dashed red;
+            box-sizing: border-box;
+        }
+        .div1{
+            
+            align-self: flex-start;
+        }
+        .div2{
+          
+            align-self: flex-end;
+        }
+        .div3{          
+            align-self: center;
+        }
+        .div4{         
+            align-self:baseline;
+        }
+        .div5{
+            align-self:stretch;
+            /* stretch拉伸  不设置宽和高才会触发*/
+        }
+    </style>
+</head>
+<body>
+    <!-- 大盒子为容器 小盒子为项目 -->
+    <div class="box">
+        <div class="div1">1111</div>
+        <div class="div2">2222</div>
+        <div class="div3">3333</div>
+        <div class="div4">4444</div>
+        <div class="div5">5555</div>
+    </div>
+</body>
+</html>

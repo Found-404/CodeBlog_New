@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jQuery-min.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="yeye">
+        <div class="father">
+            <div class="son">儿子</div>
+        </div>
+    </div>
+    <div class="nav">
+        <p>我是p</p>
+        <div>
+            <p>我是p</p>
+        </div>
+    </div>
+    <ol>
+        <li>我是ol的li</li>
+        <li>我是ol的li</li>
+        <li class="item">我是ol的li</li>
+        <li>我是ol的li</li>
+        <li>我是ol的li</li>
+        <li>我是ol的li</li>
+    </ol>
+    <ul>
+        <li>我是ul的li</li>
+        <li>我是ul的li</li>
+        <li>我是ul的li</li>
+        <li>我是ul的li</li>
+        <li>我是ul的li</li>
+        <li>我是ul的li</li>
+    </ul>
+    <script>
+        // 注意一下都是方法 带括号
+        $(function() {
+
+            // 1.父 parent() 返回最近一级父级元素 亲爸爸
+            $('.son').parent();
+            console.log($('.son').parent());
+
+            // 2.子 
+            // (1) 亲儿子 children() 子代选择器 ul>li
+            $('.nav').children('p').css('color', 'red');
+            // (2) 可以选择所有后代 包括儿子孙子 find()类似于后代选择器
+            $('.nav').find('p').css('background', 'gray');
+
+            // 3.兄
+            // (1)siblings 除了自身元素之外的所有亲兄弟
+            $('ol .item').siblings('li').css('color', 'red');
+            // (2)nextAll 当前元素之后所有同辈元素
+            $('ol .item').nextAll('li').css('background', 'gray');
+            // (3)prevAll 当前元素之前所有同辈元素
+            $('ol .item').prevAll('li').css('background', 'gray');
+
+            // (4)eq 第几个元素
+            $('ol li:eq(2)').css('font-weight', '900')
+
+            // (5)利用选择方法的方式选择 推荐此方法
+            $('ul li').eq(2).css('color', 'red');
+        })
+    </script>
+</body>
+
+</html>

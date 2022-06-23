@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" style="width:200px"></div>
+    <script>
+        // offset与style的区别
+        var box = document.querySelector('.box');
+        console.log(box.offsetWidth); //数字型
+        // offset可以得到任意样式表中的样式值
+        // 包含padding值
+        console.log(box.style.width); //字符串型
+        // style只能得到行内样式表中的样式值
+        // 不包含padding值
+        box.style.width = '300px'; //style可改变属性
+    </script>
+</body>
+
+</html>

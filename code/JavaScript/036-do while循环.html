@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var i = 1;
+        do {
+            console.log('hello');
+            i++;
+        } while (i <= 100)
+        // 先执行一次循环再判断条件
+
+        var j = 1;
+        do {
+            console.log(j + '岁;');
+            j++;
+        } while (j <= 100);
+
+        //1-10和
+        var sum = 0;
+        var a = 1;
+        do {
+            sum += a;
+            a++;
+        } while (a <= 100);
+        console.log(sum);
+
+        //弹出框
+        do {
+            var mass = prompt('一加一等于几?');
+        } while (mass !== '2');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 数据类型-------------------------------------------
+        //var num;//这里的num不确定属于哪种类型
+        var num = 10; //num属于数字型
+
+        //js 的变量类试是程序运行时 等号后的值来确定
+        var str = 'found'; //str属于字符串类型
+
+        //js 是动态语言 变量类型可以变换
+        var x = 10; //x 是数字型
+        x = 'found'; //x 是字符串型
+
+        // 简单数据类型-----------------------------------------
+        // Number      数字型，包括 整型值和浮点值 如21 0.21
+        // Boolean     布尔值类型 如true，false 等价于1和0
+        // String      字符串型 如'张三' js中字符串要加引号
+        // Undefined   var a；声明了变量a但没有给值 此时a=undefined
+        // Null        var a = null；声明了变量a为空值
+
+        // 1.八进制 0 ~ 7 开头为0
+        var num1 = 010;
+        console.log(num1); //010 八进制 转换为十进制就是8
+        //2.十六进制 0~9 a~f 0x开头表示十六进制
+        var num3 = 0x9;
+        console.log(num3);
+
+        //无穷大无穷小
+        console.log(Number.MAX_VALUE * 2); //infinity无穷大
+        console.log(Number.MIN_VALUE * 2); //-infinity无穷小
+
+        // 数字型的最大值----------------------------------------------
+        console.log(Number.MAX_VALUE);
+        console.log(Number.MIN_VALUE);
+
+        //NaN ,Not a number 代表一个非数值
+        console.log('found' - 100); // NaN
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

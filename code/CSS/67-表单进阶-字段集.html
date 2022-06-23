@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset{
+            border: 4px solid blue;
+            width: 200px;
+            height: 400px;
+        }
+        legend{
+            font-size: 20px;
+            text-align: center;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <h1>表单进阶-字段集</h1>
+    <!-- fieldset设置一个边框 -->
+    <!-- legend设置框上文字 -->
+    <fieldset>
+        <legend>选择你的性别</legend>
+        <input type="radio" name="aa" id="man">
+        <label for="man">男</label>
+        <input type="radio" name="aa" id="woman">
+        <label for="woman">女</label>
+    </fieldset>
+    <fieldset>
+        <legend>选择你的特长</legend>
+        <input type="checkbox" name="bb" id="html">
+        <label for="html">html</label>
+        <input type="checkbox" name="bb" id="css">
+        <label for="css">css</label>
+    </fieldset>
+</body>
+</html>

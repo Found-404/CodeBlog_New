@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jQuery-min.js"></script>
+    <style></style>
+    <script>
+        $(function() {
+            $('div').on({
+                click: function() {
+                    console.log('点击');
+                },
+                mouseover: function() {
+                    console.log('鼠标经过');
+                }
+            });
+            $('ul').on('click', 'li', function() {
+                alert(11);
+            });
+
+            // 1.事件绑定off
+            //$('div').off(); //这个是解除了div身上的所有事件
+            $('div').off('click'); //只接触点击事件 
+            $('ul').off('click', 'li'); //事件委托解除
+
+            // 2.one() 但是只能触发事件一次
+            $('p').one('click', function() {
+                alert(22);
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div></div>
+    <ul>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+    </ul>
+    <p>123</p>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 定位:                 说明      文档流     偏移位置(top left right bottom)时候的参照物     层叠顺序(z-index)
+        1.position:static;    默认值    默认       默认                                             z-index属性是不带
+        2.position:absolute;  绝对定位  脱离       A)当没有父元素或者父元素没有定位,参照物是       单位的,并且可以给:
+                                                     窗口的第一屏                                 负值,没有设置
+                                                   B)有父元素且父元素有定位,父元素                z-index时,最后写的
+        3.position:relative;  相对定位  不脱离     自己的初始位置                                 对象优先显示在.上层,
+        4.position:fixed;     固定位置  脱离       浏览器当前窗口                                 设置后,数值越大,层越靠上;    
+        5.position:slicky;    粘性定位  可以做吸顶效果,粘性定位是css3.0新增加的,兼容性不好               */
+    div{
+        width: 200px;
+        height: 200px;
+    }
+    .box1{
+        background: red;
+    }
+    .box2{
+        background: blue;
+        position: relative;
+        top:100px;
+        left:100px
+    }
+    .box3{
+        background:yellow;
+    }
+    
+    
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>

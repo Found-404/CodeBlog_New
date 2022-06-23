@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 节点的优点 -->
+    <div>我是div</div>
+    <span>我是span</span>
+    <ul>
+        123
+        <li>我是li1</li>
+        <li>我是li2</li>
+        <li>我是li3</li>
+        <li>我是li4</li>
+        <li>我是li5</li>
+        456
+    </ul>
+    <ol>
+        <li>我是li1</li>
+        <li>我是li2</li>
+        <li>我是li3</li>
+        <li>我是li4</li>
+        <li>我是li5</li>
+
+    </ol>
+    <div class="box">
+        <span class="erweima">X</span>
+    </div>
+    <script>
+        // var box = document.querySelector('.box');
+        // console.dir(box);
+        // 1.父节点 parentNote
+        var erweima = document.querySelector('.erweima');
+        // var box=document.querySelector('.box');
+        // 得到的是离元素最近的父级节点(亲父级) 如果找不到就返回空 null
+        console.log(erweima.parentNode);
+
+        // DOM提供的方法(API)获取
+        var ul = document.querySelector('ul');
+        var lis = document.querySelectorAll('li');
+        // 2. 子节点
+        // (1)子节点 childNotes 所有的子节点 包含 元素节点 文本节点等等
+        console.log(ul.childNodes);
+        // .nodeType节点类型
+        console.log(ul.childNodes[0].nodeType);
+
+        // (2)子节点 children 获取所有的子元素节点 实际开发常用的
+        console.log(ul.children);
+        // (3)子节点 firstChild 子节点第一个
+        console.log(ul.firstChild); //#text 文本节点
+        console.log(ul.lastChild); //#text 文本节点
+        // (4)子节点 firstElementChild 返回第一个子元素节点 ie9以上支持
+        console.log(ul.firstElementChild);
+
+        // (5)实际开发中 既没有兼容性问题又返回第一个子元素
+        console.log(ul.children[0]);
+        console.log(ul.children[ul.children.length - 1]); //最后一个
+    </script>
+</body>
+
+</html>

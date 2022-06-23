@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 500px;
+            height: 500px;
+            border: 2px solid black;
+            margin: 100px auto;
+            display: flex;/*弹性盒，作用于父级 */          
+            flex-direction: row; 
+            /*调整主轴
+              row 水平排列      主轴X轴
+              column 垂直排列   主轴Y轴
+              row-reverse 水平取反排列
+              column-reverse 垂直取反排列
+            */
+            justify-content: space-around;
+            /*调整主轴对齐方式
+              flex-start     靠左对齐
+              flex-end       靠右对齐
+              center         居中对齐
+              space-between  两端对齐
+              space-around   距离环绕 子对象左右间距相等             
+            */
+            align-items: center;
+            /*调整侧轴对齐方式
+              flex-start   垂直靠上
+              flex-end     垂直靠下
+              center       垂直居中
+            */
+        }
+        .box span{
+            width: 100px;
+            height: 100px;
+            border: 1px dashed red;
+
+        }
+    </style>
+</head>
+
+</head>
+<body>
+<!-- 弹性盒是一种新的布局方式，特别适合移动端布局 -->
+
+<div class="box">
+    <span>1111</span>
+    <span>2222</span>
+    <span>3333</span>
+    <span>4444</span>
+</div>
+</body>
+</html>

@@ -1,0 +1,623 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    /* box-sizing: border-box; */
+}
+
+p {
+    cursor: pointer;
+}
+
+
+/* 设置居中类名 */
+
+.centerALL {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+
+/* 弹性盒居中类名 */
+
+.flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mouse {
+    cursor: pointer;
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+header .header_top {
+    height: 30px;
+    background-color: #f5f5f5;
+    font-size: 12px;
+    color: #666;
+}
+
+header .header_top menu .right_menu,
+header .header_top menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+
+/* 地区选择样式 */
+
+header .header_top menu .region {
+    position: relative;
+    width: 100px;
+    height: 100%;
+    gap: 0px 5px;
+}
+
+
+/* 被选中类名 */
+
+
+/* 当点击时改变类名 */
+
+.login_region,
+.border_region {
+    position: relative;
+    border-style: solid;
+    border-width: 1px;
+    box-sizing: border-box;
+    border-color: #ccc #ccc transparent #ccc;
+    background-color: #fff;
+}
+
+.border_region::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    z-index: 100;
+    bottom: -3px;
+    width: 98px;
+    height: 3px;
+    background-color: #fff;
+}
+
+.login_region::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    z-index: 100;
+    bottom: -3px;
+    width: 58px;
+    height: 3px;
+    background-color: #fff;
+}
+
+.after_kong::after {
+    content: attr(data-text) !important;
+}
+
+
+/* 地区选择箭头标志 */
+
+header .header_top menu .region .arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #afafaf transparent transparent transparent;
+    margin-top: 5px;
+}
+
+
+/* 登录注册模块 */
+
+header .header_top menu .right_menu ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px 3px;
+    width: 100px;
+    height: 100%;
+    margin: 0px 2px 0px;
+}
+
+header .header_top menu .right_menu ul li {
+    height: 100%;
+}
+
+header .header_top menu .right_menu ul:not(:nth-child(8))::after {
+    content: "/";
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    font-size: 10px;
+    color: #e3e3e3;
+}
+
+header .header_top menu .right_menu ul:nth-child(1) li:first-child {
+    width: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+
+header .header_top menu .right_menu ul:nth-child(1) li:first-child::after {
+    content: "/";
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    font-size: 10px;
+    color: #e3e3e3;
+}
+
+.Sign_In {
+    width: 15px;
+    height: 15px;
+    background-image: url(./img/header_sign-hash-0459d02c.gif);
+    background-position: center center;
+}
+
+.right_menu p:hover {
+    color: #f10180;
+}
+
+header .header_top menu .right_menu ul .arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #afafaf transparent transparent transparent;
+    margin-top: 5px;
+    transition: all 0.2s ease;
+}
+
+.arrow_after {
+    transform: rotate(180deg) translateY(5px);
+    border-color: #f10180 transparent transparent transparent !important;
+}
+
+
+/* 当触发事件后改变的类名 */
+
+header .header_top menu .right_menu ul .arrowAfter {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px;
+    border-color: transparent transparent #f10180 transparent;
+    margin-bottom: 5px;
+}
+
+
+/* 触发样式模块------------------------------------------------------ */
+
+header .header_top menu {
+    position: relative;
+}
+
+
+/* 切换省份 */
+
+header .header_top menu .regions {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    top: 30px;
+    width: 470px;
+    height: 283px;
+    background-color: #fff;
+    padding: 0px 20px;
+    border: 1px solid #ccc;
+}
+
+header .header_top menu .regions .region_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    padding: 10px 0px;
+    color: #000;
+}
+
+header .header_top menu .regions .region_center {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    box-sizing: border-box;
+    color: #000;
+}
+
+header .header_top menu .regions .region_center div {
+    display: flex;
+}
+
+header .header_top menu .regions .region_center p:nth-child(1) {
+    border-right: 2px solid #ccc;
+    border-left: 2px solid #ccc;
+}
+
+header .header_top menu .regions .region_center p:nth-child(2) {
+    border-right: 2px solid #ccc;
+}
+
+header .header_top menu .regions .region_center p {
+    width: 70px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-top: 3px solid transparent;
+}
+
+header .header_top menu .regions .region_center .xunZhong {
+    width: 70px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-top: 2px solid #f10180;
+    border-bottom: 1px solid transparent;
+}
+
+header .header_top menu .regions .region_center .xunZhongNot {
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    background-color: #f5f5f5;
+}
+
+.regions .region_center .border_Bottom {
+    width: calc(512px - 72px);
+    height: 1px;
+    background-color: #dadada
+}
+
+header .header_top menu .regions .region_bottom ul {
+    /* display: flex; */
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 10px;
+}
+
+header .header_top menu .regions .region_bottom ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 20px;
+    margin: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.disNone {
+    display: none;
+}
+
+.disFlex {
+    display: flex;
+}
+
+.Selected_li {
+    background-color: #f10180;
+    color: #fff;
+}
+
+header .header_top menu .regions .region_bottom ul li:hover {
+    border: 1px solid #f10180;
+    color: #f10180;
+}
+
+
+/* 请登录 */
+
+.login_window {
+    display: none;
+    position: absolute;
+    top: 28px;
+    left: -1px;
+    width: 280px;
+    height: 151px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 0px 15px;
+    box-sizing: border-box;
+}
+
+.login_window .login_top {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.login_window .login_top p {
+    width: 180px;
+    height: 30px;
+    font-size: 15px;
+    line-height: 30px;
+    border-bottom: 1px solid #d1d1d1;
+    margin-left: 10px;
+}
+
+.login_window .login_top span {
+    display: inline-block;
+    width: 41px;
+    height: 40px;
+    background-image: url(./img/sprites-hash-06206acd.png);
+    background-position: -159px -141px;
+}
+
+.login_window div:nth-child(2) {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.login_window div:nth-child(2) span {
+    width: 46%;
+    height: 20px;
+    margin: 5px 0px 0px 9px;
+    cursor: pointer;
+}
+
+.login_window div:nth-child(2) span:hover {
+    color: #f10180;
+}
+
+
+/* 签到有礼 */
+
+.right_menu .signin .signin_Box {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px 0px;
+    top: 30px;
+    left: calc(50% - 200px);
+    width: 400px;
+    height: 450px;
+    background-color: #fff;
+    filter: drop-shadow(0px 0px 3px #afafaf);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.right_menu .signin .signin_Box::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: calc(50% - 10px);
+    width: 0;
+    height: 0;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+}
+
+.right_menu .signin .signin_Box h3 {
+    font-size: 20px;
+}
+
+.right_menu .signin .signin_Box h3 span {
+    color: #f10180;
+}
+
+.right_menu .signin .signin_Box>p {
+    width: 100%;
+    height: 50px;
+    padding-top: 5px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.right_menu .signin .signin_Box .phone_signin {
+    height: 150px;
+}
+
+.right_menu .signin .signin_Box .weChat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px 40px;
+    width: calc(100% - 40px);
+    height: 150px;
+    background-color: #fce3f0;
+}
+
+.right_menu .signin .signin_Box .weChat p {
+    color: #545454;
+}
+
+
+/* 我的特卖 */
+
+.special .special_Sale {
+    display: none;
+    position: absolute;
+    top: 28px;
+    width: 98px;
+    height: 100px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.special .special_Sale div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px 0px;
+    height: 100%;
+}
+
+.special .special_Sale div span {
+    cursor: pointer;
+}
+
+.special .special_Sale div span:hover {
+    color: #f10180;
+}
+
+.border_region::after {
+    content: attr(data-text) !important;
+}
+
+
+/* 会员俱乐部 */
+
+.member .member_box {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 28px;
+    width: 98px;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+
+/* 客服服务 */
+
+.customer .customer_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px 0px;
+    align-items: center;
+    position: absolute;
+    top: 28px;
+    width: 98px;
+    height: 100px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+
+/* --------------------------------------------------- */
+
+
+/* 商品分类 */
+
+.header_bottom menu .right>ul,
+.header_bottom menu .right,
+.header_bottom menu {
+    display: flex;
+    align-items: center;
+}
+
+.header_bottom menu>div:nth-child(1) {
+    flex-grow: 1;
+}
+
+.header_bottom menu>div:nth-child(2) {
+    flex-grow: 15;
+}
+
+.header_bottom menu .left {
+    width: 150px;
+    height: 50px;
+    background-color: #f10180;
+    color: #fff;
+}
+
+.header_bottom menu .right>ul {
+    width: 940px;
+}
+
+.header_bottom menu .right>ul li {
+    flex-grow: 1;
+    text-align: center;
+    cursor: pointer;
+}
+
+.header_bottom menu .right div p:hover,
+.header_bottom menu .right ul li:hover {
+    color: #f10180;
+}
+
+.open {
+    position: relative;
+}
+
+.open .open_sort {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    height: 0px;
+    background-color: #f10180;
+    transition: all 0.3s ease;
+}
+
+.open .open_sort>ul {
+    overflow: hidden;
+    height: 0px;
+    transition: all 0.3s ease;
+    background-color: #f10180;
+}
+
+.open .open_sort>ul>li {
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: #f10180;
+    color: #fff;
+    cursor: pointer;
+}
+
+.open .open_sort .open_detailed {
+    display: none;
+    width: 1000px;
+    height: 530px;
+    position: absolute;
+    left: 153px;
+    top: 0px;
+    background-color: #e0e0e0;
+}
+
+.open .open_sort .open_detailed ul li {
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+    color: #000;
+}
+
+
+/* .header_bottom menu .right {
+    gap: 0px 10px;
+} */
+
+.header_bottom menu .right .more {
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.header_bottom menu .right .after_more {
+    box-shadow: 0px 0px 3px 0px #a4a4a4;
+}
+
+.header_bottom menu .right .more ul li {
+    height: 35px;
+    cursor: pointer;
+}
+
+.header_bottom menu .right .more div section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_bottom menu .right .more div section span {
+    transform: rotate(0deg);
+    transition: all 0.3s ease;
+    color: #afafaf;
+}

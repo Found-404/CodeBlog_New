@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function success(data) {
+            console.log('JSONP响应回来的数据');
+            console.log(data);
+        };
+    </script>
+    <script src="http://ajax.frontend.itheima.net:3006/api/jsonp?callback=success&name=ls&age=30">
+    </script>
+
+    <!-- 2.4 JSONP的缺点
+    由于JSONP是通过<script> 标签的src属性,来实现跨域数据获取的，所以，JSONP只支持GET数据请求,
+    不支持POST请求。
+    注意: JSONP 和Ajax之间没有任何关系，不能把JSONP请求数据的方式叫做Ajax,因为JSONP没有用到
+    XMLHttpRequest这个对象。 -->
+</body>
+
+</html>

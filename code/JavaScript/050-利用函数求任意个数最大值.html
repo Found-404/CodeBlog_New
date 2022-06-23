@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //利用函数求任意个数最大值
+        function max() {
+            var p = arguments[0];
+            for (var i = 1; i < arguments.length; i++) {
+                if (p < arguments[i]) {
+                    p = arguments[i];
+                }
+            }
+            return p;
+        }
+        console.log(max(6, 5, 1, 6, 12, 2));
+        console.log(max(60, 50, 10, 60, 12, 2));
+
+        // 利用函数翻转数组
+        function fanZhuan() {
+            var kong = [];
+            for (var i = arguments.length - 1; i >= 0; i--) {
+                kong[kong.length] = arguments[i];
+            }
+            return kong;
+        }
+        console.log(fanZhuan('一', '二', '三', '四', '五'));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

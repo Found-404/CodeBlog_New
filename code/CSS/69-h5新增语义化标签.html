@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+        }
+        header,footer{
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background: orange;
+        }
+        section{
+            height: calc(100% - 100px);
+        }
+        nav,aside{
+            width: 100px;
+            height: 100%;
+            background: #ccc;
+            float: left;
+        }
+        main{
+            float: left;
+            height: 100%;
+            width: calc(100% - 200px);
+            background: white;
+        }
+        aside p{
+            font-size: 12px;
+        }
+        main .article1{
+            height: 60%;
+        }
+        main .article2{
+            height: 40%;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="header"></div>
+    <div class="body"></div>
+    <div class="footer"></div> -->
+    <header>header顶部</header>
+    <section>
+        <nav>
+            <figure>nav</figure> <!-- figure普通的标签,没有任何特性 -->
+            <ul>
+                <li>111</li>
+                <li>111</li>
+                <li>111</li>
+                <li>111</li>
+            </ul>
+        </nav>
+        <main>
+            <!-- article上下文无关的独立的内容 -->
+            <article class="article1">
+                <header>article-header</header>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto perferendis culpa inventore illo rerum, obcaecati quae qui debitis libero consequatur commodi impedit ipsum error ipsam a accusamus vitae exercitationem earum!</p>
+                <footer>article-footer</footer>
+            </article>
+            <article class="article2">
+                <header>article-header</header>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto perferendis culpa inventore illo rerum, obcaecati quae qui debitis libero consequatur commodi impedit ipsum error ipsam a accusamus vitae exercitationem earum!</p>
+                <footer>article-footer</footer>
+            </article>
+        </main>
+        <aside>
+            <figure>Aside</figure>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis delectus deserunt maiores ad esse saepe veniam sit adipisci aut cupiditate. Ratione voluptas illo hic quo reiciendis minima. Veritatis, perferendis explicabo!</p>
+        </aside>
+    </section>
+    <footer>footer底部</footer>
+</body>
+</html>

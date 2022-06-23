@@ -1,0 +1,61 @@
+<!--
+ * @Author: error: git config user.name && git config user.email & please set dead value or install git
+ * @Date: 2022-06-02 11:09:07
+ * @LastEditors: error: git config user.name && git config user.email & please set dead value or install git
+ * @LastEditTime: 2022-06-02 11:29:58
+ * @FilePath: \code\code\JavaScript\ES6-\30-class静态成员.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Phone() {
+
+        };
+        // ---------------------------------
+        // 此处添加的属性或方法是添加在了Phone(函数对象)上
+        // 其实例化对象不会存在这些属性或者方法
+        Phone.nam = '手机';
+        Phone.call = () => {
+            console.log('我可以改变世界');
+        };
+        // 这样的属性称之为静态成员
+        // ---------------------------------
+        let pho = new Phone();
+        //console.log(pho.nam); //underfined
+        //pho.call(); //报错:call方法不是实例对象的方法,不是pho的方法
+        console.log(pho); //空
+
+        // 在Phone函数原型上添加方法
+        Phone.prototype.size = '123cm';
+        console.log(pho.size); //123cm
+
+        Phone.call(); //我可以改变世界
+        console.log(Phone.nam); //手机
+
+
+        //----------------------------------------------------
+
+        class Phone2 {
+            // 静态属性static标注的属性或者方法是属于类的不会属于实例化对象pho2
+            static nam = '手机';
+            static change() {
+                console.log('我可以改变世界');
+            }
+        }
+        let pho2 = new Phone2();
+        console.log(pho2.nam); //underfined
+        console.log(Phone2.nam); //手机
+    </script>
+</body>
+
+</html>

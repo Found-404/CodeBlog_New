@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- 
+    1.font-size      字体大小     单位px 默认16px 常用12px
+    2.font-family    字体         当字体是中文字体、英文字体中有空格时，需加双引号;
+                                  多个字体中间用逗号链接,先解析第1个字体如果没有解析第2个字体,以此类推
+    3.color          颜色         color:red; color:##ff0; color:rgb(255,0,0); 0-255
+    4.font-weight     加粗         font-weight:bolder(更粗的)/hold(加粗)/mormal(常规)
+                                  font-weight:100-900; 10-500不加粗 600-900加粗
+    5.font-style     倾斜         font-style:italic(倾斜字)/cblique(倾斜的文字)/normal(常规显示);
+    6.text-align     文本水平对齐  text-align:left;水平靠左
+                                    text-align:right;水平靠右
+                                    text-align:center;水平居中
+                                    text-align:justify;水平两端对齐,但是只对多行起作用 
+    7.line-height    行高           line-height的数据=height的数据,可以实现单行文本垂直居中
+    8.text-indent    首行缩进       text-indent可以取负值;  text-indent属性只对第一行起作用
+    9.letter-spacing 字间距         控制文字和文字之间的间距 word-spacing词间距
+    10.text-decoration  文本修饰    text-decoration:none没有/underline下划线/overline上划线/line-throu删除线
+    11.font          文字简写       font是font-style font-weight font-size/line-height font-family的简写.
+                                    font:italic 800 30px/80px"宋体"; 顺序不能改变,必须同时指定font-size和font-family的属性时才起作用
+                                    font:倾斜化 加粗化(前两个可省略) 字体大小/行高 字体
+    12.text-transform 大小写        text-transform:capitalize;(首字母大写)
+                                    text-transform:lowercase;(所有字母小写)
+                                    text-transform:uppercase;(所有字母大写)
+-->
+<style>
+    .p1{
+        font-size: 16px;
+    }
+    .p2{
+        font-family:宋体;
+    }
+    .p3{
+        /* color: red; */
+        /* color:rgb(99, 199, 245) */
+        color: #ffff;
+    }
+    /* 十进制 0-9  */
+    /* 二进制 01 */
+    /* 十六进制 0-9 A-F */
+    .p4{
+        font-weight: 700;
+    }
+    .p5{
+        font-style:italic;
+    }
+    .p6{
+        
+        text-align: center;
+        background-color: royalblue;
+        width: 500px;
+    }
+    .p8{
+        background-color: yellow;
+        width: 500px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+    }
+    .p9{
+        /* 文本间距:词间距,字符间距 */
+        letter-spacing: 10px;
+    }
+    .p10{
+        word-spacing: 10px;
+    }
+    .p11{
+        /* 首行缩进 */
+        font-size: 40px;
+        text-indent: 2em;/* 相对字体大小缩进 */
+    }
+    .p12{
+        text-decoration:underline;/*下划线*/
+        text-decoration:line-through;/*删除线*/
+        text-decoration:overline;/*上划线*/
+
+        text-decoration:none; /*无效果*/  
+        text-decoration:underline overline; /*可包含多个 */
+    }
+    #p13{
+        /* font:italic bold 20px/1em 宋体 */
+        /* font:italic bold 20px/1em 宋体 */
+        font:30px/1em 微软雅黑
+        /* font:倾斜化 加粗化(前两个可省略) 字体大小/行高 字体 */
+    }
+</style>
+</head>
+<body>
+    <p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi exercitationem, quo magnam corporis fugit animi, dolor molestiae, sint expedita repellendus quasi nihil ducimus facilis aliquam. Eos neque voluptatibus nobis quisquam?</p>
+    <p class="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi exercitationem, quo magnam corporis fugit animi, dolor molestiae, sint expedita repellendus quasi nihil ducimus facilis aliquam. Eos neque voluptatibus nobis quisquam?</p>
+    <P class="p3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem sapiente exercitationem ullam accusantium alias necessitatibus. Molestiae, excepturi neque cupiditate consequatur autem itaque eveniet quo ea. Fugit soluta error quos eaque!</P>
+    <P class="p4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem sapiente exercitationem ullam accusantium alias necessitatibus. Molestiae, excepturi neque cupiditate consequatur autem itaque eveniet quo ea. Fugit soluta error quos eaque!</P>
+    <P class="p5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem sapiente exercitationem ullam accusantium alias necessitatibus. Molestiae, excepturi neque cupiditate consequatur autem itaque eveniet quo ea. Fugit soluta error quos eaque!</P>
+    <div class="p6">hello world!</div>
+    <P class="p7">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem sapiente exercitationem ullam accusantium alias necessitatibus. Molestiae, excepturi neque cupiditate consequatur autem itaque eveniet quo ea. Fugit soluta error quos eaque!</P>
+    <div class="p8">大家好</div>
+    <p class="p9">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque ea ratione a ipsum facere rem reiciendis quod temporibus eligendi officiis delectus molestiae unde, accusantium dolorum vero ut officia aut quo?</p>
+    <p class="p10">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque ea ratione a ipsum facere rem reiciendis quod temporibus eligendi officiis delectus molestiae unde, accusantium dolorum vero ut officia aut quo?</p>
+    <p class="p11">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque ea ratione a ipsum facere rem reiciendis quod temporibus eligendi officiis delectus molestiae unde, accusantium dolorum vero ut officia aut quo?</p>
+    <p class="p12">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque ea ratione a ipsum facere rem reiciendis quod temporibus eligendi officiis delectus molestiae unde, accusantium dolorum vero ut officia aut quo?</p>
+    <p id="p13">
+        大家好,Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid eligendi quod et aperiam tempora molestiae laborum tempore unde, iure, sequi voluptatum veniam possimus officia doloremque molestias nisi harum illo fugit.
+    </p>
+</body>
+</html>

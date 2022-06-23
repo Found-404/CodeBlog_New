@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+        //1. 数组的合并 黑 白 灰
+        const anSe = ['黑', '白', '灰'];
+        const liangSe = ['红', '黄', '绿'];
+        //老方法 使用concat拼接数组
+        // const heBing = anSe.concat(liangSe);
+        const heBing = [...anSe, ...liangSe];
+        console.log(heBing);
+
+        //2.数组的克隆
+        const q1 = ['E', 'G', 'M'];
+        const q2 = [...q1];
+        console.log(q2);
+
+        //3.将伪数组转换为真正的数组
+        const divs = document.querySelectorAll('div');
+        console.log(divs); //此时还为伪数组
+        const divArr = [...divs]; //转换
+        console.log(divArr);
+    </script>
+</body>
+
+</html>

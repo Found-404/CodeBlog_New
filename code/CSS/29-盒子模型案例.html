@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* img{
+            display: block;元素转换 
+        } */
+        .box1{
+            width: 241px;
+            height: 335px;
+            /* background-color: yellow; */
+            margin: 0 auto;
+            padding: 11px 11px 18px;
+        }
+        .title{
+            width: 235px;
+            height: 19px;
+            /* background-color: red; */
+            padding-left: 4px;
+            border-left: 2px solid #254262;
+            color: #254262;
+            line-height: 19px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+        .bigpic{
+            width: 241px;
+            height: 170px;
+            margin: bottom 16px;;
+        }
+        .bigpic div{
+            width: 241px;
+            height: 144px;
+            background-image: url(浮动案例/1.jpeg);
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+        .bigpic p{
+            width: 241px;
+            height: 26px;
+            background-color:#f6f7f8;
+            font-size: 12px;
+            text-align: center;
+            line-height: 26px;
+        }
+        .smallpic{
+            width: 242px;
+            height: 121px;
+            margin-top: 10px;
+        }
+        .zuo{
+            width: 112px;
+            height: 84px;
+            background-image: url(浮动案例/2.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .you{
+            width: 112px;
+            height: 84px;
+            background-image: url(浮动案例/3.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .smallpic p{
+            font-size: 12px;
+            width: 112px;
+            text-align: center;
+            background-color: #f6f7f8;
+            line-height: 18px;
+        }
+        .left{
+            float: left;
+        }
+        .right{
+            float: right;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="title">示例图片</div>
+        <div class="bigpic">
+            <div></div>
+            <p>示例图片01</p>
+        </div>
+        <div class="smallpic">
+            <div class="left">
+                <div class="zuo"></div>
+                <p>示例图片02</p>
+            </div>
+            <div class="right">
+                <div class="you"></div>
+                <p>示例图片03</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

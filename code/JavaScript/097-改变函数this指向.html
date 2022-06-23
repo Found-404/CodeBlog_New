@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>点击</button>
+    <button>点击</button>
+    <button>点击</button>
+    <script>
+        // 改变函数this指向 js提供了三种方法 call() apply() bind()
+        // 1.call()
+        var o = {
+            name: 'andy'
+        };
+
+        function fn(a, b) {
+            console.log(this);
+            console.log(a + b);
+        };
+        fn.call(o, 1, 2);
+        // call第一个调用函数 第二个可以改变函数内的this指向
+        // call的只要作用可以实现继承
+        function Father(uname, age, sex) {
+            this.uname = uname;
+            this.age = age;
+            this.sex = sex;
+        }
+
+        function Son(uname, age, sex) {
+            Father.call(this, uname, age, sex)
+        }
+        var son = new Son('ldh', 18, '男');
+        console.log(son);
+
+        // 2.apply() 应用 运用的意思
+        var a = {
+            name: 'andy'
+        };
+
+
+        function fna(arr) {
+            console.log(this);
+            console.log(arr); //'pink'
+        };
+        fna.apply(a, ['red']);
+        // 1.也是调用函数 第二个可以改变函数内部的this指向
+        // 2.但是他的参数必须是数组(伪数组)
+        // 3.apply的主要运用 如:利用apply借助于数学内置对象求最大值
+        // Math.max();
+        var arr = [6, 61, 23, 3, 13, 2];
+        var max = Math.max.apply(Math, arr);
+        var min = Math.max.apply(Math, arr);
+        console.log(max, min);
+
+        // 3.bind() 绑定 捆绑的意思但不调用
+        var o = {
+            name: 'andy'
+        };
+
+        function fn(a, b) {
+            console.log(this.name);
+            console.log(a + b);
+        };
+        var f = fn.bind(o, 1, 2);
+        f();
+        // 1.不会调用原来的函数 可以改变原来函数内部的this指向
+        // 2.返回的是原来函数改变this之后产生的新函数
+        // 3.如果有的函数我们不需要立即调用又想改变这个函数内部的this指向此时用bind
+        // 4.我们有个按钮，当点击之后就近用这个按钮，3秒之后开启按钮。
+        var btn = document.querySelector('button');
+        btn.onclick = function() {
+            this.disabled = true; //这个this指向btn按钮
+            setTimeout(function() {
+                this.disabled = false; //定时器函数里面的this指向window
+            }.bind(this), 1000); //这个this指向btn
+        }
+
+        // var btns = document.querySelectorAll('button');
+        // for (var i = 0; i < btns.length; i++) {
+        //     btns[i].onclick = function() {
+        //         this.disabled = true;
+        //         setTimeout(function() {
+        //             this.disabled = false;
+        //         }.bind(this), 2000);
+        //     }
+        // }
+    </script>
+</body>
+
+</html>

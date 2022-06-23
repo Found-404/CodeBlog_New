@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jQuery-min.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div>演示文本</div>
+    <div>演示文本</div>
+    <div>演示文本</div>
+    <div>演示文本</div>
+    <ul>
+        <li>相同操作</li>
+        <li>相同操作</li>
+        <li>相同操作</li>
+    </ul>
+    <script>
+        // 1.获取四个div元素
+        $('div'); // 伪数组形式储存
+        console.log($('div'));
+
+        // 2.给四个div设置背景颜色 jQuery不能使用style方法
+        $('div').css('background', 'pink');
+
+        // 3.隐式迭代
+        // 遍历内部的DOM元素(伪数组形式储存)的过程叫做隐式迭代
+        $('ul li').css('color', 'red');
+    </script>
+</body>
+
+</html>

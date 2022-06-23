@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //声明变量
+        let a;
+        let b, c, d;
+        let e = 100;
+        let f = 123,
+            g = 'abc',
+            h = [];
+
+        // 1.变量不能重复声明
+        // let star='123';
+        // let star='321'
+
+        // 2.块级作用域 全局 局部 eval
+        // if else while for
+        // {
+        //     let gril = '一二三';
+        // }
+        // console.log(gril);
+
+        // 3.不存在变量提升
+        // console.log(song);
+        //使用var会输出undefined
+        //使用let会报错
+        // let song = '变量';
+
+        // 4.不影响作用域链
+        {
+            let school = '垃圾';
+
+            function fn() {
+                console.log(school);
+            }
+            fn();
+        }
+    </script>
+</body>
+
+</html>

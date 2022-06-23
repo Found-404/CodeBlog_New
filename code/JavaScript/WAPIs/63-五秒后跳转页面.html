@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <button>点击</button>
+    <div></div>
+    <script>
+        var btn = document.querySelector('button');
+        var div = document.querySelector('div');
+        btn.addEventListener('click', function() {
+            // console.log(location.href);
+            location.href = 'http://www.baidu.com';
+        }); //点击跳转页面
+        var timer = 10;
+        times(); //先声明一次避免空白
+        setInterval(times, 1000); // 每隔1秒调用一次函数
+
+        function times() { // 函数封装
+            if (timer == 0) {
+                location.href = 'http://www.baidu.com';
+            } else {
+                div.innerHTML = '您将在' + timer + '秒钟后跳转页面';
+                timer--;
+            }
+        }
+    </script>
+</body>
+
+</html>

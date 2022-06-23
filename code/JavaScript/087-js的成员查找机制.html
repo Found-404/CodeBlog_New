@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.当访问一个对象的属性(包括方法)时,首先查找这个对象自身有没有该属性。
+        // 2.如果没有就查找它的原型(也就是_ proto_ 指向的prototype原型对象)。
+        // 3.如果还没有就查找原型对象的原型( Object的原型对象)。
+        // 4.依此类推一直找到Object为止 ( null )。
+        // 5.__proto__对象原型的意义就在 于为对象成员查找机制提供一个方向,或者说一条路线。
+        function Star(uname, age) {
+            this.uname = uname;
+            this.age = age;
+        }
+        Star.prototype.sing = function() {
+            console.log(this.uname + '我会飞');
+        };
+        // Star.prototype.sex = '女';
+        Object.prototype.sex = '男';
+        var ldh = new Star('刘德华', 18);
+        // ldh.sex = '男';
+        console.log(ldh.sex); //就近原则查找
+        console.log(Object.prototype);
+        console.log(ldh);
+        console.log(Star.prototype);
+        ldh.sing();
+    </script>
+</body>
+
+</html>

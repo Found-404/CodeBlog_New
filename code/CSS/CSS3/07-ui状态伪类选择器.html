@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+        E:enabled   匹配所有用户界面(form表单)中处于可用状态的E元索
+       E:disabled  匹配所有用户界面(form表单)中处于不可用状态的E元素
+       E:checked   匹配所有用户界面(form表单) 中处于选中状态的元素E
+       E:selection 匹配E元索中被用户选中或处于高亮状态的部分 */
+        
+        input:enabled {
+            background-color: red;
+        }
+        
+        input:disabled {
+            background-color: yellow;
+        }
+        /* 焦点 会匹配此选择器 focus 手动选择后激活 变成"blue"" */
+        
+        input:focus {
+            background-color: blue;
+        }
+        /*勾选之后 激活变成红色  前提是去除默认样式*/
+        
+        input[type=checkbox] {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            border: 2px solid black;
+        }
+        
+        input:checked {
+            background-color: red;
+        }
+        /* ::selection选择之后触发 */
+        
+        div::selection {
+            background-color: yellow;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        用户名<input type="text"><br> 密码
+        <input type="password"><br> 记住用户名
+
+        <input type="checkbox"><br>
+
+        <input type="submit" disabled>
+    </form>
+
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nam, at ducimus porro, magni cum vero rerum enim hic rem asperiores dolor incidunt dolorem dolore temporibus fugiat accusantium animi ipsam.
+    </div>
+</body>
+
+</html>

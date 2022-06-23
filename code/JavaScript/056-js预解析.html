@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //预解析
+        // 1.
+        console.log(num); //underfined
+        var num = 10;
+        // 相当于执行力以下代码
+        // var num;
+        // console.log(num);//underfined
+        // num = 10;
+
+        // 2.
+        fn(); //11
+
+        function fn() {
+            console.log(11);
+        }
+
+        //3.
+        // fun();
+        // // 报错
+        // var fun = function() {
+        //         console.log(22);
+        //     }
+        //1.js引擎运行 先预解析 再执行代码
+        //2.预解析 js 引擎会把js所有var和function提升到当前作用域最前面
+        //3.代码执行 按照代码书写的顺序从上往下
+
+        //预解析分 变量预解析(变量提升) 和 函数预解析(函数提升)
+        //(1)变量提升 就是把所有变量 声明提升到当前的作用域最前面 不提升赋值操作
+        //(2)函数提升 就是把所有函数声明提升到当前作用域的最前面 不调用函数
+
+        //-------------------------------------------------------------------------------------------------------
+        // 案例1 结果：underfinde
+        var anLi = 10;
+        an();
+
+        function an() {
+            console.log(anLi);
+            var anLi = 20;
+        }
+
+        // 执行顺序:
+        // (1)var anLi;
+
+        // (2)function an() {
+        //     (1)var anLi;
+        //     (2)console.log(anLi); underfined
+        //     (3)anLi = 20;     
+        // }
+        // (3)anLi = 10;
+        // (4)an();
+        //-------------------------------------------------------------------------------------------------------
+        // 案例2  结果：underfined 20
+        var anLi2 = 10;
+
+        function an2() {
+            console.log(anLi2);
+            var anLi2 = 20;
+            console.log(anLi2);
+        }
+        an2();
+
+        //执行顺序
+        //(1)var anLi2;
+        //(2)function an2() {
+        //      (1)var anLi2;
+        //      (2)console.log(anLi2);
+        //      (3)anLi2 = 20;
+        //      (4)console.log(anLi2);
+        // }
+        //anLi2=10;
+        //an2();
+        //-------------------------------------------------------------------------------------------------------
+        // 案例3 结果：underfined 9
+        var a = 18;
+        f1();
+
+        function f1() {
+            var b = 9;
+            console.log(a);
+            console.log(b);
+            var a = '123';
+        }
+
+        // 执行顺序:
+        // (1)var a
+        // (2)function f1() {
+        //         var b = 9;
+        //         console.log(a);
+        //         console.log(b);
+        //         var a = '123';
+        //        (1)var b
+        //        (2)var a
+        //        (3)b=9
+        //        (4)console.log(a);
+        //        (5)console.log(b);
+        //        (6)a='123'
+        // }
+        // (3)a = 18
+        // (4)f1()
+        //-------------------------------------------------------------------------------------------------------
+        // 案例4 结果：9 9 9 9 9 报错
+        f1();
+        console.log(c);
+        console.log(b);
+        console.log(a);
+
+        function f1() {
+            var a = b = c = 9;
+            //相当于 var a = 9；b = 9；c = 9；
+            //但是b 和 c没有被var声明 直接赋值 当全局变量看
+            console.log(a);
+            console.log(b);
+            console.log(c);
+        }
+
+        // 执行顺序分析
+        // (1)function f1() {
+        //     var a = b = c = 9;
+        //     console.log(a);
+        //     console.log(b);
+        //     console.log(c);
+        //     (1)var a
+        //     (2)a = 9
+        //     (3)b = 9  b和c只赋值属于全局变量
+        //     (4)c = 9
+        //     (5)console.log(a); 9
+        //     (6)console.log(b); 9
+        //     (7)console.log(c); 9
+        // }
+        // (2)f1()
+        // (3)console.log(c); 9
+        // (4)console.log(b); 9
+        // (5)console.log(a); 报错 a未被声明
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

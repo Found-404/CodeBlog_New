@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 600px;
+            height: 600px;
+            border:5px solid gray;
+            display: grid;
+            grid-template-rows: repeat(3,100px);
+            grid-template-columns: repeat(3,100px);
+/* ---------------容器布局控制----------------------------- */
+            grid-auto-flow: column;
+            /* row默认横向排列 
+               colum竖向排列 */
+            justify-content: center;
+            /* 水平方向排列 */
+            /* 
+            start-对齐容器的起始边框
+            end-对齐容器的结束边框
+            center-容器内部居中
+            stretch-项目大小没有指定时，拉伸占据整个网格容器
+            space-around每个项目两侧间隔相等，所以项目之间的间隔比项目与容器边框的间隔大一倍
+            space-between项目与项目的间隔相等，项目与容器边框之间没有间隔
+            space-evenly项目与项目的间隔相等，项目于容器边框之间也是同样长度的间隔
+            */
+            align-content: center;
+            /* 垂直方向排列 */
+/* ---------------项目布局控制----------------------------- */
+            /* 水平 */
+            justify-items: center;
+            /* 垂直 */
+            align-items: center;
+
+            /* 综合写法 */
+            place-items: center center;
+        }
+        .box div{
+            border: 1px solid red;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+</body>
+</html>

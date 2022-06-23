@@ -1,0 +1,222 @@
+nav section:nth-child(4) div {
+    color: #fff;
+}
+
+nav section:nth-child(4) div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+nav section:nth-child(4) p {
+    color: red;
+}
+
+
+/* 头部 */
+
+.header .headr_Box {
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+}
+
+.header .headr_Box .play_Music {
+    width: 40px;
+    height: 40px;
+}
+
+.header .headr_Box .header_left {
+    font-size: 2.5rem;
+    height: 25px;
+    color: #767676;
+}
+
+.header .headr_Box .header_center {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .headr_Box .header_center p {
+    position: relative;
+    width: 80px;
+    padding: 5px 0px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.header .headr_Box .header_center p:nth-child(1) {
+    border-bottom: 2px solid red;
+}
+
+.header .headr_Box .header_center p:nth-child(2)::before {
+    content: "99+";
+    position: absolute;
+    right: -10px;
+    top: -5px;
+    width: 35px;
+    height: 15px;
+    font-size: 1rem;
+    line-height: 15px;
+    border-radius: 10px;
+    background-color: red;
+    color: #fff;
+}
+
+.header .headr_Box .play_Music {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .headr_Box .play_Music a {
+    overflow: hidden;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #afafaf;
+}
+
+.header .search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0px;
+}
+
+.header .search a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px 10px;
+    width: 300px;
+    height: 25px;
+    background-color: #f0f0f0;
+    color: #767676;
+    border-radius: 30px;
+}
+
+
+/* 内容部分 */
+
+main {
+    padding: 5px 10px;
+}
+
+main .main_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    height: 60px;
+    border-radius: 10px;
+    background-image: url(../assetes/images/u2347.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: #fff;
+}
+
+main .main_header .header_left p {
+    font-size: 1.5rem;
+}
+
+main .main_header .header_left a {
+    color: #fff;
+    padding-left: 5px;
+}
+
+main .main_header .header_right {
+    margin-right: 10px;
+    font-size: 1.8rem;
+}
+
+main ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px 0px;
+    margin-top: 10px;
+}
+
+main ul li {
+    width: 47%;
+    box-shadow: 2px 2px 5px -5px black;
+    border-radius: 10px;
+    padding: 5px 5px 10px;
+}
+
+main ul li a {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0px;
+}
+
+main ul li a .li_img {
+    width: 100%;
+    height: 200px;
+}
+
+main ul li a .user {
+    display: flex;
+    align-items: center;
+    gap: 0px 10px;
+}
+
+main ul li a .user .user_img {
+    overflow: hidden;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+main ul li a .user .user_icon {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2rem;
+    color: #939393;
+}
+
+
+/* 加载界面 */
+
+.load {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px 10px;
+    width: 100vw;
+    height: 100px;
+    padding-bottom: 80px;
+}
+
+.load .load_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    font-size: 2.5rem;
+    color: #afafaf;
+    animation: load linear 1.5s infinite;
+}
+
+.load p {
+    color: #afafaf;
+}
+
+@keyframes load {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

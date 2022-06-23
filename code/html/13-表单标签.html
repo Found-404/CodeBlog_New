@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- <from method="get或者post" action="向何处发送表单数据">
+        <input/>
+        A.属性type定义输入框类型
+          a）文本框type="text" 密码框 type="password"
+          b）提交框type="submit"和<button>提交按钮</button>一样
+          c）按钮框type="button"单纯的按钮
+          d）重置框type="reset"清空效果
+        B.属性 placeholder描述输入字段预期值的简短的提示信息。兼容到IE8以上
+        C.属性name必须设置，否则在提交表单时，用户在其中输入的数据不会被发送到服务器
+        D.属性value
+    </from> 
+-->
+<form action="http://www.baidu.com" method="post">
+    用户信息:<input type="text" placeholder="请输入你的用户名" name="username">
+    <br>
+    密码:<input type="password" placeholder="请输入密码" name="mima">
+    <!-- <input type="submit" value="登录"> -->
+    <button type="submit">登录</button>
+    <!-- 提交信息到action指定的地址 -->
+ 
+    <!-- <input type="reset" value="请重新输入"> -->
+    <button type="reset">请重新输入</button>
+
+    <input type="button" value="aaaa">
+</form>
+</body>
+</html>

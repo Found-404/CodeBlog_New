@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lib/axios.js"></script>
+</head>
+
+<body>
+    <button id="btn1">发起GET请求</button>
+    <button id="btn2">发起POST请求</button>
+
+    <button id="btn3">直接使用axios发起GET请求</button>
+    <button id="btn4">直接使用axios发起POST请求</button>
+
+    <script>
+        // 1.什么是axios
+        // Axios是专注于网络数据请求的库。
+        // 相比于原生的XMLHttpRequest对象，axios 简单易用。
+        // 相比于jQuery, axios 更加轻量化，只专注于网络数据请求。
+
+        // axios发起get请求
+        document.querySelector('#btn1').addEventListener('click', function() {
+            var url = 'http://www.liulongbin.top:3006/api/get';
+            var paramsObj = {
+                name: 'zs',
+                age: 20
+            };
+            axios.get(url, {
+                params: paramsObj
+            }).then(function(res) {
+                console.log(res.data);
+                // res返回的是axios封装的一个包.其中的data才是服务器返回的真正数据
+            });
+        });
+
+
+        // axios发起POST请求
+        document.querySelector('#btn2').addEventListener('click', function() {
+            var url = 'http://www.liulongbin.top:3006/api/post';
+            var dataObj = {
+                address: '北京',
+                location: '顺义区'
+            };
+            axios.post(url, dataObj).then(function(res) {
+                console.log(res.data);
+            });
+        });
+
+
+        // 直接使用axios发起GET请求 类似于ajax中的$.ajax()
+        document.querySelector('#btn3').addEventListener('click', function() {
+            var url = 'http://www.liulongbin.top:3006/api/get';
+            var paramsObj = {
+                name: 'ls',
+                age: 30
+            };
+            axios({
+                method: 'GET',
+                url: url,
+                params: paramsObj
+            }).then(function(res) {
+                console.log(res.data);
+            });
+        });
+
+
+        // 直接使用axios发起POST请求 类似于ajax中的$.ajax()
+        document.querySelector('#btn4').addEventListener('click', function() {
+            axios({
+                method: 'POST',
+                url: 'http://www.liulongbin.top:3006/api/post',
+                data: {
+                    name: 'hhh',
+                    age: 91,
+                    gender: '女'
+                }
+            }).then(function(res) {
+                console.log(res.data);
+            });
+        });
+    </script>
+</body>
+
+</html>

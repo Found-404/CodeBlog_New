@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 修改length长度以及索引号
+        var arr = ['red', 'green', 'blue'];
+        console.log(arr.length);
+        arr.length = 5; //把数组长度改为了5
+        console.log(arr);
+        console.log(arr[3]); //undefine
+        console.log(arr[4]); //undefine
+
+        // 新增数组元素 修改索引号 追加数组元素
+        var arr1 = ['red', 'green', 'blue'];
+        arr1[3] = 'found';
+        console.log(arr1);
+        arr1[1] = '替换'; //有值的元素会被直接替换掉
+        console.log(arr1);
+
+        //新建一个数组 里面存放10个整数(1-10)
+        var arr2 = [];
+        for (i = 0; i < 10; i++) {
+            arr2[i] = i + 1;
+        }
+        console.log(arr2);
+
+        // 将数组[2,0,6,1,77,0,52,0,25,7]中大于等于10的元素选出来,放入新数组
+        var arr3 = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+        console.log(arr3);
+        var newArr = [];
+        var j = 0;
+        for (var i = 0; i < arr3.length; i++) {
+            if (arr3[i] >= 10) {
+                //新数组应该从0开始递增
+                newArr[j] = arr3[i];
+                j++;
+            }
+        }
+        console.log(newArr);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

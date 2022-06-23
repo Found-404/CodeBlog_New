@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1.javescript 就是代码名字(变量)在某个范围内起作用和效果
+        // 目的:提高程序可靠性 减少命名冲突
+        // 2.js作用域分类(es6)之前：全局作用域  局部作用域
+        // 3.全局作用域：整个<script>标签 或者一个单独的js文件
+        var num = 10;
+        var num = 30;
+        console.log(num);
+        //4.局部作用域(函数作用域) 在函数内部就是局部作用域 这个代码的名字只在函数内部起作用
+        function fn() {
+            //局部作用域 
+            var num = 20;
+            console.log(num);
+        }
+        fn();
+
+        // 4.全局变量 和 局部变量
+        var num1 = 40; //全局变量
+        console.log(num1);
+        //注意:如果在函数内部没有声明 直接赋值的也叫做全局变量
+        function fn1(aru) { //函数的形参也可看成一个局部变量
+            var num1 = 50; //局部变量 
+            num2 = 60;
+            console.log(num1); //在函数内部的变量就是局部变量
+        }
+        fn1();
+        console.log(num2);
+        // (1)全局变量只有浏览器关闭时才会销毁 比较占用资源
+        // (2)局部变量在执行完毕就会销毁 比较节约资源
+
+        //js现阶段没有块级作用域 es6有
+        //js是在 es6 的时候新增的块级作用域
+        //块级作用域 {} if {} for{}
+        //java中的{}
+        // if(xx){
+        //     int num =10;
+        // }
+        // 外面不能调用num的
+        if (3 < 5) {
+            var num3 = 10;
+        }
+        console.log(num3); //js中外部可以调用 跟其它语言不同
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

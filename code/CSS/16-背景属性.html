@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /*  1.background-color  背景颜色 background-color:red;
+        2.background-image  背景图片 background-imag:url(路径);
+        3.background-repeat 背景图片平铺 background-repeat:no-repeat/repeat/repeat-x/repeat-y
+        4.background-position 背景图片的定位 background-position:水平位置 垂直位置 ;可以给负值
+        5.background-attachment 背景图片固定  background-attachment:scroll(滚动)/fixed(固定,固定在浏览器窗口里,固定后相对于浏览器窗口) */
+        .box1{
+            width: 300px;
+            height: 300px;
+            /* background-color: yellow; */
+            background-color: rgb(91, 185, 248);
+            background-color: #ff000f
+
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: rgba(0,0,0,0.5);/*透明度rgba*/
+        }
+        .box3{
+            
+            width: 400px;
+            height:400px;
+            background-color: yellow;
+            background-image: url(../CSS/touxiang.png);
+            
+            background-repeat:no-repeat;
+            /*
+             repeat:默认平铺
+             repeat-x x轴平铺
+             repeat-y y轴平铺
+             no-repeat 不平铺
+            */
+            background-position:center bottom;
+            /*
+            1.20px 20px
+            2.10% 10%
+            3.left center right
+              top  center bottom
+            */
+            background-size:cover;
+        /*  1.400px 400px
+            2.100% 100%
+            3.cover 把背景图像扩展到足够大 以使背景图片完全覆盖背景区域
+               也许无法显示在背景定位区域中
+            3.contain  铺满区域                                        */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1" >
+        大家好
+        <div class="box2"></div>
+    </div>
+    <div class="box3"></div>
+</body>
+</html>

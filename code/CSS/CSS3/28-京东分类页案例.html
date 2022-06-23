@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+        }
+        ul{
+            list-style: none;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+        }
+        /* 头部 ------------------------------------*/
+        header{
+            height: 45px;
+            background-color: gray;
+        }
+        header ul{
+            display: flex;
+            overflow: auto;/*设置将溢出部分 变为滚动条*/
+        }
+        header ul li{
+            flex-shrink: 0; /*设置成禁止挤压 出现滚动条*/
+            color: white;
+            line-height: 45px;
+            padding: 0 10px; /*设置上下0边距 左右10px边距*/
+        }
+        header ul li:hover{ /*设置点击事件*/
+            color: red;
+            background: white;
+        }
+
+        /* 中间 ------------------------------------ */
+        section{
+            flex: 1;
+            display: flex;
+            overflow: auto;
+        }
+        /* 左边 */
+        section ul{
+            width: 85px;
+            overflow: auto;
+        }
+        section ul li{
+            height: 45px;
+            line-height: 45px;
+            text-align: center;
+            font-size: 14px;
+            background: #f8f8f8;
+        }
+        section ul li:hover{
+            background: white;
+            color: #e96062;
+        }
+        ::-webkit-scrollbar{  /*取消滚动条*/
+            display: none;
+        }
+        /* 右边 */
+        section>div{
+            flex: 1;
+            /* background: yellow; */
+            display: flex;
+            flex-wrap: wrap; /*折行*/
+            align-content: flex-start;
+            overflow: auto;
+        }
+        section .content>div{
+            height: 90px;
+            width: 33.33%;/*设置宽度占据content的1/3*/
+            /* background: red; */
+            text-align: center;
+            font-size: 12px;
+        }
+        section .content div>img{
+            height: 60px;
+            width: 60px;
+            /* margin-top: 11px; */
+        }
+        section .content .top{
+            margin-top: 11px;/*设置前三个顶部11px*/
+        }
+        /* 底部  ------------------------------------*/
+        footer{
+            height: 50px;
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+        </ul>
+    </header>
+    <section>
+        <ul>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+        </ul>
+        <!-- 右边 -->
+        <div class="content">
+            <div class="top">
+                <img src="../touxiang.png" alt="">
+                <p>电脑</p>
+            </div>
+            <div class="top">
+                <img src="../touxiang.png" alt="">
+                <p>电脑</p>
+            </div>
+            <div class="top">
+                <img src="../touxiang.png" alt="">
+                <p>电脑</p>
+            </div>
+            <div>
+                <img src="../touxiang.png" alt="">
+                <p>电脑</p>
+            </div>
+            <div>
+                <img src="../touxiang.png" alt="">
+                <p>电脑</p>
+            </div>
+            <div>
+                <img src="../touxiang.png" alt="">
+                <p>电脑</p>
+            </div>
+            <div>
+                <img src="../touxiang.png" alt="">
+                <p>电脑</p>
+            </div>
+            <div>
+                <img src="../touxiang.png" alt="">
+                <p>电脑</p>
+            </div>
+            <div>
+                <img src="../touxiang.png" alt="">
+                <p>电脑</p>
+            </div>
+            <div>
+                <img src="../touxiang.png" alt="">
+                <p>电脑</p>
+            </div>
+            <div>
+                <img src="../touxiang.png" alt="">
+                <p>电脑</p>
+            </div>
+            <div>
+                <img src="../touxiang.png" alt="">
+                <p>电脑</p>
+            </div>
+            <div>
+                <img src="../touxiang.png" alt="">
+                <p>电脑</p>
+            </div>
+        </div>
+    </section>
+    <footer></footer>
+</body>
+</html>

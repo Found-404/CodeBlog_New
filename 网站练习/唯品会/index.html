@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./lib/index.js"></script>
+    <script src="./lib/commodityList.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header_top">
+
+            <menu class="centerALL" tabindex="1">
+                <!-- 选择地区部分 -->
+                <div class="region flex_center">
+                    <p class="mouse">北京市</p>
+                    <div class="arrow"></div>
+                </div>
+                <!-- 地区选择块 -->
+                <section class="regions">
+                    <div class="region_top">
+                        <p>请选择你所在的收货地址</p>
+                        <div class="region_close">
+                            <ion-icon name="close-outline" style="font-size: 19px;"></ion-icon>
+                        </div>
+                    </div>
+                    <!-- 省份 -->
+                    <div class="region_center">
+                        <div>
+                            <p class="xunZhong">省份</p>
+                            <p class="xunZhongNot" style="display: none;">城市</p>
+                        </div>
+                        <div class="border_Bottom"></div>
+                    </div>
+                    <!-- 选择省份 -->
+                    <div class="region_bottom">
+                        <ul class="disFlex" id="ul_region" data-index="0">
+
+                        </ul>
+                        <ul class="disNone" id="ul_region2" data-index="1">
+
+                        </ul>
+                    </div>
+                </section>
+                <!-- 登录注册等 -->
+                <div class="right_menu">
+                    <!-- 登陆注册 -->
+                    <ul style="position:relative;" class="login_first">
+                        <li class="" data-text=" ">
+                            <p>请登录</p>
+                            <!-- 请登录 -->
+                            <section class="login_window">
+                                <div class="login_top">
+                                    <span></span>
+                                    <p>您好![请登录]</p>
+                                </div>
+                                <div>
+                                    <span>我的收藏</span>
+                                    <span>我的订单</span>
+                                    <span>零钱</span>
+                                    <span>我的优惠卷</span>
+                                    <span>我的唯品币</span>
+                                    <span>唯品金额</span>
+                                </div>
+                            </section>
+                        </li>
+                        <li class="flex_center">
+                            <p>注册</p>
+                        </li>
+
+                    </ul>
+                    <!-- 签到有礼 -->
+                    <ul class="signin" style="position:relative;">
+                        <i class="Sign_In"></i>
+                        <p>签到有礼</p>
+
+                        <section class="signin_Box">
+                            <h3>
+                                请前往<span>唯品会APP首页</span>签到哦
+                            </h3>
+                            <p>
+                                即日起,签到网页端入口将下线，请前往”唯品会APP首 页签到领券”继续参与签到活动。
+                            </p>
+
+                            <div class="phone_signin">
+                                <img src="./img/header_signin-hash-670694db.png" alt="" height="100%">
+                            </div>
+                            <div class="weChat">
+                                <img src="./img/1598435695911.png" alt="" width="100px">
+                                <p>也可以使用微信扫码签到哦</p>
+                            </div>
+                        </section>
+                    </ul>
+                    <!-- 我的订单 -->
+                    <ul>
+                        <p>我的订单</p>
+                    </ul>
+                    <!-- 我的特卖 -->
+                    <ul class="special" style="position:relative;" data-text=" ">
+                        <p>我的特卖</p>
+                        <span class="arrow"></span>
+                        <section class="special_Sale">
+                            <div>
+                                <span>商品收藏</span>
+                                <span>品牌收藏</span>
+                                <span>我的足迹</span>
+                            </div>
+                        </section>
+                    </ul>
+                    <!-- 会员俱乐部 -->
+                    <ul class="member" style="position:relative;">
+                        <p>会员俱乐部</p>
+                        <span class="arrow"></span>
+
+                        <section class="member_box" style="display:none;">
+                            <p>俱乐部首页</p>
+                        </section>
+                    </ul>
+                    <!-- 客服服务 -->
+                    <ul class="customer" style="position:relative;">
+                        <p>客服服务</p>
+                        <span class="arrow"></span>
+
+                        <section class="customer_box" style="display: none;">
+                            <span>
+                                <p>联系客服</p>
+                            </span>
+                            <span>
+                                <p>服务中心</p>
+                            </span>
+                            <span>
+                                <p>帮助中心</p>
+                            </span>
+                            <span>
+                                <p>知识产权投诉</p>
+                            </span>
+                        </section>
+                    </ul>
+                    <!-- 手机版 -->
+                    <ul>
+                        <!-- <span></span> -->
+                        <ion-icon name="phone-portrait-outline"></ion-icon>
+                        <p>手机版</p>
+                    </ul>
+                    <!-- 更多 -->
+                    <ul>
+                        <p>更多</p>
+                        <span class="arrow"></span>
+                    </ul>
+                </div>
+            </menu>
+        </div>
+        <!-- 头部中间搜索框 -->
+        <div class="header_center"></div>
+        <!-- 商品分类 -->
+        <div class="header_bottom">
+            <menu class="centerALL">
+                <div class="left flex_center open">
+                    <p>商品分类</p>
+                    <div class="open_sort">
+                        <ul></ul>
+                        <section class="open_detailed">
+                            <ul>
+                                <li>页面渲染1</li>
+                                <li>页面渲染2</li>
+                                <li>页面渲染3</li>
+                                <li>页面渲染4</li>
+                                <li>页面渲染5</li>
+                                <li>页面渲染6</li>
+                                <li>页面渲染7</li>
+                                <li>页面渲染8</li>
+                                <li>页面渲染9</li>
+                                <li>页面渲染10</li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+                <div class="right">
+                    <ul>
+                        <li>推荐</li>
+                        <li>3折疯抢</li>
+                        <li>唯品快枪</li>
+                        <li>唯品奥莱</li>
+                        <li>女装</li>
+                        <li>运动</li>
+                        <li>鞋包</li>
+                        <li>美妆</li>
+                        <li>母婴</li>
+                        <li>电器</li>
+                        <li>男装</li>
+                        <li>内衣</li>
+                    </ul>
+                    <div class="more">
+                        <div>
+                            <section>
+                                <p>更多</p>
+                                <span class="flex_center">
+                                    <ion-icon name="chevron-down-outline"></ion-icon>
+                                </span>
+                            </section>
+                            <ul style="display: none;">
+                                <li>1</li>
+                                <li>3</li>
+                                <li>4</li>
+                                <li>5</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </menu>
+        </div>
+    </header>
+</body>
+
+</html>

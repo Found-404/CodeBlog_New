@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        span {
+            font-size: 30px;
+            line-height: 50px;
+            text-align: center;
+            width: 50px;
+            height: 50px;
+            background-color: rgb(226, 9, 118);
+            display: block;
+        }
+        
+        .con {
+            position: absolute;
+            width: 200px;
+            height: 50px;
+            background-color: hotpink;
+            font-size: 20px;
+            line-height: 50px;
+            text-align: center;
+            font-weight: 700;
+            top: 0px;
+            z-index: -1;
+        }
+        
+        .sliderbar {
+            width: 300px;
+            position: relative;
+            margin: 50px auto;
+        }
+    </style>
+    <script src="./82-animate.js"></script>
+</head>
+
+<body>
+    <div class="sliderbar">
+        <span><-</span>
+        <div class="con">问题反馈</div>
+    </div>
+    <script>
+        // 当我们鼠标经过sliderbar就会让con这个盒子滑动到左侧
+        // 当我们鼠标离开sliderbar就会让con这个盒子滑动到右侧
+        var sliderbar = document.querySelector('.sliderbar');
+        var con = document.querySelector('.con');
+        sliderbar.addEventListener('mouseenter', function() {
+            // animate(obj,target,function(){});
+            animate(con, -200, function() {
+                // 动画执行完毕 箭头改变
+                sliderbar.children[0].innerHTML = '->';
+            });
+        })
+        sliderbar.addEventListener('mouseleave', function() {
+            // animate(obj,target,function(){});
+            animate(con, 0, function() {
+                sliderbar.children[0].innerHTML = '<-';
+            });
+        })
+    </script>
+</body>
+
+</html>

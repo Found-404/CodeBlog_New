@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background: red;
+           /*animation: dingyiming1 2s ease 1s infinite; */
+           /*animation: 动画名-持续时间-运动方式-延迟时间-(动画次数-infinite重复执行); */
+/*动画名字*/animation-name: xuanzhuan;
+/*持续时间*/animation-duration: 2s;
+/*运动方式*/animation-timing-function: linear;
+/*延迟时间*/animation-delay: 1s;
+/*重复几次*/animation-iteration-count: infinite;
+        
+            /*控制动画方向*/
+            animation-direction: reverse;
+            /*
+            normal      正常
+            reverse     反向运动
+            alternate   交替运动
+            alternate-reverse 反方向交替运动
+            */
+
+        }
+        .box1:hover{
+/*暂停动画*/animation-play-state: paused;
+        }
+
+        /* 先声明动画 */
+        /* keyframes关键帧数 */
+        @keyframes dingyiming1 { /*以一种写法*/
+            from{ /*定义一个初始状态*/
+                width: 200px;
+                height: 200px;
+                background: red;
+            }
+            to{  /*定义一个结束状态*/
+                width: 400px;
+                height: 600px;
+                background-color: green;
+            }
+        }
+        @keyframes dingyiming2 { /*第二种写法*/
+            0%{ /*定义一个初始状态*/
+                width: 200px;
+                height: 200px;
+                background: red;
+            }
+
+            25%{
+                width: 200px;
+                height: 400px;
+                background-color: yellow;
+            }
+
+            100%{  /*定义一个结束状态*/
+                width: 400px;
+                height: 600px;
+                background-color: green;
+            }
+        }
+        .box2{
+            width: 50px;
+            height: 50px;
+            background: black;
+            margin: 20px auto;
+            animation: xuanzhuan 2s linear infinite;
+        }
+        @keyframes xuanzhuan {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+
+    <div class="box2"></div>
+
+</body>
+</html>

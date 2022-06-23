@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 500px;
+            height: 500px;
+            border: 5px solid gray;
+            display: flex;
+            /*搭建3d舞台*/
+            transform-style: preserve-3d;
+
+            /* 必须填加景深 */
+            perspective: 800px;
+        }
+        .center{
+            margin:auto;
+            width: 200px;
+            height: 200px;
+            background: red;
+
+            transform:scaleZ(3) rotateY(45deg);
+            /* 两种写法 */
+            transform: scale3d(1,1,10) rotate(45deg);
+
+        }
+    </style>
+</head>
+<body>
+    <!-- 3d缩放 -->
+    <div class="box">
+        <div class="center"></div>
+    </div>
+</body>
+</html>

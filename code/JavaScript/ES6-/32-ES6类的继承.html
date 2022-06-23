@@ -1,0 +1,62 @@
+<!--
+ * @Author: error: git config user.name && git config user.email & please set dead value or install git
+ * @Date: 2022-06-02 11:47:15
+ * @LastEditors: error: git config user.name && git config user.email & please set dead value or install git
+ * @LastEditTime: 2022-06-02 12:01:11
+ * @FilePath: \code\code\JavaScript\ES6-\32-ES6类的继承.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //创建一个Phone类
+        class Phone {
+            //构造方法
+            constructor(brand, price) {
+                this.brand = brand;
+                this.price = price;
+            };
+            //父类成员属性和方法
+            call() {
+                console.log('打电话');
+            }
+        }
+
+        //创建一个子类继承Phone类
+        // extends 关键词
+        class SmartPhone extends Phone {
+            constructor(brand, price, color, size) {
+                // super方法类似于Phone.call(this,brand,price)
+                super(brand, price);
+                // super子类调用父类的构造方法
+                this.color = color;
+                this.size = size;
+            }
+            photo() {
+                console.log('拍照');
+            }
+            playGame() {
+                console.log('玩游戏');
+            }
+            call() {
+                super.call(); //通过super方法可以调用被继承父级的call方法
+                console.log('视频通话');
+            }
+        }
+        const xiaomi = new SmartPhone('小米', 1999, '黑色', '123');
+        console.log(xiaomi);
+
+        xiaomi.call();
+    </script>
+</body>
+
+</html>

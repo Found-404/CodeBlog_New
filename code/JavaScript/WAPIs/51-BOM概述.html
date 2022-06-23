@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // window.document.querySelector();
+        var num = 10;
+        // 两者等价
+        console.log(num);
+        console.log(window.num);
+
+        function fn() {
+            console.log(11);
+        }
+        // 两者等价
+        fn();
+        window.fn();
+
+        // 两者等价
+        alert(11);
+        window.alert(11);
+    </script>
+</body>
+
+</html>

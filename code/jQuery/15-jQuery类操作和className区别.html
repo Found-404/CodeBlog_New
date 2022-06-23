@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jQuery-min.js"></script>
+    <style>
+        .two {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one"></div>
+    <script>
+        // 原生JS中className会覆盖元素原先里面的类名。
+
+        // jQuery里面类操作只是对指定类进行操作,不影响原先的类名。
+        $('.one').addClass('two');
+        // 这个addClass相当去追加类名 不影响以前的类名
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>逐帧动画</title>
+    <style>
+        .box1{
+            height: 200px;
+            width: 200px;
+            background: red;
+
+            animation: run 5s steps(1,end);
+            /* steps(1,end)数字表示关键帧之间的帧数
+               end保留当前帧,看不到最后一帧,动画结束看不见 
+               start保留下一帧,看不到第一帧,从第一帧很快跳到最后一帧 */
+            
+            /* start-end === steps(1,end)
+               start-start === steps(1,start)   */
+        }
+        @keyframes run{
+            0%{
+                background: red;
+            }
+            50%{
+                background: green;
+            }
+            100%{
+                background: yellow;
+            }
+        }
+
+        .box2{
+            width: 180px;
+            height: 300px;
+            background-image: url(./弹跳球.png);
+
+            animation: run1 1s step-end infinite;
+        }
+
+        @keyframes run1 {
+            0%{
+                background-position:0px 0px;
+            }
+            14.7%{
+                background-position:-180px 0px;
+            }
+            28.6%{
+                background-position:-360px 0px;
+            }
+            42.9%{
+                background-position:-540px 0px;
+            }
+            57.2%{
+                background-position:-720px 0px;
+            }
+            71.5%{
+                background-position:-900px 0px;
+            }
+            85.8%{
+                background-position:-1080px 0px;
+            }
+            100%{
+                background-position:-1260px 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- steps(直接进行关键帧跳跃) , linear ,ease-in  -->
+
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>

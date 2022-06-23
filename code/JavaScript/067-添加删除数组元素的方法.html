@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //添加数组元素方法
+        //1.push()在数组末尾 添加一个或多个数组
+        var arr = [1, 2, 3];
+        // arr.push(4, 'found');
+        console.log(arr.push(4, 'found')); //返回的是长度 5
+        console.log(arr);
+
+        //2.unshift()在开头 添加
+        arr.unshift('red') //返回值数组长度
+        console.log(arr);
+
+        //3.pop()删除数组的最后一个元素
+        arr.pop(); //返回值是被删除的元素
+        console.log(arr);
+
+        //4.shift()删除数组的第一个元素
+        arr.shift(); //返回值是被删除的元素
+        console.log(arr);
+
+        //筛选数组
+        var arr1 = [1500, 1200, 2000, 2100, 1800];
+        console.log(arr1);
+        var newArr = [];
+        for (var i = 0; i < arr1.length; i++) {
+            if (arr1[i] < 2000) {
+                // newArr[newArr.length] = arr1[i];
+                newArr.push(arr1[i]);
+            }
+        }
+        console.log(newArr);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

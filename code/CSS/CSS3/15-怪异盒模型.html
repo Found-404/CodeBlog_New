@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .box1{
+        width: 200px;
+        height: 200px;
+        background: green;
+        padding: 30px;
+        border: 30px solid black;
+
+        box-sizing: content-box;
+        
+        /* 吞噬外部 扩大空间 */
+    }
+    .box2{
+        width: 200px;
+        height: 200px;
+        background: red;
+        margin-top: 100px;
+        padding: 30px;
+        border: 30px solid black;
+        box-sizing: border-box;
+        /* 吞噬内部 固定空间 */
+    }
+    .box3{
+        width: 900px;
+        height: 300px;
+        background: yellow;
+        margin: 0 auto;
+
+    }
+    .box3 div{
+        width: 300px;
+        height: 300px;
+        float: left;
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+</style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+    <div class="box3">
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat accusamus in, quo aut deleniti ut modi iusto incidunt pariatur voluptatum sequi sunt, facere at. Exercitationem veniam accusamus aut inventore culpa.
+        </div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque debitis, dignissimos nemo delectus culpa eaque quo explicabo dicta officiis expedita facilis omnis aliquid, repellat dolorem molestiae modi? Cupiditate, commodi vero?</div>
+        <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quisquam asperiores maxime ratione, quia aliquam ullam possimus laboriosam excepturi ipsa, voluptates ad illo error omnis commodi laudantium eaque, exercitationem obcaecati?</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1.1-100之间所有数的和与平均值
+        var sum = 0;
+        for (var i = 1; i <= 100; i++) {
+            sum += i
+        }
+        console.log(sum);
+        console.log(sum / 100);
+
+        // 2.求1-100之间所有偶数和
+        var he = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 2 == 0) {
+                he += i;
+            }
+        }
+        console.log(he);
+
+        //3.求1-100以内7的倍数总和
+        var zong = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 7 == 0) {
+                zong += i
+            }
+        }
+        console.log(zong);
+
+        // 4.打印矩形
+        var xing = '';
+        for (var i = 1; i <= 4; i++) {
+            for (var j = 1; j <= 5; j++) {
+                xing += '★';
+            }
+            xing += '\n';
+        }
+        console.log(xing);
+
+        //5.打印三角形
+        var sanJiao = '';
+        for (var i = 1; i <= 5; i++) {
+            for (var j = 1; j <= i; j++) {
+                sanJiao += '★';
+            }
+            sanJiao += '\n';
+        }
+        console.log(sanJiao);
+
+        // 6.打印99乘法表
+        var chengFa = '';
+        for (var i = 1; i <= 9; i++) {
+            for (var j = 1; j <= i; j++) {
+                //1 x 2 = 2
+                chengFa += j + 'X' + i + '=' + j * i + '\t';
+            }
+            chengFa += '\n';
+        }
+        console.log(chengFa);
+
+        //求1-100累加值，但是跳过所有个位数为3的数字
+        var mass = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 10 == 3) {
+                continue;
+            }
+            mass += i;
+        }
+        console.log(mass);
+
+        //ATM机制作
+        var yVe = 100;
+        do {
+            var caoZuo = prompt('请输入你要的操作:\n 1.存钱\n 2.取钱\n 3.显示余额\n 4.退出');
+            if (caoZuo == '1') {
+                var cunQian = prompt('您要存多少钱');
+                yVe += parseFloat(cunQian);
+                alert('存入:' + cunQian + '\n余额:' + yVe);
+            }
+            if (caoZuo == '2') {
+                var qvQian = prompt('你要取多少钱');
+                yVe -= parseFloat(qvQian);
+                alert('取走:' + qvQian + '\n余额:' + yVe);
+            }
+            if (caoZuo == '3') {
+                alert('您的余额为' + yVe);
+            }
+            if (caoZuo == '4') {
+                alert('您已退出');
+                break;
+            }
+        } while (caoZuo !== '4');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

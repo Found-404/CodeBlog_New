@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.Object.is 判断两个值是否完全相等
+        console.log(Object.is(120, 120)); //true
+        console.log(Object.is(120, '120')); //false
+        console.log(Object.is(NaN, NaN)); //true
+        console.log(NaN === NaN); //false
+
+        // 2.Object.assign('被替换对象','替换对象') 对象的合并
+        // 如果第一个对象有第二个没有的属性,替换之后也同样保留没有的属性
+        const config1 = {
+            host: 'abcdefg',
+            prot: 3306,
+            name: 'root',
+            pass: 'root',
+            test: 'text'
+        };
+        const config2 = {
+            host: 'http://',
+            prot: 33006,
+            name: 'xxx.com',
+            pass: 'abc',
+            test2: 'text'
+        };
+        console.log(Object.assign(config1, config2));
+
+        //3. Object.setPrototypeOf 设置原型对象 
+        //   Object.getPrototypeOf 获取原型对象
+        //   Object.setPrototypeOf(obj, prototype)
+        const school = {
+            name: 'abc'
+        };
+        const cities = {
+            shuzu: [1, 2, 3]
+        }
+        Object.setPrototypeOf(school, cities)
+        console.log(school); //{name: 'abc'}
+
+        console.log(Object.getPrototypeOf(school));
+    </script>
+</body>
+
+</html>

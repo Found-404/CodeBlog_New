@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background: red;
+            animation: dingyiming1 2s ease 1s infinite;
+        /*animation: 动画名-持续时间-运动方式-延迟时间-(动画次数-infinite重复执行); */
+        }
+
+        /* 先声明动画 */
+        /* keyframes关键帧数 */
+        @keyframes dingyiming1 { /*以一种写法*/
+            from{ /*定义一个初始状态*/
+                width: 200px;
+                height: 200px;
+                background: red;
+            }
+            to{  /*定义一个结束状态*/
+                width: 400px;
+                height: 600px;
+                background-color: green;
+            }
+        }
+        @keyframes dingyiming2 { /*第二种写法*/
+            0%{ /*定义一个初始状态*/
+                width: 200px;
+                height: 200px;
+                background: red;
+            }
+
+            25%{
+                width: 200px;
+                height: 400px;
+                background-color: yellow;
+            }
+
+            100%{  /*定义一个结束状态*/
+                width: 400px;
+                height: 600px;
+                background-color: green;
+            }
+        }
+        .box2{
+            width: 50px;
+            height: 50px;
+            background: black;
+            margin: 20px auto;
+            animation: xuanzhuan 2s linear infinite;
+        }
+        @keyframes xuanzhuan {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+
+    <div class="box2"></div>
+
+</body>
+</html>
