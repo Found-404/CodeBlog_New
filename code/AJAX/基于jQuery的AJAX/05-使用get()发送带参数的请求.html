@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,17 +8,20 @@
     <title>Document</title>
     <script src="./jQuery-min.js"></script>
 </head>
+
 <body>
     <button id="btnGet">发起带参数的请求</button>
     <script>
-        $(function(){
-            $('#btnGet').on('click',()=>{
-                console.log(this);
-                $.get('http://www.liulongbin.top:3006/api/getbooks',{id:1},function(res){
+        $(function() {
+            $('#btnGet').on('click', () => {
+                $.get('http://www.liulongbin.top:3006/api/getbooks', {
+                    id: 1
+                }, function(res) {
                     console.log(res);
                 });
             })
         })
     </script>
 </body>
+
 </html>
