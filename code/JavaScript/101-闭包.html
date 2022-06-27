@@ -14,7 +14,8 @@
         // 闭包:fun这个函数作用域 访问了另外一个函数fn里面的局部变量num
         // fn()外部的作用域可以访问fn内部的局部变量
         // 闭包的主要作用:延伸了变量的作用范围
-        function fn() {
+
+        function fn1() {
             var num = 10;
 
             function fun() {
@@ -23,13 +24,90 @@
             }
             return fun;
         };
-        var f = fn();
-        f();
+        var f1 = fn1();
+        f1();
+        console.log('----------------------------------');
 
         // 类似于:
         // var f = function fun() {
         //     console.log(num);
         // }
+
+
+        // 例子1
+        // function fn() {
+        //     var arr = [];
+        //     for (var i = 0; i < 5; i++) {
+        //         arr[i] = function() {
+        //             return i;
+        //         }
+        //     }
+        //     return arr;
+        // }
+        // var list = fn();
+        // // console.log(i);
+        // for (var i = 0, len = list.length; i < len; i++) {
+        //     console.log(list[i]());
+        // }
+
+
+        // 例子2
+        // var age = 10;
+
+        // function foo() {
+        //     console.log(age); //-----------------1
+        //     var name = "hunt_bo";
+        //     return function() {
+        //         console.log(name);
+        //     }
+        // }
+        // console.log(name); //---------------2
+        // var bar = foo();
+        // bar();
+
+        // console.log(this);
+
+
+        // 例子3
+        function addCount() {
+            var count = 0;
+            console.log(count);
+            return function() {
+                count += 1;
+                console.log(count);
+            }
+        }
+        var fun1 = addCount(); //0
+        var fun2 = addCount(); //0
+        fun1(); //1
+        fun1(); //2
+        fun1(); //3
+        fun2(); //1
+        fun2(); //2
+
+        console.log('-----------------------------');
+
+
+        // 例子4
+        // var o = {
+        //     name: 'ABC'
+        // }
+        var name = 'CBA'
+
+        var obj = {
+            name: 'obg',
+            fun3: function() {
+                console.log(this.name);
+                return function() {
+                    console.log(name);
+                    console.log(this.name);
+                }
+            }
+        }
+
+        console.log(obj.name);
+        obj.fun3()();
+        console.log(this);
     </script>
 </body>
 
