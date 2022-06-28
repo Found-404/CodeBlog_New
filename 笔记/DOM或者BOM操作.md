@@ -1,6 +1,6 @@
 # 获取元素
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1654481169296-a0d9f0e5-2ada-4ab7-ad58-2d34e893cd58.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1654481169296-a0d9f0e5-2ada-4ab7-ad58-2d34e893cd58.png)
 
 
 
@@ -40,7 +40,7 @@ DOM最根本的对象**document** (实际上是**window . document**)， 表示�
 
 ### getElementsByTagName( )
 
-*获取过来元素对象的集合 以****伪数组****形式储存*
+xxxxxxxxxx <!DOCTYPE html><html lang="en">​<head>    <meta charset="UTF-8">    <meta http-equiv="X-UA-Compatible" content="IE=edge">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Document</title>    <style>         :root {            --blue: blue;            --red: red;        }                div {            width: 300px;            height: 300px;            background-color: var(--blue);        }                div:hover {            background-color: var(--red);        }    </style></head>​<body>    <div></div></body>​</html>html
 
 ```html
 <body>
@@ -392,7 +392,7 @@ DOM最根本的对象**document** (实际上是**window . document**)， 表示�
 
 **通过****.className****修改节点类名**
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1654486021557-a62f87cc-7e9b-4726-972a-b0162de620d6.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1654486021557-a62f87cc-7e9b-4726-972a-b0162de620d6.png)
 
 **关于classList**
 
@@ -640,7 +640,7 @@ node 节点
 
 实际开发中获取方法
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1654505851064-e1bc2453-f6e7-44f8-acf2-ac4af638c071.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1654505851064-e1bc2453-f6e7-44f8-acf2-ac4af638c071.png)
 
 ### 兄弟节点
 
@@ -717,13 +717,13 @@ node 节点
 
 **node.insrtBefore****(child,指定元素)**  *在指定元素的前面添加元素*
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1654500572591-be97b45a-33ff-445f-9670-0694c7b0daa3.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1654500572591-be97b45a-33ff-445f-9670-0694c7b0daa3.png)
 
 ### 3.替换节点
 
 **node.replaceChild****(child,指定元素)** *要替换的节点从文档中删除,同时要插入的节点占据它的位置*
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1654573225003-2d51c9be-41d8-42c6-9303-67c60c9e0051.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1654573225003-2d51c9be-41d8-42c6-9303-67c60c9e0051.png)
 
 ## 删除节点
 
@@ -783,18 +783,18 @@ node 节点
 
 ### 1.传统注册事件  唯一性
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1654567236574-e6b523aa-e666-4350-94b4-d826f751382f.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1654567236574-e6b523aa-e666-4350-94b4-d826f751382f.png)
 
 ### 2.方法监听注册事件  addEventListener  ie9以上
 
 - 里面的事件类型是字符串必定加引号而月不带on
 - 同一个元素同一个事件可以添加多个侦听器( 事件处理程序)
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1654567353359-44fcc364-cb25-489c-a585-3e1c1c986b98.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1654567353359-44fcc364-cb25-489c-a585-3e1c1c986b98.png)
 
 ### 3.attachEvent事件监听方式   仅了解不提倡使用
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1654567401400-06a31444-ae07-47d4-baf5-57705c2bed99.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1654567401400-06a31444-ae07-47d4-baf5-57705c2bed99.png)
 
 ## 删除事件
 
@@ -802,15 +802,15 @@ node 节点
 
 **node.onclick=null**
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1654567648988-1f888cf6-0c10-4f84-ba95-c8ab39d4bc48.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1654567648988-1f888cf6-0c10-4f84-ba95-c8ab39d4bc48.png)
 
 ### 2.removeEventListener 删除事件
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1654567684924-10492efa-f2d8-43b8-a08c-c2a19e4ea166.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1654567684924-10492efa-f2d8-43b8-a08c-c2a19e4ea166.png)
 
 ### 3.老办法attachEvent *仅在ie9之前可用*
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1654567728098-295e58e4-b1a9-4ad5-a861-d411f15ca038.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1654567728098-295e58e4-b1a9-4ad5-a861-d411f15ca038.png)
 
 # DOM事件流代码验证
 
@@ -822,7 +822,7 @@ dom事件流三个阶段
 
 ## 捕获阶段
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1654568481514-ce930ecf-5199-4857-8d0c-86e81074eaf4.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1654568481514-ce930ecf-5199-4857-8d0c-86e81074eaf4.png)
 
 当点击**son**会依次触发**从根元素到目标节点**的事件
 
@@ -830,7 +830,7 @@ dom事件流三个阶段
 
 ## 冒泡阶段
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1654569320445-d2ab52e1-5fd8-4334-8ece-27cb2779e880.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1654569320445-d2ab52e1-5fd8-4334-8ece-27cb2779e880.png)
 
 当点击**son**会依次触发**从目标元素到根节点**的事件
 
@@ -984,7 +984,7 @@ dom事件流三个阶段
 
 ## 1.返回事件类型e.type
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1654588757570-3ddfdd50-4bfa-4aad-a4a2-b49b6af34bbb.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1654588757570-3ddfdd50-4bfa-4aad-a4a2-b49b6af34bbb.png)
 
 **此时当触发事件时，就在控制台输出所触发的事件类型**
 
@@ -992,11 +992,11 @@ dom事件流三个阶段
 
  *让链接不跳转 或者让提交按钮不提交*
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1654588902929-09afa0fd-12f3-4cd1-a229-bbcf9464a248.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1654588902929-09afa0fd-12f3-4cd1-a229-bbcf9464a248.png)
 
 ## 3.传统方式 return false
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1654589028187-2885f65d-b02e-491d-86dd-affd651e2b45.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1654589028187-2885f65d-b02e-491d-86dd-affd651e2b45.png)
 
 ## 4.阻止冒泡
 
@@ -1119,17 +1119,17 @@ dom事件流三个阶段
 
 ## 1.client 鼠标在可视区域的坐标
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1654658100226-1994bb9f-58ba-42ae-a97b-a0bcf832d178.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1654658100226-1994bb9f-58ba-42ae-a97b-a0bcf832d178.png)
 
 ## 2.page 鼠标在文档的坐标 *兼容问题*
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1654658136881-5af81d56-0e4e-4ad8-be02-18020060d94c.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1654658136881-5af81d56-0e4e-4ad8-be02-18020060d94c.png)
 
 涵盖了被卷去的部分
 
 ## 3.screen 鼠标在电脑屏幕的坐标
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1654658163694-f1ac6404-cc35-4def-8382-adfcd41dde55.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1654658163694-f1ac6404-cc35-4def-8382-adfcd41dde55.png)
 
 
 
@@ -1347,18 +1347,18 @@ mouseover事件和mouseenter事件，都是鼠标进入一个节点时触发。�
 
 ## 1. keyup 按键弹起的时候触发
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1654669083014-96fd7257-2c5d-4185-a6d0-9911db9a56ee.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1654669083014-96fd7257-2c5d-4185-a6d0-9911db9a56ee.png)
 
 ## 2. keydown 按键按下的时候触发
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1654669137983-6227fd61-01d8-48a9-aa31-f668d4304dbb.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1654669137983-6227fd61-01d8-48a9-aa31-f668d4304dbb.png)
 
 ## 3. keypress 按键按下的时候触发  
 
 - **keypress区分字母大小写** 
 - **不识别功能键 ctrl shift 方向键**
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1654669227779-a9316f92-4a36-4116-bc16-aca863c8ee03.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1654669227779-a9316f92-4a36-4116-bc16-aca863c8ee03.png)
 
 执行顺序 keydown-keypress-keyup
 
@@ -1367,7 +1367,7 @@ mouseover事件和mouseenter事件，都是鼠标进入一个节点时触发。�
 - **keyup**和**keydown**不区分字母大小写
 - **keypress**区分字母大小写
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1654669720171-10e1c086-4485-4600-9869-1e493c15f514.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1654669720171-10e1c086-4485-4600-9869-1e493c15f514.png)
 
 ## 5.e.key获取按键的字符
 
@@ -1522,7 +1522,7 @@ mouseover事件和mouseenter事件，都是鼠标进入一个节点时触发。�
 </html>
 ```
 
-# ![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655188997507-ba126c1e-f1b9-4746-990c-13f599befabe.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655188997507-ba126c1e-f1b9-4746-990c-13f599befabe.png)
 
 # 页面加载事件
 
@@ -1589,7 +1589,7 @@ mouseover事件和mouseenter事件，都是鼠标进入一个节点时触发。�
 3. 这个调用函数可以直接写函数 还可以写函数名 还有一个写法 '函数名()'
 4. 页面中可能有很多定时器,我们经常给定时器加标识符 (名字)
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1654681938149-c2710173-ee0c-4263-9aad-677b517c91a5.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1654681938149-c2710173-ee0c-4263-9aad-677b517c91a5.png)
 
 异步任务
 
@@ -1618,7 +1618,7 @@ mouseover事件和mouseenter事件，都是鼠标进入一个节点时触发。�
 
 每隔**[间隔毫秒数]**触发一次函数
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1654682117835-2678d70c-b9a3-4737-9b71-5766f853dcff.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1654682117835-2678d70c-b9a3-4737-9b71-5766f853dcff.png)
 
 ### 清除定时器**clearInterval(变量)**
 
@@ -1645,13 +1645,13 @@ this指向问题一般情况下this的最终指向的是那个调用它的对象
 
 ## 2.函数中的this
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1654744499437-6ea6b88a-d412-4772-9064-e590f576ae41.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1654744499437-6ea6b88a-d412-4772-9064-e590f576ae41.png)
 
 **注：****匿名函数****中的****this****也同样指向****windows**
 
 ## 3.定时器中的this
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1654744551802-255f5ba4-a4a8-42b1-9baf-8d488175c3d1.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1654744551802-255f5ba4-a4a8-42b1-9baf-8d488175c3d1.png)
 
 ## 4.对象或者构造函数中的this
 
@@ -1694,7 +1694,7 @@ this指向问题一般情况下this的最终指向的是那个调用它的对象
 
 谁绑定事件**this**就指向谁
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1654744731772-a804b07f-d121-4b03-aa9c-57980de6fc8d.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1654744731772-a804b07f-d121-4b03-aa9c-57980de6fc8d.png)
 
 ## 6.箭头函数this指向	*特殊性*
 
@@ -1704,11 +1704,11 @@ this指向问题一般情况下this的最终指向的是那个调用它的对象
 
 ### 普通函数
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1654746204921-fab4c532-3bae-4292-9e9d-b5f9d6d75eac.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1654746204921-fab4c532-3bae-4292-9e9d-b5f9d6d75eac.png)
 
 ### 箭头函数
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1654746238269-01e68480-a644-4ce2-9c57-d94c32499fe0.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1654746238269-01e68480-a644-4ce2-9c57-d94c32499fe0.png)
 
 # 改变this指向方法
 
@@ -1720,7 +1720,7 @@ call(无数个参数);
 - 第二个参数：实参
 - 使用之后会自动执行该函数，不适合用在定时器处理函数或者事件处理函数
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655455484583-0d0dd80b-d5c2-4752-9623-fdd9cf6b7e47.png) 
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655455484583-0d0dd80b-d5c2-4752-9623-fdd9cf6b7e47.png) 
 
 ## 2.apply()方法
 
@@ -1730,7 +1730,7 @@ apply（两个参数）
 - 第二个参数：数组或者伪数组（里面为实参）
 - 特点：使用时候会自动执行函数，不适合用在定时器处理函数或者事件处理函数
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655457205108-985cd7e9-ae97-4743-942d-6a12deb83123.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655457205108-985cd7e9-ae97-4743-942d-6a12deb83123.png)
 
 ## 3.bind()方法
 
@@ -1742,7 +1742,7 @@ bind（无数个参数）
 - 使用的时候需要手动调用下返回的新函数（不会自动执行）
 - 作用：改变事件处理函数或者定时器处理函数的this指向  
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655457422671-0e2884fe-92a5-449b-9deb-e42a3cccafab.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655457422671-0e2884fe-92a5-449b-9deb-e42a3cccafab.png)
 
 ## 三者区别
 
@@ -1828,7 +1828,7 @@ bind（无数个参数）
 
 **它以带有定位的父亲为准** **如果有父亲或者父亲没有定位** **则以body为准**
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655470123512-aac4c250-3062-47ae-b896-44f7bac6f187.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655470123512-aac4c250-3062-47ae-b896-44f7bac6f187.png)
 
 ### window.pageYoffset  页面卷去的高度
 
@@ -1843,7 +1843,7 @@ bind（无数个参数）
 - **offset**可以得到任意样式表中的样式值(数字型)		*包含padding值*
 - **style**只能得到行内样式表中的样式值(字符串型)		*不包含padding值*
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1654755515627-807871ff-e068-4970-b901-6d1a9d16eaae.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1654755515627-807871ff-e068-4970-b901-6d1a9d16eaae.png)
 
 ### offsetX / offsetY
 
@@ -1926,7 +1926,7 @@ bind（无数个参数）
 
 **scroll**计算出的高度或者宽度涵盖了被折叠部分
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655191086306-4064c008-e9c4-48f1-850d-d0a8729aaa9a.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655191086306-4064c008-e9c4-48f1-850d-d0a8729aaa9a.png)
 
 - document.documentElement**.scroll**(0, 100);
 - document.documentElement**.scrollTo**(0, 100);
@@ -1936,7 +1936,7 @@ bind（无数个参数）
 2. **scrollBy**是'执行'，**.scrollBy**(0, 100)是每当点击一次则移动100，可重复执行
 3. **scroll**和**scrollTo**一样，没什么区别
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655194792765-550de9e9-0ab5-44a2-b030-b185bcc2029c.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655194792765-550de9e9-0ab5-44a2-b030-b185bcc2029c.png)
 
 - **scrollTop**指的是“元素中的内容”超出“元素上边界”的那部分的高度。
 
@@ -1944,7 +1944,7 @@ bind（无数个参数）
 
 最大的区别就是**client**		不包含边框
 
-输出的高度/宽度是可视内容的高度/宽度  *（人眼看到的部分大小*![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655188997507-ba126c1e-f1b9-4746-990c-13f599befabe.png)
+输出的高度/宽度是可视内容的高度/宽度  *（人眼看到的部分大小*![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655188997507-ba126c1e-f1b9-4746-990c-13f599befabe.png)
 
 [**🔗🔗clientX、offsetX、screenX、pageX的区别🔗🔗**](https://blog.csdn.net/Serena_tz/article/details/113939879?ops_request_misc=&request_id=&biz_id=102&utm_term=clientx screenx pagex offsetx &utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-1-113939879.142^v16^control,157^v14^control&spm=1018.2226.3001.4187)
 
@@ -1987,7 +1987,7 @@ bind（无数个参数）
 </html>
 ```
 
-# ![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655274453803-b3d6b959-aa7e-41a9-bfac-55cfba4ead26.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655274453803-b3d6b959-aa7e-41a9-bfac-55cfba4ead26.png)
 
 # 封装一个动画函数
 
@@ -2135,10 +2135,10 @@ function animate(obj, target, callback) {
 - **touchmove**	**拖动事件**
 - **touchend**	**松手事件**
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655262416536-b2fb10c6-f036-44bd-8536-e9eff70439b8.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655262416536-b2fb10c6-f036-44bd-8536-e9eff70439b8.png)
 
 **targetTouches[0]** 就可以得到触摸dom元素的第一个手指的相关信息 比如手指的坐标
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655262506029-4dcf0ee5-7ca7-4340-8508-3e3c0cdecb1b.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655262506029-4dcf0ee5-7ca7-4340-8508-3e3c0cdecb1b.png)
 
 [**🔗🔗关于移动端手指触发事件blog🔗🔗**](https://blog.csdn.net/weixin_42349568/article/details/109240923?ops_request_misc=%7B%22request%5Fid%22%3A%22165526231616782184615037%22%2C%22scm%22%3A%2220140713.130102334..%22%7D&request_id=165526231616782184615037&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-3-109240923-null-null.142^v16^control,157^v14^control&utm_term=touchend&spm=1018.2226.3001.4187)

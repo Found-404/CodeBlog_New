@@ -811,21 +811,21 @@ XML的英文全称是EXtensible Markup Language,即可扩展标记语言。因�
 
 ## 发起get请求 ##
 
-![png](https://i.bmp.ovh/imgs/2022/06/24/7f26d3041bfe3351.png)
+![png](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/7f26d3041bfe3351.png)
 
 ## 发起post请求 ##
 
-![png](https://i.bmp.ovh/imgs/2022/06/24/7f26d3041bfe3351.png)
+![png](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/7f26d3041bfe3351.png)
 
 ## Axios中的ajax请求 ##
 
 ### 直接使用axios发起GET请求 类似于ajax中的$.ajax() ###
 
-![png](https://i.bmp.ovh/imgs/2022/06/24/39b2bb46022a6ee5.png)
+![png](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/39b2bb46022a6ee5.png)
 
 ### 直接使用axios发起POST请求 类似于ajax中的$.ajax() ###
 
-![png](https://i.bmp.ovh/imgs/2022/06/24/d2d956e157587721.png)
+![png](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/d2d956e157587721.png)
 
 
 # 了解同源策略和跨域 #

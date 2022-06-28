@@ -1,7 +1,7 @@
 # BOM操作 #
 
-![png](https://img-blog.csdnimg.cn/d4d075ee9982467290c30398aa3eee59.png)
-![png](https://img-blog.csdnimg.cn/4d2bfa28bf4148d987d27444373e4d19.png)
+![png](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/d4d075ee9982467290c30398aa3eee59.png)
+![png](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/4d2bfa28bf4148d987d27444373e4d19.png)
 
 ## 什么是BOM？ ###
 

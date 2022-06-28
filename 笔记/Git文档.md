@@ -21,7 +21,7 @@ Git快照是在原有文件版本的基础.上重新生成一份新的文件，�
 
 ## 所有操作都是本地执行
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655534484451-4c0517e2-4d65-4b59-a4be-19d51a9ce9b0.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655534484451-4c0517e2-4d65-4b59-a4be-19d51a9ce9b0.png)
 
 
 
@@ -29,11 +29,11 @@ Git快照是在原有文件版本的基础.上重新生成一份新的文件，�
 
 使用Git管理的项目，拥有三个区域，分别是**工作区**、**暂存区**、**Git 仓库**。
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655534910353-c3fc5bf1-796d-4a11-8c14-0e75314464ba.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655534910353-c3fc5bf1-796d-4a11-8c14-0e75314464ba.png)
 
 # Git中的三个状态
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655534960656-79a481e4-61a1-4fb7-8fd3-3c1357894a25.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655534960656-79a481e4-61a1-4fb7-8fd3-3c1357894a25.png)
 
 - 工作区的文件被修改了,但还没有放到暂存区,就是**已修改**状态。
 - 如果文件已修改并放入暂存区，就属于**已暂存**状态。
@@ -47,7 +47,7 @@ Git快照是在原有文件版本的基础.上重新生成一份新的文件，�
 
 **.git directory(Repository)**（Git仓库）
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655535118711-22e89a62-12eb-4c50-90f3-d1d0b4c1df5d.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655535118711-22e89a62-12eb-4c50-90f3-d1d0b4c1df5d.png)
 
 基本的Git工作流程如下:
 
@@ -63,7 +63,7 @@ Git快照是在原有文件版本的基础.上重新生成一份新的文件，�
 
 安装完Git之后，要做的第一件事就是设置自己的用户名和邮件地址。因为通过Git对项目进行版本管理的时候，Git需要使用这些基本信息，来记录是谁对项目进行了操作:
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655535398516-456da10e-f08d-4d89-8ae0-8771737d2c9f.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655535398516-456da10e-f08d-4d89-8ae0-8771737d2c9f.png)
 
 --golbal选项只需执行一次就可以永久生效
 
@@ -81,17 +81,17 @@ Git快照是在原有文件版本的基础.上重新生成一份新的文件，�
 
 除了使用记事本查看全局的配置信息之外,还可以运行如下的终端命令,快速的查看Git的全局配置信息:
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655535635403-14eac1d4-2f97-41cc-bc07-f457d2df43a3.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655535635403-14eac1d4-2f97-41cc-bc07-f457d2df43a3.png)
 
 # 获取帮助信息
 
 可以使用**git help <verb>**命令,无需联网即可在浏览器中打开帮助手册，例如:
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655535684182-9e2812e8-61e4-4484-8550-e5f1d78b8dd3.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655535684182-9e2812e8-61e4-4484-8550-e5f1d78b8dd3.png)
 
 如果不想查看完整的手册，那么可以用-h选项获得更简明的"help" 输出:
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655535742912-3076a012-e2d7-4b6e-bbc0-f816bfa87f20.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655535742912-3076a012-e2d7-4b6e-bbc0-f816bfa87f20.png)
 
 
 
@@ -121,7 +121,7 @@ git init命令会创建一个名为 .git 的隐藏目录,这个.git目录就是�
 
 工作区中的每一个文件可能有4种状态,这四种状态共分为两大类,如图所示:
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655536027484-d2c17c61-7fce-4532-a47d-a2cf89550de5.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655536027484-d2c17c61-7fce-4532-a47d-a2cf89550de5.png)
 
 未跟踪	??
 
@@ -137,7 +137,7 @@ git init命令会创建一个名为 .git 的隐藏目录,这个.git目录就是�
 
 可以使用**git status** 命令查看文件处于什么状态，例如：
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655536242631-7e6024cf-3551-46e6-a1af-c197aa7d0427.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655536242631-7e6024cf-3551-46e6-a1af-c197aa7d0427.png)
 
 在状态报告中可以看到新建的**index.html**文件出现在**Untracked files** (未跟踪的文件)下面。
 
@@ -147,17 +147,17 @@ git init命令会创建一个名为 .git 的隐藏目录,这个.git目录就是�
 
 使用git status输出的状态报告很详细，但有些繁琐。如果希望以精简的方式显示文件的状态，可以使用如下两条完全等价的命令，其中-s是--short的简写形式:
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655536349500-52f5969f-2a0a-432d-983c-b128289b4b69.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655536349500-52f5969f-2a0a-432d-983c-b128289b4b69.png)
 
 ## 跟踪新文件  *（向暂存区添加文件）* **git add 文件**
 
 使用命令 **git add** 开始跟踪一个文件 所以要跟踪**index.html**文件，运行如下的命令即可
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655536474765-050a37a1-b18d-4eeb-ad43-182702bf06f0.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655536474765-050a37a1-b18d-4eeb-ad43-182702bf06f0.png)
 
 此时再运行**git status**命令,会看到index.html文件在Changes to be committed这行的下面，说明已被跟踪，并处于暂存状态:
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655536517820-ce82dd36-123e-4949-8082-6c9c42cc0873.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655536517820-ce82dd36-123e-4949-8082-6c9c42cc0873.png)
 
 ![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655536538806-8c2c13f3-9b86-4353-b730-9a535f08e209.png)
 
@@ -165,7 +165,7 @@ git init命令会创建一个名为 .git 的隐藏目录,这个.git目录就是�
 
 如果需要被暂存的文件比较多，可以使用   **git add** .  命令一次性向暂存区提交多个文件
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655537763425-fa5cefe1-3afe-4669-a1de-0c8de68e25dc.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655537763425-fa5cefe1-3afe-4669-a1de-0c8de68e25dc.png)
 
 项目开发常用命令，将新增和修改后的文件放入暂存区
 
@@ -175,11 +175,11 @@ git init命令会创建一个名为 .git 的隐藏目录,这个.git目录就是�
 
 现在暂存区中有一个**index.html**文件等待被提交到Git仓库中进行保存。可以执行**git commit**命令进行提交，其中 **-m** 选项后面是本次的提交消息，用来对提交的内容做进一步的描述:
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655536628213-900af14e-f287-401f-bd5b-487edcd8cb5c.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655536628213-900af14e-f287-401f-bd5b-487edcd8cb5c.png)
 
 提交成功后会显示如下信息：
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655536671600-652b2a80-4b04-4d9c-938f-0134cae6c4ec.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655536671600-652b2a80-4b04-4d9c-938f-0134cae6c4ec.png)
 
 ## 对已提交的文件进行修改后 M标记
 
@@ -187,7 +187,7 @@ git init命令会创建一个名为 .git 的隐藏目录,这个.git目录就是�
 
 修改了工作区中**index.html**的内容之后,再次运行**git status**和**git status -s**命令,会看到如下的内容:
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655536867487-488a48d8-014e-4539-8579-5f821b019fa1.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655536867487-488a48d8-014e-4539-8579-5f821b019fa1.png)
 
 文件index.html出现在**Changes not staged for commit**这行下面，说明**已跟踪文件的内容发生了变化,**
 
@@ -205,15 +205,15 @@ git init命令会创建一个名为 .git 的隐藏目录,这个.git目录就是�
 2. 把已跟踪的、且已修改的文件放到暂存区
 3. 把有冲突的文件标记为已解决状态
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655537072502-c6038e2f-1e37-4e23-bc76-8393f9199a64.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655537072502-c6038e2f-1e37-4e23-bc76-8393f9199a64.png)
 
 ## 提交已暂存的文件 **git commit -m "提交消息"**
 
 再次运行 **git commit -m "提交消息"** 命令,即可将暂存区中记录的index.html的快照，提交到Git仓库中进行保存:
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655537193259-ae4c4898-310f-42b9-8b05-6b728edbad64.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655537193259-ae4c4898-310f-42b9-8b05-6b728edbad64.png)
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655537207921-7b41145a-0590-4cfc-9d86-6d372bb94316.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655537207921-7b41145a-0590-4cfc-9d86-6d372bb94316.png)
 
 ## 撤销对文件的修改  git checkout -- index.html
 
@@ -221,13 +221,13 @@ git init命令会创建一个名为 .git 的隐藏目录,这个.git目录就是�
 
 操作的结果:所有的修改会丢失，且无法恢复!   **危险性比较高,请慎重操作!**
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655537502602-d29f7b89-de20-4d61-a077-394510ed3d47.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655537502602-d29f7b89-de20-4d61-a077-394510ed3d47.png)
 
 ## 取消暂存的文件	gti reset HEAD 要移除的文件名称
 
 如果需要从暂存区中移除对应的文件，可以使用如下命令：
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655538293353-e0645ac8-e007-4c52-8bd5-b9f2e6f24d1d.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655538293353-e0645ac8-e007-4c52-8bd5-b9f2e6f24d1d.png)
 
 ## 跳过使用暂存区域
 
@@ -237,7 +237,7 @@ Git提供了一个跳过使用暂存区域的方式，只要在提交的时候�
 
 所有已经跟踪过的文件暂存起来一并提交， 从而跳过git add步骤:
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655538525145-487fc07b-f18d-4e8e-a042-a268a447b3e6.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655538525145-487fc07b-f18d-4e8e-a042-a268a447b3e6.png)
 
 # Git仓库移除文件
 
@@ -245,7 +245,7 @@ Git提供了一个跳过使用暂存区域的方式，只要在提交的时候�
 
 ## 2.只从Git仓库中移除指定的文件，但保留工作区中对应的文件
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655538736242-5b2f6c78-ed58-49dc-b5df-c33ef3d89d32.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655538736242-5b2f6c78-ed58-49dc-b5df-c33ef3d89d32.png)
 
 # Git忽略文件
 
@@ -279,17 +279,17 @@ Git提供了一个跳过使用暂存区域的方式，只要在提交的时候�
 
 ⑤**两个星号\****表示**匹配任意中间目录**(比如a/**/z可以匹配a/z、a/b/z 或a/b/C/z等)
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655539134717-62f9b9a8-0d07-4695-9d43-e5c6367b220a.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655539134717-62f9b9a8-0d07-4695-9d43-e5c6367b220a.png)
 
 # 查看提交历史  git log
 
 如果希望回顾项目的提交历史，可以使用 **git log** 这个简单且有效的命令。
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655540439882-5c0019d9-017d-4580-9488-e89d21a4777d.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655540439882-5c0019d9-017d-4580-9488-e89d21a4777d.png)
 
 # 回退指定版本
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655540509352-742697e3-97db-45dd-986b-ecf6f5f9c910.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655540509352-742697e3-97db-45dd-986b-ecf6f5f9c910.png)
 
 **注意：回退到旧版本后不能再使用** **git log --pretty=oneline** **查看历史版本**
 
@@ -297,7 +297,7 @@ Git提供了一个跳过使用暂存区域的方式，只要在提交的时候�
 
 ## 1.什么是开源
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655541135151-d8670571-d0b9-473a-9cf7-e053671c2ef6.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655541135151-d8670571-d0b9-473a-9cf7-e053671c2ef6.png)
 
 ## 2.什么是开源许可协议
 
@@ -340,7 +340,7 @@ Github.上的远程仓库，有两种访问方式，分别是HTTPS和SSH。它�
 
 ### HTTPS上传：
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655549171898-6d827579-7eac-4f0b-90a9-30e09cd76d97.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655549171898-6d827579-7eac-4f0b-90a9-30e09cd76d97.png)
 
 1. 在Github官网创建新的库之后首选HTTPS上传方式
 2. 在你要上传的库中打开 Git Bash控制台
@@ -355,7 +355,7 @@ Github.上的远程仓库，有两种访问方式，分别是HTTPS和SSH。它�
 
 2.在github官网个人设置中找到绑定令牌
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655549534866-d9084c9c-e9fc-4261-a379-96b7c6bdec34.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655549534866-d9084c9c-e9fc-4261-a379-96b7c6bdec34.png)
 
 3.选择new SSH key 添加绑定令牌
 
@@ -371,17 +371,17 @@ Github.上的远程仓库，有两种访问方式，分别是HTTPS和SSH。它�
 
 
 
-1. ![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655554230182-4c6d1140-8cfb-40e4-af72-5456c597a6c9.png)
+1. ![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655554230182-4c6d1140-8cfb-40e4-af72-5456c597a6c9.png)
 
 
 
-1. ![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655554297252-5680c8ab-4f67-42e7-9e03-3d2b7480e07c.png)
+1. ![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655554297252-5680c8ab-4f67-42e7-9e03-3d2b7480e07c.png)
 
 ## 7.克隆已上传的库
 
 使用 **git clone 远程库地址**
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655737899273-d316d6df-6e0d-4a56-b5c6-abaadface510.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655737899273-d316d6df-6e0d-4a56-b5c6-abaadface510.png)
 
 # Git FLS
 
@@ -399,37 +399,37 @@ Github.上的远程仓库，有两种访问方式，分别是HTTPS和SSH。它�
 
 **git remote rm origin** 删除远程库
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655706799778-d145bcc5-bc99-40e0-ae97-e84614d42f88.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655706799778-d145bcc5-bc99-40e0-ae97-e84614d42f88.png)
 
 然后，用 **git remote add (name)** 添加一个远程仓库，其中name可以任意指定（对应上面的origin部分），比如：
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655707455484-be8d2b92-9dcf-45e7-a522-ca12eb07b040.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655707455484-be8d2b92-9dcf-45e7-a522-ca12eb07b040.png)
 
 再次查看本地仓库所关联的远程仓库，可以发现成功关联了两个远程仓库：
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655707507827-f921d99b-70b8-4b83-bf0f-18f51750a347.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655707507827-f921d99b-70b8-4b83-bf0f-18f51750a347.png)
 
 此后，若需进行**push**操作，则需要指定目标仓库，**git push** ，对这两个远程仓库分别操作：
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655707541452-46421b8e-085d-4d73-a083-66ffbf3994c7.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655707541452-46421b8e-085d-4d73-a083-66ffbf3994c7.png)
 
 同理，**pull**操作也需要指定从哪个远程仓库拉取，**git pull** ，从这两个仓库中选择其一：
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655707568939-7274d046-eabb-44a9-8c70-65b6b32c679d.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655707568939-7274d046-eabb-44a9-8c70-65b6b32c679d.png)
 
 ## 方法 2：每次push/pull时可以同时操作
 
 首先，指令 **git remote -v** 查看本地仓库所关联的远程仓库：
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655706799778-d145bcc5-bc99-40e0-ae97-e84614d42f88.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655706799778-d145bcc5-bc99-40e0-ae97-e84614d42f88.png)
 
 然后，不额外添加远程仓库，而是给现有的远程仓库添加额外的 URL。使用 **git remote set-url -add** ，已有的名为**name**的远程仓库添加一个远程地址，比如：
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655707655729-c692b8da-a686-4e3b-ae63-f552f6457e45.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655707655729-c692b8da-a686-4e3b-ae63-f552f6457e45.png)
 
 再次查看所关联的远程仓库：
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655707688970-e1d0cd08-1915-4359-8d8d-dafa3e338850.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655707688970-e1d0cd08-1915-4359-8d8d-dafa3e338850.png)
 
 可以看到，我们并没有如方法 1 一般增加远程仓库的数目，而是给一个远程仓库赋予了多个地址（或者准确地说，多个用于push的地址）。
 
