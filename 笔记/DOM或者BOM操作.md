@@ -4,6 +4,8 @@
 
 
 
+<!-- more -->
+
 DOM最根本的对象**document** (实际上是**window . document**)， 表示文档对象
 
 每个载入浏览器的HTML文档都会称为document对象，把文档中每个标签都解析为对象

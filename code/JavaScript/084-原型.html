@@ -24,8 +24,8 @@
             // 此时的this依旧指向Star
         }
         var ldh = new Star('刘德华', 18);
+
         var zxy = new Star('张学友', 19);
-        console.log(ldh.sing === zxy.sing); // true
         // 缺点 浪费内存
         // console.dir(Star);
         ldh.sing();
@@ -34,6 +34,8 @@
 
         // 3.__proto__指向构造函数的原型对象prototype
         console.log(ldh);
+        console.log(Star.prototype);
+        console.log(ldh.__proto__);
         console.log(ldh.__proto__ === Star.prototype); //true
 
         // 方法的查找规则:首先先看ldh对象身上是否有sing方法，如果有就执行这个对象上的sing

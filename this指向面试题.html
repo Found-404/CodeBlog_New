@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // this指向01
+    // var name = 'window'
+
+    // function Person(name) {
+    //     this.name = name
+    //     this.obj = {
+    //         name: 'obj',
+    //         foo1: function() {
+    //             return function() {
+    //                 console.log(this.name)
+    //             }
+    //         },
+    //         foo2: function() {
+    //             return () => {
+    //                 console.log(this.name)
+    //             }
+    //         }
+    //     }
+    // }
+
+    // var person1 = new Person('person1')
+    // var person2 = new Person('person2')
+
+    // person1.obj.foo1()() //win
+    // person1.obj.foo1.call(person2)() //win
+    // person1.obj.foo1().call(person2) //p2
+
+    // person1.obj.foo2()() //obj
+    // person1.obj.foo2.call(person2)() //p2
+    // person1.obj.foo2().call(person2) //obj
+
+    // this指向02
+    // var name = 'ABC';
+    // (function(name) {
+    //     var name = 'abc';
+    //     console.log(name);
+    //     console.log(this);
+    //     console.log(this.name);
+    // }('hh'));
+
+
+    // var obj = {
+    //     b: 10,
+    //     a: this,
+    // }
+    // console.log(obj.a);
+
+    // function Person(name, age) {
+    //     this.name = name;
+    //     this.age = age;
+    //     this.sayHi = function(content) {
+    //         console.log(this.name + '说' + content);
+    //     };
+    //     this.run = function(running) {
+    //         console.log(this.name + '每天跑步' + running);
+    //     }
+    // }
+
+    // var lisa = new Person('LISA', 20);
+
+    // // 原型上的方法
+    // Person.prototype.sleep = function(hour) {
+    //     console.log(this.name + `每天睡${hour}小时`);
+    // }
+    // console.log(Person.prototype);
+    // console.log(lisa);
+
+
+    // 动物的构造函数
+    // function Animal(name, age, sex) {
+    //     this.name = name;
+    //     this.age = age;
+    //     this.sex = sex;
+    //     this.eat = function() {
+    //         console.log("构造函数的eat");
+    //     };
+    // };
+    // Animal.prototype.eat = function() {
+    //     console.log('原型上的eat');
+    // };
+    // Animal.prototype.sleep = function(hour) {
+    //     console.log(this.name + `每天睡${hour}小时`);
+    // };
+    // Animal.prototype.run = function(k) {
+    //     console.log(this.name + `每天跑${k}km`);
+    // };
+
+    // var dog = new Animal('狮子', 5, '雄');
+    // console.log(dog);
+
+    // function Person(name, age, sex, height) {
+    //     Animal.call(this, name, age, sex);
+    //     this.height = height;
+    // };
+    // var zs = new Person('张三', 30, '男', 180);
+
+    // console.log(zs);
+
+
+
+    // 原型面试题:
+    // function A() {}
+
+    // function B(a) {
+    //     this.a = a;
+    // }
+
+    // function C(a) {
+    //     if (a) {
+    //         this.a = a;
+    //     }
+    // }
+    // A.prototype.a = 1;
+    // B.prototype.a = 1;
+    // C.prototype.a = 1;
+
+    // console.log(new A().a); //{} 1
+    // console.log(new B().a); // {a:undefined} undefined 
+    // console.log(new C(2).a); // {a:2} 2
+
+
+    // var F = function() {
+
+    // };
+    // Object.prototype.a = function() {
+    //     console.log('a');
+    // };
+    // Function.prototype.b = function() {
+    //     console.log('b');
+    // };
+    // var f = new F();
+    // console.log(f.a, f.b, F.a, F.b);
+    // afn  undefined afn bfn
+
+    /* f为自定义对象  它的隐式原型指向 自定义函数原型  F
+    自定义函数原型F  它的隐式原型指向 Object 原型   */
+
+    /* F为自定义函数  它的隐式原型指向 Function原型
+    Function原型 的隐式原型指向 Object 原型 */
+
+    //（万物皆对象）
+
+
+    function Foo() {
+        getName = function() {
+            console.log(1)
+        };
+        return this
+    }; //1
+    Foo.getName = function() {
+        console.log(2)
+    }; //2
+    Foo.prototype.getName = function() {
+        console.log(3)
+    }; //3
+    var getName = function() {
+        console.log(4)
+    }; //4
+    function getName() {
+        console.log(5)
+    }; //5
+
+    getName() //4
+    Foo().getName() //1
+    getName() //1
+    Foo.getName() //2
+    new Foo.getName() //2
+    new Foo().getName() //3
+    new new Foo().getName() //3
+</script>
+
+</html>

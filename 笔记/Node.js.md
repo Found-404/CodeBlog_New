@@ -4,7 +4,7 @@
 
 ## Node.js中的JavaScript运行环境
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655822357450-119a84ee-f87e-471f-adeb-96b9c664695e.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655822357450-119a84ee-f87e-471f-adeb-96b9c664695e.png)
 
 注意：
 
@@ -49,7 +49,7 @@ Node.js作为-个JavaScript的运行环境,仅仅提供了基础的功能和API�
 2. **使用tab键能够快速补全路径**
 3. **使用esc键能够快速清空当前输入的命令**
 
-# 什么是fs文件系统模块
+# fs文件系统模块
 
 fs模块是Node.js官方提供的，用来操作文件的模块，它提供了一系列的方法和属性。用来满足用户对文件的操作需求。
 
@@ -59,12 +59,12 @@ fs模块是Node.js官方提供的，用来操作文件的模块，它提供了�
 
 如果在javaScript代码中，使用fs模块来操作文件，则需要使用如下方式导入他：
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/26760678/1655904379652-fb60eeb1-f9a9-4703-864e-e83eea12097f.png)
+![img](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1655904379652-fb60eeb1-f9a9-4703-864e-e83eea12097f.png)
 
 ## fs.readFile()的语法格式      *读取文件内容*
 使用fs.readFile()方法，可以读取指定文件中的内容，语法格式如下：
 
-![png](https://i.bmp.ovh/imgs/2022/06/22/a205835e3c0951ef.png)
+![png](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/a205835e3c0951ef.png)
 
 参数解读：
 - 参数1：**必选**参数，字符串，表示文件的路径。
@@ -94,21 +94,21 @@ fs.readFile('./files/11.txt', 'utf8', function(err, dataStr) {
 
 **成功：**
 
-![png](https://i.bmp.ovh/imgs/2022/06/22/e41f9d8c61cbe03b.png)
+![png](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/e41f9d8c61cbe03b.png)
 
 **失败：**
 
-![png](https://i.bmp.ovh/imgs/2022/06/22/58cc12468873bbe8.png)
+![png](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/58cc12468873bbe8.png)
 
 优化写法：
 
->![png](https://i.bmp.ovh/imgs/2022/06/22/1a6b2b72ed2946a8.png)
+>![png](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/1a6b2b72ed2946a8.png)
 
 
 ## fs.writeFile( )的语法格式      *写入文件内容*
 使用fs.writeFile()方法，可以向指定文件中写入内容。语法格式如下：
 
-![png](https://i.bmp.ovh/imgs/2022/06/22/adf82be76daf111c.png)
+![png](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/adf82be76daf111c.png)
 
 参数解读：
 
@@ -138,7 +138,7 @@ fs.writeFile('f:/files/2.txt', 'abc', function(err) {
 
 优化写法：
 
->![png](https://i.bmp.ovh/imgs/2022/06/22/edd1798ffc5eec30.png)
+>![png](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/edd1798ffc5eec30.png)
 
 ## __dirname解决路径拼接错误 ##
 
@@ -192,7 +192,7 @@ path.join([...paths])
 
 代码示例:
 
-![png](https://i.bmp.ovh/imgs/2022/06/23/2883715f9505b5a9.png)
+![png](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/2883715f9505b5a9.png)
 
 ## path.basename()的语法格式 ##
 
@@ -211,10 +211,180 @@ path.basename(path[,ext])
 
 示例代码：
 
-![png](https://i.bmp.ovh/imgs/2022/06/23/e6b7240594ea3cf6.png)
+![png](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/e6b7240594ea3cf6.png)
 
 ## path.extname()代码示例 ##
 
 >使用path.extname()方法，可以获取路径中的扩展名部分
 
-![png](https://i.bmp.ovh/imgs/2022/06/23/6f381844b033d682.png)
+![png](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/6f381844b033d682.png)
+
+# http模块 #
+
+> 什么是客户端？什么是服务器？
+>
+> 1. 在网络节点中，负责消耗资源的电脑，叫做**客户端**
+> 2. <u>负责对外提供网络资源的电脑</u>，叫做**服务器**
+
+
+
+http模块是Node.js官方提供的，用来创建web服务器的模块，通过http模块提供的http.createServer()方法，就能方便把一台普通的电脑，变成一台web服务器，从而对外提供web资源服务。
+
+如果希望使用http模块创建Web服务器，则需要导入他：
+
+```js
+const http = require('http');
+```
+
+## 进一步理解http模块的作用
+
+> 服务器和普通电脑的区别在于，服务器上安装了web服务器插件。例如：IIS，Apache等。通过安装这些服务器软件，就能把一台普通电脑变成一台web服务器。
+
+> 在node.js中我们不需要使用IIS、Apache等这些第三方web服务器软件，因为我们可以基于Node.js提供的http模块，通过几行代码就能轻松手写一个服务器软件，从而对外提供web服务。
+
+## 服务器相关概念
+
+ ### 1.IP地址 ###
+
+IP地址就是互联网上每台计算机的唯-地址,因此IP地址具有唯一性。 如果把“个人电脑”比作"-台电话”，那么"IP地址"就相当于“电话号码”，只有在知道对方IP地址的前提下，才能与对应的电脑之间进行数据通信。
+
+IP地址的格式:通常用”点分十进制”表示成(a.b.c.d) 的形式，其中, a,b,c,d 都是0~255之间的十进制整数。例如:用点分十进表示的IP地址(192.168.1.1)
+
+**注意：**
+
+1. 互联网中每台Web服务器，都有自己的IP地址，例如:大家可以在Windows的终端中运行ping www baidu.com命令,即可查看到百度服务器的IP地址。
+2. 在开发期间，自己的电脑既是一台服务器, 也是-个客户端，为了方便测试，可以在自己的浏览器中输入127.0.0.1 这个IP地址,就能把自己的电脑当做一台服务 器进行访问了.
+
+### 2.域名和域名服务器 ###
+
+尽管IP地址能够唯-地标记网络上的计算机，但IP地址是一长串数字,不直观，而且不便于记忆，于是人们又发明了另一套字符型的地址方案，即所谓的域名(Domain Name)地址
+
+IP地址和域名是一对应的关系， 这份对应关系存放在一种叫做域名服务器(DNS, Domain name server)的电脑中。使用者只需通过好记的域名访问对应的服务器即可，对应的转换工作由域名服务器实现。因此，域名服务器就是提供IP地址和域名之间的转换服务的服务器。
+
+**注意：**
+
+1. 单纯使用IP地址，互联网中的电脑也能够正常工作。但是有了域名的加持，能让互联网的世界变得更加方便。
+2. 在开发测试期间，**127.0.0.1** 对应的域名是**localhost**,它们都代表我们自己的这台电脑，在使用效果上没有任何区别。
+
+### 3.端口号 ###
+
+计算机中的端口号,就好像是现实生活中的门牌号一样。 通过门牌号,外卖小哥可以在整栋大楼众多的房间中，准确把外卖送到你的手中。
+同样的道理，在一台电脑中,可以运行成百上千个web服务。每个web服务都对应-个唯的端口号. 客户端发送过来的网络请求,通过端口号,可以被准确地交给**对应的web服务**进行处理。
+
+![image-20220628214815281](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/image-20220628214815281.png)
+
+**注意：**
+
+1. 每个端口号不能同时被多个web服务器占用
+2. 在实际运用中URL中的80端口可以被省略
+
+## 创建最基本的web服务器
+
+**创建web服务器的基本步骤**
+
+>1. 导入http模块
+>2. 创建web服务器实例
+>3. 为服务器实例绑定**require**事件，**监听客户端的请求**
+>4. 启动服务器
+
+### 步骤1-导入http模块 ###
+
+如果希望在自己电脑上创建一个web服务器，从而对外提供web服务，则需要导入http模块：
+
+```js
+const http = require('http');
+```
+
+### 步骤2-创建web服务器实例 ###
+
+调用**http.sreateServer()**方法，即可快速创建一个web服务器实例：
+
+```js
+const server = http.createServer();
+```
+
+### 步骤3-为服务器实例绑定request事件 ###
+
+为服务器实例绑定request事件，即可监听客户端发送过来的网络请求：
+
+```js
+// 使用服务器实例的.on()方法，为服务器绑定一个request事件
+sever.on('request',(req,res)=>{
+    // 只要有客户端来请求我们的服务器，就会触发request事件，从而调用这个事件处理函数
+    console.log('Someone visit our web server');
+});
+```
+
+#### req请求对象 ####
+
+只要服务器接收了客户端的请求，就会调用server.on()为服务器绑定的request事件处理函数。如果想在事件处理函数中，访问与客户端相关的**数据**或者**属性**，就可以使用如下方法：
+
+```js
+server.on('request',(req)=>{
+    // req 是请求对象，它包含了与客户端相关的数据和属性，例如：
+    // req.url 是客户端请求的url地址
+    // req.method 是客户端的method请求类型
+    const str = `Your request url is ${req.url},and request method is ${req.method}`;
+    console.log(str);
+});
+```
+
+#### res响应对象 ####
+
+在服务器的request使事件处理函数中，如果想访问与服务器相关的**数据**或**属性**，可以使用如下方式：
+
+```js
+server.on('request', (req, res) => {
+    //req是请求对象，包含了与客户端相关的数据和属性
+    // req.url是客户端请求的url地址
+    const url = req.url;
+    // req.method是客户端请求的method类型
+    const method = req.method
+    const str = `Your request url is ${url},and request method is ${method}`;
+    console.log(str);
+    // 调用res.end()方法向客户端响应一些内容
+    res.end(str);
+});
+```
+
+#### 解决中文乱码问题 ####
+
+当调用res.end()方法，向客户端发送中文内容时候，就会出现乱码问题，此时，需要手动设置内容的编码格式：
+
+`res.setHeader('Content-Type', 'text/html;charset=utf-8');`
+
+```js
+server.on('request', (req, res) => {
+    // 发送内容包含中文
+    const str = `你请求的url地址是${req.url},请求的method类型是${req.method}`;
+    // 调用res.setHeader('Content-Type', 'text/html;charset=utf-8')方法
+    res.setHeader('Content-Type', 'text/html;charset=utf-8');
+    // 调用res.end()方法向客户端响应一些内容
+    res.end(str);
+});
+```
+
+
+
+### 步骤4-启动服务器 ###
+
+调用服务器实例的.listen()方法，即可启动当前的web服务器实例:
+
+```js
+// 调用server.listen(端口号，callback回调函数)方法，即可启动web服务器
+server.listen(80,()=>{
+    console.log('http server running at http//127.0.0.1');
+});
+```
+
+## 根据不同的url相应不同的html内容 ##
+
+**核心实现步骤：**
+
+1. 获取**请求的url地址**
+2. 设置**默认的响应内容**为<u>404 Not found</u>
+3. 判断用户请求的是否为**/**或**/index.html**首页
+4. 判断用户请求的是否为**/about.html**关于页面
+5. 设置**Content-Type响应头**,防止中文乱码
+6. 使用**res.end( )**把内容响应给客户端
+

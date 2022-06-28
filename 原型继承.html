@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function Animal(name, age, sex) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+        this.set = function() {
+            console.log('构造函数内eat');
+        }
+    }
+    Animal.prototype.eat = function() {
+        console.log('原型中的eat');
+    }
+
+    function Person(name, age, sex, height) {
+
+    }
+
+    // 原型继承:只能继承原型上的方法,无法再继承父类构造函数中的属性和方法
+
+    Person.prototype = Object.create(Animal.prototype);
+
+    console.log(Animal.prototype);
+    console.log(Person);
+
+    console.log(Person.prototype.constructor);
+    Person.prototype.constructor = Person;
+    console.log(Person.prototype);
+</script>
+
+</html>
