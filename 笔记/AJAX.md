@@ -181,20 +181,27 @@ $.post(url,[data],[callback])
 ```
 
 **form的属性:**
->- action   &emsp;&emsp;规定当提交表单时候向何处发送表单数据  如果没有内容则默认当前URL地址
->- target   &emsp;&emsp;_blank  &emsp;&emsp;在新窗口中打开
->   -   &emsp;&emsp;_self  &emsp;&emsp;默认,在相同框架中打开
->   -   &emsp;&emsp;_parent&emsp;&emsp;在父框架集中打开
->   -   &emsp;&emsp;_top&emsp;&emsp;在整个窗口中打开
->   -   &emsp;&emsp;framename    &emsp;&emsp;在指定的框架中打开
->- method &emsp;&emsp;GET/POST  &emsp;&emsp;默认为GET  
->   -   &emsp;&emsp;get&emsp;&emsp;适合提交少量简单数据
->   -   &emsp;&emsp;post&emsp;&emsp;适合提交大量复杂包含文件上传的数据
->- enctype&emsp;&emsp;application/x-www-form-urlencoded &emsp;&emsp;在发送前编码所有字符
->   -   &emsp;&emsp;multipart/form-data    &emsp;&emsp;部队字符编码 在使用包含文件上传控件的表单时必须使用该值(文件上传)
->   -   &emsp;&emsp;text/plain    &emsp;&emsp;空格转换为“+”加号 但不对特殊字符编码
->- autocomplete&emsp;&emsp;on&emsp;&emsp;开启表单自动补全内容
->   - &emsp;&emsp;off&emsp;&emsp;关闭表单自动补全内容
+
+**action**  规定当提交表单时候向何处发送表单数据  如果没有内容则默认当前URL地址
+
+| target： |      |
+| :-: | :-: |
+|_blank|在新窗口中打开|
+|_self|默认在相同框架中打开|
+|_parent|在父框架集中打开|
+|_top|在整个窗口中打开|
+|framename|在指定的框架中打开|
+
+|method:| GET/POST |
+| :-: | :-: |
+|GET|get适合提交少量简单数据|
+|POST|post适合提交大量复杂包含文件上传的数据|
+
+|enctype:||
+| :-: | :-: |
+|application/x-www-form-urlencoded|在发送前编码所有字符|
+|multipart/form-data|部队字符编码 在使用包含文件上传控件的表单时必须使用该值(文件上传)|
+|text/plain |空格转换为“+”加号 但不对特殊字符编码|
 
 ### 什么是表单的同步提交 ###
 通过点击submit按钮 触发表单提交的操作 从而使页面跳转到action URL的行为叫做表单的同步提交:

@@ -5,7 +5,8 @@ const http = require('http');
 const server = http.createServer();
 
 // 3. 为服务器实例绑定require事件，监听客户端的请求
-server.on('request', (req, res) => {
+server.on('request', function(req, res) {
+
     // 发送内容包含中文
     const str = `你请求的url地址是${req.url},请求的method类型是${req.method}`;
     // 调用res.setHeader('Content-Type', 'text/html;charset=utf-8')方法
@@ -15,6 +16,6 @@ server.on('request', (req, res) => {
 });
 
 // 4. 启动服务器
-server.listen(8080, () => {
-    console.log('server running at http://127.0.0.1:8080');
+server.listen(80, function() {
+    console.log('server running at http://127.0.0.1');
 });

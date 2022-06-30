@@ -27,12 +27,12 @@
             // 封装异步操作
             setTimeout(function() {
                 //
-                // let date = '数据库中用户数数据';
-                // resolve
-                // resolve(date);
+                let date = '数据库中用户数数据';
 
-                let err = '数据调用失败';
-                reject(err);
+                resolve(date);
+
+                // let err = '数据调用失败';
+                // reject(err);
             }, 1000);
         });
 
@@ -50,22 +50,22 @@
 
 
         // 实例二
-        // let q = new Promise((resolve, reject) => {
-        //     //做一些异步操作
-        //     setTimeout(function() {
-        //         var num = Math.ceil(Math.random() * 10); //生成1-10的随机数
-        //         if (num <= 5) {
-        //             resolve(num);
-        //         } else {
-        //             reject('数字太大了');
-        //         }
-        //     }, 2000);
-        // });
-        // q.then((data) => {
-        //     console.log('resolved', data);
-        // }, (err) => {
-        //     console.log('rejected', err);
-        // });
+        let fo = new Promise((resolve, reject) => {
+            //做一些异步操作
+            setTimeout(function() {
+                var num = Math.ceil(Math.random() * 10); //生成1-10的随机数
+                if (num <= 5) {
+                    resolve(num);
+                } else {
+                    reject('数字太大了');
+                }
+            }, 2000);
+        });
+        fo.then((data) => {
+            console.log('resolved', data);
+        }, (err) => {
+            console.log('rejected', err);
+        });
     </script>
 </body>
 

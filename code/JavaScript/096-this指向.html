@@ -66,6 +66,21 @@
         }
         fn3();
         fn3.call(a);
+
+        var ooj = {
+            id: 100
+        };
+
+        function foo() {
+            // setTimeout(() => {
+            //     console.log('id', this.id);
+            // }, 500);
+            setTimeout(function() {
+                console.log('id', this.id);
+            }, 500);
+        };
+        var id = 10;
+        foo.call(ooj);
     </script>
 
 </body>

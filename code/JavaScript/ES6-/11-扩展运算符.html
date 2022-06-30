@@ -21,7 +21,9 @@
         // [...] 扩展运算符能将[数组]转换为逗号分割的[参数序列]
         // 声明一个数组 ... 
         const colors = ['黑', '白', '灰']; // => '黑','白','灰'
-        console.log(colors);
+        console.log(colors); // ['黑', '白', '灰']
+        console.log(...colors); // 黑 白 灰
+
         //声明一个函数
         function color() {
             console.log(arguments);
