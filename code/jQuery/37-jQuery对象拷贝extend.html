@@ -17,7 +17,6 @@
             //     id: 1,
             //     name: 'andy',
             // };
-            // // $.extend(target,obj);
             // $.extend(targetObj, obj);
             // console.log(targetObj);
 
@@ -28,12 +27,33 @@
             //     id: 1,
             //     name: 'andy',
             // };
-            // // $.extend(target,obj);
             // // 如果原先有属性 那么拷贝的属性就会
             // $.extend(targetObj, obj);
             // console.log(targetObj); //覆盖掉原先的数据
 
 
+            // var targetObj = {
+            //     id: 0,
+            //     msg: {
+            //         sex: '男',
+            //     }
+            // };
+            // var obj = {
+            //     id: 1,
+            //     name: 'andy',
+            //     msg: { //拷贝的只是地址
+            //         age: 18,
+            //     }
+            // };
+            // // $.extend(target,obj);
+            // $.extend(targetObj, obj);
+            // // console.log(targetObj);
+            // // 1. 浅拷贝把原来对象里面的复杂数据类型地址拷贝给目标对象
+            // targetObj.msg.age = 20;
+            // console.log(targetObj); //覆盖掉原先的数据
+            // console.log(obj);
+
+            // 2.深拷贝把里面的数据完全复制一份给目标对象如果里面有不冲突的属性 会合并到一起
             var targetObj = {
                 id: 0,
                 msg: {
@@ -47,20 +67,12 @@
                     age: 18,
                 }
             };
-            // $.extend(target,obj);
-            // $.extend(targetObj, obj);
-            // console.log(targetObj);
-            // 1. 浅拷贝把原来对象里面的复杂数据类型地址拷贝给目标对象
-            // targetObj.msg.age = 20;
-            // console.log(targetObj); //覆盖掉原先的数据
-            // console.log(obj);
-
-            // 2.深拷贝把里面的数据完全复制一份给目标对象如果里面有不冲突的属性 会合并到一起
             $.extend(true, targetObj, obj);
-            // console.log(targetObj);
+            console.log(targetObj);
             targetObj.msg.age = 20; //修改也不会有影响
             console.log(targetObj); //msg:{sex:'男',age:20}
             console.log(obj);
+
 
         });
     </SCript>

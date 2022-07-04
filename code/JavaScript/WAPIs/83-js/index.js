@@ -69,8 +69,8 @@ window.addEventListener('load', function() {
             // 如果走到了最后一张复制的图片  要快速恢复left改为0
             if (num == ul.children.length - 1) {
                 // ul孩子的长度减一
-                ul.style.left = 0;
                 num = 0;
+                ul.style.left = '0px';
             }
             num++;
             animate(ul, -num * focusWidth, function() {

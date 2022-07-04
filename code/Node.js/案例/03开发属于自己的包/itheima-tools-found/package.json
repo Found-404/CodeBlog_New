@@ -1,0 +1,8 @@
+{
+    "name": "itheima-tools-found",
+    "version": "1.0.0",
+    "mian": "index.js",
+    "description": "提供格式化时间，HTMLEscape的功能",
+    "keywords": ["itheima", "data", "found"],
+    "license": "ISC"
+}

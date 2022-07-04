@@ -1,4 +1,8 @@
 #忽略智游文件
-
 /智游
 
+#忽略npm文件目录下所有文件
+/code/Node.js/npm
+
+#忽略Express文件目录下所有文件
+/code/Node.js/Express

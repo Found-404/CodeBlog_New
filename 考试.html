@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function Fn() {
+        // console.log(this);
+        this.x = 100;
+        this.y = 200;
+        this.getX = function() {
+            console.log(this.x);
+        }
+    }
+    Fn.prototype.logThis = function() {
+        console.log(this);
+    }
+    Fn.prototype.getX = function() {
+        console.log(this.x);
+    };
+    Fn.prototype.getY = function() {
+        console.log(this.y);
+    };
+    // console.log(Object.prototype);
+    var f1 = new Fn();
+    var f2 = new Fn();
+    console.log(Fn);
+
+    // var g1 = {
+    //     x: 100,
+    //     y: 200,
+    //     getA() {
+    //         console.log(this.x);
+    //     }
+    // };
+    // var g2 = {
+    //     x: 100,
+    //     y: 200,
+    //     getA() {
+    //         console.log(this.x);
+    //     }
+    // };
+    // console.log(g1 === g2);
+
+    // console.log(Fn.constructor);
+
+
+
+    console.log(f1.getX === f2.getX); //false  两个对象不能全等
+    console.log(f1.getY === f2.getY); //true	 使用的一个构造函数，原型上的方法相同
+    console.log(f1.__proto__.getY === Fn.prototype.getY); //true	对象的原型方法和构造函数的原型方法相同(指向同一个构造函数)
+
+    console.log(f1.__proto__.getX);
+    console.log(f2.getX);
+    console.log(f1.__proto__.getX === f2.getX); //false	对象原型的方法和对象的方法不相等
+    console.log(f1.__proto__.getX === Fn.prototype.getX); //true	对象的原型方法和构造函数的原型方法相同(指向同一个构造函数)
+    console.log(f1.constructor); //f  Fn()  构造函数对象的构造方法是FN()
+    console.log(Fn.prototype.__proto__ === Object.prototype); //空函数	构造函数的原型的构造方法是空函数
+    console.log(Fn.prototype);
+    console.log(Fn.prototype.__proto__); // object的原型对象
+    console.log(Fn.__proto__);
+    console.log(Fn.prototype.__proto__.constructor.constructor); //空函数	构造函数的原型的构造方法是空函数
+    f1.getX(); //	100	
+    f1.__proto__.logThis();
+    console.log(f1.__proto__.logThis);
+    f1.__proto__.getX(); //undefined	  原型上的方法没有给x赋值
+    f2.getY(); //	200  
+    Fn.prototype.getY(); //	undefined	  原型上的方法没有给x赋值
+</script>
+
+</html>
